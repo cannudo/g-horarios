@@ -1,7 +1,7 @@
-# Gerenciador de Horários
+# O'Time
 
 ``
-Sem descrição no momento.
+O O'Time é uma aplicação web que auxilia na montagem de horários escolares de maneira simples e rápida.
 ``
 
 ## Início
@@ -14,13 +14,15 @@ em seu computador para desenvolvimento e testes.
 Para baixar, compilar e executar em seu computador, você deve ter:
 
 - Sistema de controle de versões `git` ([https://www.git-scm.com/])
-- Kit de desenvolvimento JAVA `jdk-8` ([https://java.com/pt_BR/])
+- Kit de Desenvolvimento `python` ([https://www.python.org/])
+- Framework para aplicalções web `django` ([https://www.djangoproject.com/])
 
 ### Instalação
 
 ##### Ubuntu Linux
 
 **Importante**: É aconselhável fazer um _update_ do `apt-get`:
+
 ```sh
 sudo apt-get update
 ```
@@ -31,10 +33,22 @@ sudo apt-get update
 sudo apt-get install git
 ```
 
-- jdk-8
+- python
 
 ```sh
-sudo apt-get install openjdk-8-jdk
+sudo apt-get install python3
+```
+
+**Importante**:aconselhável fazer um _upgrade_ do `pip`, que é o software que usamos para instalar o Django:
+
+```sh
+python -m pip install --upgrade pip
+```
+
+- django 
+
+```sh
+pip install -r requirements.txt
 ```
 
 ### Clonar o repositório
@@ -42,11 +56,11 @@ sudo apt-get install openjdk-8-jdk
 Para realizar um clone do projeto, execute:
 
 ```sh
-git clone https://gitlab.devops.ifrn.edu.br/tads.cnat/pdsweb/2019-1/www-fretou.git
-cd www-fretou
+git clone https://gitlab.devops.ifrn.edu.br/tads.cnat/pdsweb/2019.2/g-horarios.git
+cd g-horarios
 ```
 
-O clone do git cria um diretório chamado `www-fretou` se não for informado um
+O clone do git cria um diretório chamado `g-horarios` se não for informado um
 nome de diretório.
 
 ### Executar em modo desenvolvimento
@@ -54,6 +68,9 @@ nome de diretório.
 Para executar em modo de desenvolvimento,
 no diretório do projeto, digite:
 
+```sh
+python manage.py runserver
+```
 
 ## Documentação
 
