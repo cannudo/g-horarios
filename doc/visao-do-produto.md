@@ -2,11 +2,11 @@
 
 ## Visão do Produto
 
-*Para* [**gestores de horários**] <br>
-*Cujo* [**problema é a falta de um sistema eficiente que auxilie no processo de montagem de horários**] <br>
+*Para* [**gestores de horários**]<br>
+*cujo* [**problema é a falta de um sistema eficiente que auxilie no processo de montagem de horários**] <br>
 *O* [**O'Time**] <br>
 *É uma* [**aplicação web**] <br>
-*Que* [**permite a criação **] <br>
+*Que* [**permite a gestão e montagem de horários de forma eficiente e simples**] <br>
 *Diferentemente da* [**TimeTables**] <br>
 *O nosso produto* [**oferece a possibilidade de colaboração simultânea e acesso em tempo real de múltiplos usuários, além de sincronizar automaticamente, impedindo que inconsistências sejam geradas;**].
 
