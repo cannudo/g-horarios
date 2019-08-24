@@ -1,3 +1,11 @@
+# Reuniões todas às quartas, das 13h00min às 14h30min
+
+## Pautas Iniciais
+
+- Dúvidas em relação ao uso das ferramentas;
+- Esclarecimentos quanto à tarefas a serem entregues;
+- Tentativa de resolução de pendências;
+
 # Primeira reunião do grupo
 
 ## Participantes:
