@@ -15,7 +15,7 @@ Para baixar, compilar e executar em seu computador, você deve ter:
 
 - Sistema de controle de versões `git` ([https://www.git-scm.com/])
 - Kit de Desenvolvimento `python` ([https://www.python.org/])
-- Framework para aplicalções web `django` ([https://www.djangoproject.com/])
+- Framework para aplicações web `django` ([https://www.djangoproject.com/])
 
 ### Instalação
 
@@ -39,7 +39,14 @@ sudo apt-get install git
 sudo apt-get install python3
 ```
 
-**Importante**:aconselhável fazer um _upgrade_ do `pip`, que é o software que usamos para instalar o Django:
+**Importante**: caso não esteja instalado, instalar o `pip`, que é o software que usamos para instalar o Django
+
+```sh
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py
+```
+
+Caso já esteja instalado, é aconselhável fazer um _upgrade_:
 
 ```sh
 python -m pip install --upgrade pip
@@ -48,7 +55,7 @@ python -m pip install --upgrade pip
 - django 
 
 ```sh
-pip install -r requirements.txt
+pip install Django
 ```
 
 ### Clonar o repositório
