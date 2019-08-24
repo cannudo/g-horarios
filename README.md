@@ -96,15 +96,15 @@ Veja o arquivo [CONTRIBUTING.md](CONTRIBUTING.md) para maiores detalhes.
 
 ## Equipe de desenvolvimento
 
-* **Eduardo Riev da Silva Oliveira** - *eduardoriev12@gmail.com*
+* **Eduardo Riev da Silva Oliveira** - *eduardoriev12@gmail.com* - Gerente
 
-* **Luan da Costa Redmann** - **
+* **Luan da Costa Redmann** - *luandacostaredmann@gmail.com* - Back-End/
 
-* **Rafael Horacio Soares de Abreu** - **
+* **Rafael Horacio Soares de Abreu** - *rafael.horacio@escolar.ifrn.edu.br* - Front-End
 
-* **Rodrigo Pereira da Silva** - *missidia@hotmail.com*
+* **Rodrigo Pereira da Silva** - *missidia@hotmail.com* - Designer
 
-* **Wallase Alan Costa de Morais** - *wallacealanmorais@gmail.com*
+* **Wallase Alan Costa de Morais** - *wallacealanmorais@gmail.com* - Fullstack
 
 ## Licença
 
