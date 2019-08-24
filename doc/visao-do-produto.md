@@ -14,25 +14,20 @@
 
 #### [Nome do Produto]
 
-*O produto é* 
-**[
-- Plataforma Web / Mobile;
-- Sistema de Montagem de Horários;
-]** 
-<br>
-*O produto **não** é* 
-**[
-- Sistema de Agendamento;
-- Calendário;
-]** <br>
-*O produto faz* 
-**[
-- Cadastro de Horários;
-- Registro de Preferência de Horários;
-- Sincronia de Dados entre múltiplos usuários simultaneamente em um arquivo único;
-- ]** <br>
-*O produto **não** faz* 
-**[
-- Marcação de Eventos;
-- Criação de Agenda;
-]** <br>
+*O produto é:* <br>
+**[Plataforma Web / Mobile]**<br>
+**[Sistema de Montagem de Horários]** 
+
+*O produto **não** é* <br>
+**[Sistema de Agendamento]**<br>
+**[Calendário]**
+
+*O produto faz:* <br>
+**[Cadastro de Horários]**<br>
+**[Registro de Preferência de Horários]**<br>
+**[Sincronia de Dados entre múltiplos usuários simultaneamente em um arquivo único]**<br>
+
+*O produto **não** faz:*<br>
+**[Marcação de Eventos]**<br>
+**[Criação de Agenda]**<br>
+
