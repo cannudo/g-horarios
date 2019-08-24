@@ -70,6 +70,13 @@ cd g-horarios
 O clone do git cria um diretório chamado `g-horarios` se não for informado um
 nome de diretório.
 
+### Criar e ativar um ambiente virtual
+
+```sh
+python -m venv nome
+nome\Scripts\activate.ps1
+```
+
 ### Executar em modo desenvolvimento
 
 Para executar em modo de desenvolvimento,
