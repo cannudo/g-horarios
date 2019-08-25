@@ -42,8 +42,8 @@ Principais responsabilidades e não responsabilidades do sistema.
 
 | Ator | Descrição |
 | -------- | -------- |
-| | | 
-| | |
+| gestor | O gesto da instituiçao que vai usar a plataforma. | 
+| professor | Professores que lecionar na instituiçao|
 
 ## 3. Clientes
 
