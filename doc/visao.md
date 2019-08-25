@@ -32,7 +32,6 @@ Principais responsabilidades e não responsabilidades do sistema.
 | F02 | Login |	O sistema deve permitir que os usuários entrem no sistema usando suas credenciais. |	Evidente |
 | F03 | Recuperação de senha |	O sistema deve permitir que os usuários recuperem suas senhas, se necessário. |	Evidente |
 
-
 ### Requisitos não funcionais
 
 | Cod. | Nome | Descrição | Categoria | Obrigatoriedade| Permanência |
@@ -59,9 +58,15 @@ Principais responsabilidades e não responsabilidades do sistema.
 | Cod. | Caso de Uso | Descrição | Classificação |
 | -------- | -------- | -------- | -------- |
 | UC01 | Nome do Caso de Uso |	Texto explicando a função do caso de uso |	Primário\Secundário |
+| UC02 | Nome do Caso de Uso |	Texto explicando a função do caso de uso |	Primário\Secundário |
+| UC03 | Nome do Caso de Uso |	Texto explicando a função do caso de uso |	Primário\Secundário |
+| UC04 | Nome do Caso de Uso |	Texto explicando a função do caso de uso |	Primário\Secundário |
 
 ### 2.6. Tabela de Referência - Casos de uso & Requisitos
 
 | | NF01 | NF02 | NF03 | F01 | F02 | F03 |
 | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
 | UC01 |  |  | | |  |  |
+| UC02 |  |  | | |  |  |
+| UC03 |  |  | | |  |  |
+| UC04 |  |  | | |  |  |
