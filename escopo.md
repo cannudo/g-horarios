@@ -1,4 +1,11 @@
-## Escopo
+# Documento de visão
+# O'Time
+## 1. Introdução
+### 1.1. Resumo
+
+`O O'Time é uma aplicação web que permite a gestão e montagem de horários de forma eficiente e simples.`
+
+### 1.2. Escopo
 
 Principais responsabilidades e não responsabilidades do sistema.
 
@@ -14,8 +21,10 @@ Principais responsabilidades e não responsabilidades do sistema.
 
 ### Não-responsabilidades
 
-* Garantir acesso total no caso de perda de conexão com a internet.
+- Garantir acesso total no caso de perda de conexão com a internet.
+- Permitir que os funcionários da escola conversem entre si.
+- Segurança em caso de vazamento de senhas oriundo de descuido dos usuários.
 
-* Permitir que os funcionários da escola conversem entre si.
+### 1.3 Diagrama Geral de Casos de Uso
 
-* Segurança em caso de vazamento de senhas oriundo de descuido dos usuários.
+![Diagrama de Casos de Uso](link aqui)
