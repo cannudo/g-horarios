@@ -29,3 +29,7 @@
 *- Marcação de Eventos;*<br>
 *- Criação de Agenda;*<br>
 
+## Casos de uso
+
+![](img/CDU.PNG)
+
