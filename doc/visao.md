@@ -37,3 +37,14 @@ Principais responsabilidades e não responsabilidades do sistema.
 | UC05 | Cadastrar horários de preferência | O professor loga no sistema e cadastra horários de preferência. Abre-se então a tabela e ele pode editar clicando nas células. | Secundário |
 | UC06 | Visualizar horários | O professor loga no sistema e escole visualiza horários. Abre-se então os horários cadastrados pelo o gesto e as suas preferências do professor logado. | Secundário |
 | UC07 | Solicitar mudança de horário | O professor loga no sistema e escole solicita mudança de horário. Abre-se então a tabela e ele seleciona a célula que deseja mudança. | Secundário |
+
+### 2.7. Atores
+
+| Ator | Descrição |
+| -------- | -------- |
+| | | 
+| | |
+
+## 3. Clientes
+
+    Texto explicando quem é o cliente
