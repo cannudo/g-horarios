@@ -22,33 +22,6 @@ Principais responsabilidades e não responsabilidades do sistema.
 - Permitir que os funcionários da escola conversem entre si.
 - Segurança em caso de vazamento de senhas oriundo de descuido dos usuários.
 
-## Requisitos
-
-### Requisitos Funcionais
-
-| Cod. | Nome | Descrição | Categoria |
-| -------- | -------- | -------- | -------- |
-| F01 | Cadastro de usuários |	O sistema deve permitir que os usuários se cadastrem no mesmo. |	Evidente |
-| F02 | Login |	O sistema deve permitir que os usuários entrem no sistema usando suas credenciais. |	Evidente |
-| F03 | Recuperação de senha |	O sistema deve permitir que os usuários recuperem suas senhas, se necessário. |	Evidente |
-
-### Requisitos não funcionais
-
-| Cod. | Nome | Descrição | Categoria | Obrigatoriedade| Permanência |
-| -------- | -------- | -------- | -------- | -------- | -------- |
-| NF01 | Interface Web |	Deve funcionar em uma plataforma web |	Interface | Obrigatório | Permanente |
-| NF02 | Interface Mobile |	Deve funcionar em uma plataforma mobile |	Interface | Desejável | Transitório |
-| NF03 | Tecnologias de Desenvolvimento |	Será desenvolvido usando o Play Framework na linguagem Java e HTML5 / JavaScript / CSS. |	Implementação | Obrigatório | Transitório |
-
-
-### Tabela de Referência - Requisitos
-
-| | NF01 | NF02 | NF03 |
-| -------- | -------- | -------- | -------- |
-| F01 |  | |  |
-| F02 |  | |  |
-| F03 |  | |  |
-
 ### Casos de uso
 
 ![](img/CDU.PNG)
@@ -61,12 +34,3 @@ Principais responsabilidades e não responsabilidades do sistema.
 | UC02 | Nome do Caso de Uso |	Texto explicando a função do caso de uso |	Primário\Secundário |
 | UC03 | Nome do Caso de Uso |	Texto explicando a função do caso de uso |	Primário\Secundário |
 | UC04 | Nome do Caso de Uso |	Texto explicando a função do caso de uso |	Primário\Secundário |
-
-### 2.6. Tabela de Referência - Casos de uso & Requisitos
-
-| | NF01 | NF02 | NF03 | F01 | F02 | F03 |
-| -------- | -------- | -------- | -------- | -------- | -------- | -------- |
-| UC01 |  |  | | |  |  |
-| UC02 |  |  | | |  |  |
-| UC03 |  |  | | |  |  |
-| UC04 |  |  | | |  |  |
