@@ -50,7 +50,7 @@ Principais responsabilidades e não responsabilidades do sistema.
 | F02 |  | |  |
 | F03 |  | |  |
 
-### Casos de uso
+### Diagrama Geral de Casos de uso
 
 ![](img/CDU.PNG)
 
