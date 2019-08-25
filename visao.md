@@ -11,13 +11,10 @@ Principais responsabilidades e não responsabilidades do sistema.
 
 ### Responsabilidades
 
-* Permitir que os usuários se cadastrem no sistema e tenham níveis de acesso diferentes de acordo com as preferências de um usuário principal.
-
-* Permitir que os professores cadastrados possam enviar suas preferências de horário para a comissão de horários escolares.
-
-* Notificar professores de eventuais mudanças no horário escolar.
-
-* Garantir que não haja inconsistência nos dados.
+- Permitir que os usuários se cadastrem no sistema e tenham níveis de acesso diferentes de acordo com as preferências de um usuário principal.
+- Permitir que os professores cadastrados possam enviar suas preferências de horário para a comissão de horários escolares.
+- Notificar professores de eventuais mudanças no horário escolar.
+- Garantir que não haja inconsistência nos dados.
 
 ### Não-responsabilidades
 
