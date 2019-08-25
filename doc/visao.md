@@ -1,11 +1,11 @@
 # Documento de visão
 # O'Time
-## 1. Introdução
-### 1.1. Resumo
+## Introdução
+### Resumo
 
 `O O'Time é uma aplicação web que permite a gestão e montagem de horários de forma eficiente e simples.`
 
-### 1.2. Escopo
+### Escopo
 
 Principais responsabilidades e não responsabilidades do sistema.
 
