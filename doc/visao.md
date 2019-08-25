@@ -42,9 +42,11 @@ Principais responsabilidades e não responsabilidades do sistema.
 
 | Ator | Descrição |
 | -------- | -------- |
-| gestor | O gesto da instituiçao que vai usar a plataforma. | 
-| professor | Professores que lecionar na instituiçao|
+| Gestor | Responsável pela criação de tabelas de horários e mudanças nas mesmas, se necessário. | 
+| Professor | Podem visualizar as tabelas de horários, solicitar mudanças aos gestores e selecionar horários de sua preferência. |
 
 ## 3. Clientes
 
-    Texto explicando quem é o cliente
+```sh
+O público-alvo do nosso sistema é formado principalmente por pessoas de instituições públicas que desejam adquirir um sistema que possibilite a gestão de horários de forma eficiente e simples.
+```
