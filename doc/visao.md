@@ -30,10 +30,10 @@ Principais responsabilidades e não responsabilidades do sistema.
 
 | Cod. | Caso de Uso | Descrição | Classificação |
 | -------- | -------- | -------- | -------- |
-| UC01 | Cadastra tabelas de horário |	O gestor loga no sistema e escole cadastra tabelas. Abre-se então as tabela. | Primário |
+| UC01 | Cadastrar tabelas de horário |	O gestor loga no sistema e seleciona a opção 'cadastrar tabelas'. Abre-se então as tabelas. | Primário |
 | UC02 | Alterar tabela de horários| O gestor loga no sistema e escole alterar a tabela X. Abre-se então a tabela e ele pode editar clicando nas células. | Primário |
 | UC03 | Deletar tabela de horários | O gestor loga no sistema e escole deletar a tabela X. Abre-se então uma mensagem de confirmação. | Secundário |
-| UC04 | Notificar mundanças de horário | O gestor loga no sistema e escole notificação. Abre-se então as notificações. | Secundário |
-| UC05 | Cadastra horários de preferencia | O Professor loga no sistema e cadastra horários de preferencia. Abre-se então a tabela e ele pode editar clicando nas células. | Secundário |
-| UC06 | Visualiza horários | O Professor loga no sistema e escole visualiza horários. Abre-se então os horários cadastrados pelo o gesto e as suas preferencias do professor logado. | Secundário |
-| UC07 | Solicita mudança de horário | O Professor loga no sistema e escole solicita mudança de horário. Abre-se então a tabela e ele seleciona a célula que deseja mudança. | Secundário |
+| UC04 | Notificar mundanças de horário | O gestor loga no sistema e  seleciona a opção notificação. Abre-se então as notificações. | Secundário |
+| UC05 | Cadastrar horários de preferência | O professor loga no sistema e cadastra horários de preferência. Abre-se então a tabela e ele pode editar clicando nas células. | Secundário |
+| UC06 | Visualizar horários | O professor loga no sistema e escole visualiza horários. Abre-se então os horários cadastrados pelo o gesto e as suas preferências do professor logado. | Secundário |
+| UC07 | Solicitar mudança de horário | O professor loga no sistema e escole solicita mudança de horário. Abre-se então a tabela e ele seleciona a célula que deseja mudança. | Secundário |
