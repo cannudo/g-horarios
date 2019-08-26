@@ -28,15 +28,11 @@ Principais responsabilidades e não responsabilidades do sistema.
 
 | Cod | Nome | Descrição | Categoria |
 | --- | ---- | --------- | --------- |
-| F01 | Cadastro de usuários | O sistema deve permitir que os usuários se cadastrem no mesmo. 
-| Evidente |
-| F02 | Login |	O sistema deve permitir que os usuários entrem no sistema usando suas credenciais. 
-| Evidente |
+| F01 | Cadastro de usuários | O sistema deve permitir que os usuários se cadastrem no mesmo. | Evidente |
+| F02 | Login |	O sistema deve permitir que os usuários entrem no sistema usando suas credenciais. | Evidente |
 | F03 | Recuperação de senha |	O sistema deve permitir que os usuários recuperem suas senhas, se necessário. | Evidente |
-| F04 | Cadastro de horários | O sistema deve permitir que gestores cadastrem tabelas de horários. 
-| Evidente |
-| F05 | Alteração de horários | O sistema deve permitir que gestores alterem tabelas de horários. 
-| Evidente |
+| F04 | Cadastro de horários | O sistema deve permitir que gestores cadastrem tabelas de horários. | Evidente |
+| F05 | Alteração de horários | O sistema deve permitir que gestores alterem tabelas de horários. | Evidente |
 | F06 | Deletar tabela de horários | O sistema deve permitir que gestores deletem tabelas de horários.  | Evidente |
 | F07 | Notificação de mudanças de horário | O sistema deve notificar aos usuários de mudanças de horários. | Evidente |
 | F08 | Cadastro de horários de preferência | O sistema deve permitir o cadastro de horários de preferência já cadastrados dos professores. | Evidente |
