@@ -29,14 +29,15 @@ Principais responsabilidades e não responsabilidades do sistema.
 ### Casos de Uso
 
 | Cod. | Caso de Uso | Descrição | Classificação |
-| -------- | -------- | -------- | -------- |
+| ---- | ----------- | --------- | ------------- |
 | UC01 | Cadastrar tabelas de horário |	O gestor loga no sistema e seleciona a opção 'cadastrar tabelas'. Abre-se então as tabelas. | Primário |
 | UC02 | Alterar tabela de horários| O gestor loga no sistema e escole alterar a tabela X. Abre-se então a tabela e ele pode editar clicando nas células. | Primário |
 | UC03 | Deletar tabela de horários | O gestor loga no sistema e escole deletar a tabela X. Abre-se então uma mensagem de confirmação. | Secundário |
-| UC04 | Notificar mudanças de horário | O gestor loga no sistema e  seleciona a opção notificação. Abre-se então as notificações. | Secundário |
-| UC05 | Cadastrar horários de preferência | O professor loga no sistema e seleciona a opção 'cadastrar horários de preferência'. Abre-se então a tabela e ele pode editar clicando nas células. | Secundário |
-| UC06 | Visualizar horários | O professor loga no sistema e seleciona a opção 'visualizar horários'. O sistema retorna uma tela com os horários cadastrados daquele professor. | Secundário |
-| UC07 | Solicitar mudança de horário | O professor loga no sistema e seleciona a opção 'solicitar mudança de horário'. Abre-se então a tabela e ele seleciona a célula que deseja mudança. | Secundário |
+| UC04 | Cadastrar horários de preferência | O professor loga no sistema e seleciona a opção 'cadastrar horários de preferência'. Abre-se então a tabela e ele pode editar clicando nas células. | Secundário |
+| UC05 | Alterar horários de preferência | O professor loga no sistema e seleciona a opção 'alterar horários de preferência'. Abre-se então a tabela e ele pode editar clicando nas células. | Secundário |
+| UC06 | Deletar horários de preferência | O professor loga no sistema e seleciona a opção 'deletar horários de preferência'. Abre-se então a tabela e ele pode editar clicando nas células. | Secundário |
+| UC07 | Visualizar horários | O professor loga no sistema e seleciona a opção 'visualizar horários'. O sistema retorna uma tela com os horários cadastrados daquele professor. | Secundário |
+| UC08 | Solicitar mudança de horário | O professor loga no sistema e seleciona a opção 'solicitar mudança de horário'. Abre-se então a tabela e ele seleciona a célula que deseja mudança. | Secundário |
 
 ### 2.7. Atores
 
