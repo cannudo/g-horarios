@@ -16,7 +16,7 @@ Principais responsabilidades e não responsabilidades do sistema.
 - Notificar professores de eventuais mudanças no horário escolar.
 - Garantir que não haja inconsistência nos dados.
 
-### Não responsabilidades
+### Não-responsabilidades
 
 - Garantir acesso total no caso de perda de conexão com a internet.
 - Permitir que os funcionários da escola conversem entre si.
