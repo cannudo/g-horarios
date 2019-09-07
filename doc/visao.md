@@ -59,20 +59,42 @@ Principais responsabilidades e não responsabilidades do sistema.
 
 | Cod. | Caso de Uso | Descrição | Classificação |
 | ---- | ----------- | --------- | ------------- |
-| UC01 | Cadastrar tabelas de horário |	O gestor loga no sistema e seleciona a opção 'cadastrar tabelas'. Abre-se então as tabelas. | Primário |
-| UC02 | Alterar tabela de horários| O gestor loga no sistema e escole alterar a tabela X. Abre-se então a tabela e ele pode editar clicando nas células. | Primário |
-| UC03 | Deletar tabela de horários | O gestor loga no sistema e escole deletar a tabela X. Abre-se então uma mensagem de confirmação. | Secundário |
-| UC04 | Visualizar tabelas cadastradas | O gestor loga no sistema e seleciona a opção 'visualizar tabelas cadastradas'. O sistema retorna uma tela com as tabelas cadastradas por aquele gestor. | Secundário |
-| UC05 | Cadastrar horários de preferência | O professor loga no sistema e seleciona a opção 'cadastrar horários de preferência'. Abre-se então a tabela e ele pode editar clicando nas células. | Secundário |
-| UC06 | Alterar horários de preferência | O professor loga no sistema e seleciona a opção 'alterar horários de preferência'. Abre-se então a tabela e ele pode editar clicando nas células. | Secundário |
-| UC07 | Deletar horários de preferência | O professor loga no sistema e seleciona a opção 'deletar horários de preferência'. Abre-se então a tabela e ele pode editar clicando nas células. | Secundário |
-| UC08 | Visualizar horários | O professor loga no sistema e seleciona a opção 'visualizar horários'. O sistema retorna uma tela com os horários cadastrados daquele professor. | Secundário |
-| UC09 | Solicitar mudança de horário | O professor loga no sistema e seleciona a opção 'solicitar mudança de horário'. Abre-se então a tabela e ele seleciona a célula que deseja mudança. | Secundário |
+| UC01 | Listar diretoria |O diretor loga no sistema e seleciona a opção 'Listar Diretorias'. Abre-se então a Lista de diretorias. | Secundário |
+| UC02 | Adiciona diretoria | O diretor loga no sistema e seleciona a opção 'Listar Diretorias' e escolhe “Adiciona diretoria”. O sistema retorna uma tela de preenchimento de dados da diretoria. | Secundário |
+| UC03 | Editar diretoria | O diretor loga no sistema e seleciona a opção 'Listar Diretorias' e selecionar a diretoria. O sistema retorna uma tela de edição de dados da diretoria. | Secundário |
+| UC04 | Listar gestores | O diretor loga no sistema e seleciona a opção 'Listar Gestores'. Abre-se então a Lista de gestores. | Secundário |
+| UC05 | Adiciona gestores | O diretor loga no sistema e seleciona a opção 'Listar Gestores' e escolhe “Adiciona gestor”. O sistema retorna uma tela de preenchimento de dados do gestor. | Secundário |
+| UC06 | Editar gestores | O diretor loga no sistema e seleciona a opção 'Listar Gestores' e selecionar o gestor. O sistema retorna uma tela de edição de dados do gestor. | Secundário |
+| UC07 | Listar salas | O gestor loga no sistema e seleciona a opção 'Listar Salas'. Abre-se então a Lista de salas. | Secundário |
+| UC08 | Adiciona sala | O gestor loga no sistema e seleciona a opção 'Listar Salas' e escolhe “Adiciona Sala”. O sistema retorna uma tela de preenchimento de dados da sala.| Secundário |
+| UC09 | Editar salas | O gestor loga no sistema e seleciona a opção 'Listar Salas' e selecionar a sala. O sistema retorna uma tela de edição de dados de salas. | Secundário |
+| UC10 | Listar disciplinas | O gestor loga no sistema e seleciona a opção 'Listar Disciplinas'. Abre-se então a Lista de disciplinas. | Secundário |
+| UC11 | Adiciona disciplinas | O gestor loga no sistema e seleciona a opção 'Listar Disciplinas' e escolhe “Adiciona Disciplina". O sistema retorna uma tela de preenchimento de dados da disciplina. | Secundário |
+| UC12 | Editar disciplinas | O gestor loga no sistema e seleciona a opção 'Listar Disciplinas' e selecionar o disciplina. O sistema retorna uma tela de edição de dados da disciplina. | Secundário |
+| UC13 | Listar Professores | O gestor loga no sistema e seleciona a opção 'Listar Professores'. Abre-se então a Lista de professores. | Secundário |
+| UC14 | Adiciona Professores | O gestor loga no sistema e seleciona a opção 'Listar Professores' e escolhe “Adiciona professor". O sistema retorna uma tela de preenchimento de dados do professor. | Secundário |
+| UC15 | Editar Professores | O gestor loga no sistema e seleciona a opção 'Listar Professores' e selecionar o professores. O sistema retorna uma tela de edição de dados de professores. | Secundário |
+| UC16 | Listar Cursos | O gestor loga no sistema e seleciona a opção 'Listar Cursos'. Abre-se então a Lista de cursos. | Primário |
+| UC17 | Adiciona Cursos | O gestor loga no sistema e seleciona a opção 'Listar Cursos' e escolhe “Adiciona curso". O sistema retorna uma tela de preenchimento de dados do curso. | Primário |
+| UC18 | Editar Cursos | O gestor loga no sistema e seleciona a opção 'Listar Cursos' e selecionar o curso. O sistema retorna uma tela de edição de dados do curso. | Primário |
+| UC19 | Listar Turmas | O gestor loga no sistema e seleciona a opção 'Listar Turmas'. Abre-se então a Lista de turmas. | Primário |
+| UC20 | Adiciona Turmas | O gestor loga no sistema e seleciona a opção 'Listar Turmas' e escolhe “Adiciona turmas". O sistema retorna uma tela de preenchimento de dados do turmas.| Primário |
+| UC21 | Editar Turmas | O gestor loga no sistema e seleciona a opção 'Listar Turmas' e selecionar a turma. O sistema retorna uma tela de edição de dados da turma. | Primário |
+| UC22 | Visualizar slots de horário de uma turma | O gestor loga no sistema e seleciona a opção 'Lista de Horários das Turmas' e selecionar a turma. Abre-se então a tabela de horário da turma. | Primário |
+| UC23 | Difinir slots de horário | O gestor loga no sistema e seleciona a opção 'Difinir slots de horário'. Abre-se então as tabelas. | Primário |
+| UC24 | Editar slots de horário | O gestor loga no sistema e seleciona a opção 'Lista Horários das Turmas' e selecionar a turma. Abre-se então a tabela e ele pode editar clicando nas células. | Primário |
+| UC25 | Visualizar Turmas | O professor loga no sistema e seleciona a opção 'Visualizar Turmas'. O sistema retorna uma tela com as turma. | Secundário |
+| UC26 | Visualizar slots de horário | O professor loga no sistema e seleciona a opção 'Visualizar horário'. O sistema retorna uma tela com a tabela de slots de horário cadastrados. | Secundário |
+| UC27 | Solicitar mudança de horário | O professor loga no sistema e seleciona a opção 'solicitar mudança de horário'. Abre-se então a tabela e ele seleciona a célula que deseja mudança. | Secundário |
+| UC28 | Filtrar por disciplinas | O professor loga no sistema e seleciona a opção 'Visualizar horário'. O sistema retorna uma tela com a tabela de slots de horário cadastrados e seleciona a opção 'Filtrar por disciplinas'.O sistema retorna uma tela com a tabela de slots de horário filtrada por disciplina. | Secundário |
+| UC29 | Filtrar por Sala | O professor loga no sistema e seleciona a opção 'Visualizar horário'. O sistema retorna uma tela com a tabela de slots de horário cadastrados e seleciona a opção 'Filtrar por Sala'.O sistema retorna uma tela com a tabela de slots de horário filtrada por sala. | Secundário |
+| UC30 | Filtrar por Professor | O professor loga no sistema e seleciona a opção 'Visualizar horário'. O sistema retorna uma tela com a tabela de slots de horário cadastrados e seleciona a opção 'Filtrar por Professor'.O sistema retorna uma tela com a tabela de slots de horário filtrada por professor. | Secundário |
 
 ### 2.5. Atores
 
 | Ator | Descrição |
 | ---- | --------- |
+| Diretor | Responsável por cadastrar gestor e diretorias, se necessário. |
 | Gestor | Responsável pela criação de tabelas de horários e mudanças nas mesmas, se necessário. | 
 | Professor | Podem visualizar as tabelas de horários, solicitar mudanças aos gestores e selecionar horários de sua preferência. |
 
