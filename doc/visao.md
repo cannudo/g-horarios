@@ -88,7 +88,7 @@ Principais responsabilidades e não responsabilidades do sistema.
 | UC27 | Solicitar mudança de horário | O professor loga no sistema e seleciona a opção 'solicitar mudança de horário'. Abre-se então a tabela e ele seleciona a célula que deseja mudança. | Secundário |
 | UC28 | Filtrar por disciplinas | O professor loga no sistema e seleciona a opção 'Visualizar horário'. O sistema retorna uma tela com a tabela de slots de horário cadastrados e seleciona a opção 'Filtrar por disciplinas'.O sistema retorna uma tela com a tabela de slots de horário filtrada por disciplina. | Secundário |
 | UC29 | Filtrar por Sala | O professor loga no sistema e seleciona a opção 'Visualizar horário'. O sistema retorna uma tela com a tabela de slots de horário cadastrados e seleciona a opção 'Filtrar por Sala'.O sistema retorna uma tela com a tabela de slots de horário filtrada por sala. | Secundário |
-| UC30 | Filtrar por Professor | O professor loga no sistema e seleciona a opção 'Visualizar horário'. O sistema retorna uma tela com a tabela de slots de horário cadastrados e seleciona a opção 'Filtrar por Professor'.O sistema retorna uma tela com a tabela de slots de horário filtrada por professor. | Secundário |
+| UC30 | Filtrar por Turma | O professor loga no sistema e seleciona a opção 'Visualizar horário'. O sistema retorna uma tela com a tabela de slots de horário cadastrados e seleciona a opção 'Filtrar por Turma'.O sistema retorna uma tela com a tabela de slots de horário filtrada por Turma. | Secundário |
 
 ### 2.5. Atores
 
