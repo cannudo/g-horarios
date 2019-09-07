@@ -53,7 +53,7 @@ Principais responsabilidades e não responsabilidades do sistema.
 
 ### 2.3. Diagrama Geral de Casos de uso
 
-![](img/CDU.PNG)
+![](img/CDU2.jpeg)
 
 ### 2.4. Casos de Uso
 
