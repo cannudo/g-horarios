@@ -35,7 +35,7 @@
 9. O ator preenche novamente os dados incorretos e seleciona a opção "Confirmar".
 10. Volta ao passo 8 do fluxo principal.
 
-**7b. O ator não preenche algum dado*
+**7b. O ator não preenche algum dado**
 
 8. O sistema retorna uma mensagem de erro, informando quais dados ainda precisam ser preenchidos.
 9. O ator preenche os dados que faltam e seleciona a opção "Confirmar".
