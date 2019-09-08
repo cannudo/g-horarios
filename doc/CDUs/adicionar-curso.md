@@ -9,7 +9,7 @@
 - Ter cadastro completo, estar logado no sistema.
 
 **Cenário de Sucesso Principal (ou Fluxo Básico):**
-zzz
+
 1. O ator seleciona a opção "Adicionar curso" na página "Visualizar cursos cadastrados".
 2. O sistema o redireciona a uma tela contendo as informações que ele deve preencher para criar o curso.
 3. O ator preenche as informações solicitadas e seleciona a opção "Confirmar".
@@ -25,7 +25,7 @@ zzz
 5. O ator preenche novamente os dados incorretos e seleciona a opção "Confirmar".
 6. Volta ao passo 4 do fluxo principal.
 
-**3b. O ator não preenche algum dado*
+**3b. O ator não preenche algum dado**
 
 4. O sistema retorna uma mensagem de erro, informando quais dados ainda precisam ser preenchidos.
 5. O ator preenche os dados que faltam e seleciona a opção "Confirmar".
