@@ -22,14 +22,7 @@
 
 **Fluxos alternativos ou excepcionais**
 
-**5a. O ator seleciona a opção "Alterar slots de horários"**
-
-6. O sistema redireciona o ator para uma página contendo os slots de horário cadastrados naquela turma.
-7. O ator faz as alterações necessárias e seleciona a opção "Confirmar alterações".
-8. O sistema exibe uma mensagem de sucesso informando que as alterações foram realizadas.
-9. CDU finalizado.
-
-**5b. O ator seleciona a opção "Deletar turma"**
+**5a. O ator seleciona a opção "Deletar turma"**
 
 6. O sistema solicita que o ator confirme que deseja excluir aquela turma.
 7. O ator seleciona a opção "Confirmar".
