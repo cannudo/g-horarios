@@ -1,0 +1,37 @@
+### Caso de Uso: Editar turma.
+---
+**Ator principal:** Gestor.
+
+**Interessados e Interesses:**
+- Gestor: Deseja editar informações da turma.
+
+**Pré-Condições:**
+- Ter cadastro completo, estar logado no sistema.
+
+**Cenário de Sucesso Principal (ou Fluxo Básico):**
+
+1. O ator segue o fluxo do CDU "Listar turmas" e seleciona a turma no qual deseja alterar os slots de horários.
+2. O sistema redireciona o ator para uma página contendo as informações da turma e um menu de opções de edição.
+3. O ator seleciona a opção "Editar turma" no menu de opções da turma.
+4. O sistema solicita que o ator selecione a operação que deseja realizar.
+5. O ator seleciona a opção "Alterar informações da turma".
+6. O sistema redireciona o ator para uma página contendo as informações cadastradas naquela turma.
+7. O ator faz as alterações necessárias e seleciona a opção "Confirmar alterações".
+8. O sistema exibe uma mensagem de sucesso informando que as alterações foram realizadas.
+9. CDU finalizado.
+
+**Fluxos alternativos ou excepcionais**
+
+**5a. O ator seleciona a opção "Alterar slots de horários"**
+
+6. O sistema redireciona o ator para uma página contendo os slots de horário cadastrados naquela turma.
+7. O ator faz as alterações necessárias e seleciona a opção "Confirmar alterações".
+8. O sistema exibe uma mensagem de sucesso informando que as alterações foram realizadas.
+9. CDU finalizado.
+
+**5b. O ator seleciona a opção "Deletar turma"**
+
+6. O sistema solicita que o ator confirme que deseja excluir aquela turma.
+7. O ator seleciona a opção "Confirmar".
+8. O sistema exibe uma mensagem de sucesso informando que a turma selecionada foi deletada.
+9. CDU finalizado.
