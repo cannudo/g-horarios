@@ -35,3 +35,15 @@
 7. O ator seleciona a opção "Confirmar".
 8. O sistema exibe uma mensagem de sucesso informando que a turma selecionada foi deletada.
 9. CDU finalizado.
+
+**7a. O ator preenche algum dado incorreto**
+
+8. O sistema retorna uma mensagem de erro, informando quais dados precisam ser corrigidos.
+9. O ator preenche novamente os dados incorretos e seleciona a opção "Confirmar".
+10. Volta ao passo 8 do fluxo principal.
+
+**7b. O ator não preenche algum dado*
+
+8. O sistema retorna uma mensagem de erro, informando quais dados ainda precisam ser preenchidos.
+9. O ator preenche os dados que faltam e seleciona a opção "Confirmar".
+10. Volta ao passo 8 do fluxo principal.
