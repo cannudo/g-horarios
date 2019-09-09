@@ -29,16 +29,37 @@ Principais responsabilidades e não responsabilidades do sistema.
 | --- | ---- | --------- | --------- |
 | F01 | Cadastro de usuários | O sistema deve permitir que os usuários se cadastrem no mesmo. | Evidente |
 | F02 | Login |	O sistema deve permitir que os usuários entrem no sistema usando suas credenciais. | Evidente |
-| F03 | Recuperação de senha |	O sistema deve permitir que os usuários recuperem suas senhas, se necessário. | Evidente |
-| F04 | Cadastro de horários | O sistema deve permitir que gestores cadastrem tabelas de horários. | Evidente |
-| F05 | Alteração de horários | O sistema deve permitir que gestores alterem tabelas de horários. | Evidente |
-| F06 | Deletar tabela de horários | O sistema deve permitir que gestores deletem tabelas de horários.  | Evidente |
-| F07 | Notificação de mudanças de horário | O sistema deve notificar aos usuários de mudanças de horários. | Evidente |
-| F08 | Cadastro de horários de preferência | O sistema deve permitir o cadastro de horários de preferência já cadastrados dos professores. | Evidente |
-| F09 | Alteração de horários de preferência | O sistema deve permitir a alteração de horários de preferência dos professores. | Evidente |
-| F09 | Remoção de horários de preferência | O sistema deve permitir a remoção de horários de preferência já cadastrados dos professores. | Evidente |
-| F11 | Visualização de horários | O sistema deve permitir aos usuários que visualizem os horários cadastrados pelos gestores. | Evidente |
-| F12 | Solicitação de mudanças de horários | O sistema deve permitir aos professores solicitarem aos gestores mudanças de horários já cadastrados. | Evidente |
+| F03 | Recuperação de senha | O sistema deve permitir que os usuários recuperem suas senhas, se necessário. | Evidente |
+| F04 | Definir slots de horários | O sistema deve permitir que gestores definam slots de horários para as turmas cadastradas. | Evidente |
+| F05 | Editar slots de horários | O sistema deve permitir que gestores alterem slots de horários já definidos, podendo excluí-los se necessário. | Evidente |
+| F06 | Notificação de mudanças de horário | O sistema deve notificar aos usuários de mudanças nos horários. | Evidente |
+| F07 | Cadastro de horários de disponibilidade | O sistema deve permitir o cadastro de horários de disponibilidade dos professores. | Evidente |
+| F08 | Editar horários de disponibilidade | O sistema deve permitir a alteração de horários de disponibilidade dos professores, podendo excluí-los se necessário. | Evidente |
+| F09 | Visualizar horários cadastrados | O sistema deve permitir aos gestores que visualizem os horários cadastrados por eles. | Evidente |
+| F10 | Adicionar diretorias | O sistema deve permitir ao diretor adicionar diretorias. | Evidente |
+| F11 | Solicitar mudança de horários | O sistema deve permitir aos professores solicitarem aos gestores mudanças de horários. | Evidente |
+| F12 | Editar diretorias | O sistema deve permitir que o diretor altere as diretorias cadatradas, podendo excluí-las se necessário. | Evidente |
+| F13 | Listar diretorias | O sistema deve permitir a listagem de diretorias cadastradas. | Evidente |
+| F14 | Adicionar gestores | O sistema deve permitir ao diretor adicionar gestores. | Evidente |
+| F15 | Editar gestores | O sistema deve permitir ao diretor alterar gestores cadastrados, podendo excluí-los se necessário. | Evidente |
+| F16 | Listar gestores | O sistema deve permitir a listagem de gestores cadastrados. | Evidente |
+| F17 | Adicionar salas | O sistema deve permitir ao diretor adicionar salas. | Evidente |
+| F18 | Editar salas | O sistema deve permitir ao diretor alterar as salas cadastradas, podendo excluí-las se necessário. | Evidente | Evidente |
+| F19 | Listar salas | O sistema deve permitir a listagem de salas cadastradas.| Evidente |
+| F20 | Verificar disponibilidade das salas | O sistema deve permitir a verificação a disponibilidade das salas. | Evidente |
+| F21 | Adicionar disciplinas | O sistema deve permitir ao gestor adicionar disciplinas.| Evidente |
+| F22 | Editar disciplinas | O sistema deve permitir ao gestor alterar disciplinas cadastradas, podendo excluí-las se necessário. | Evidente |
+| F23 | Listar disciplinas | O sistema deve permitir ao gestor a listagem de disciplinas cadastradas. | Evidente |
+| F24 | Adicionar curso | O sistema deve permitir ao gestor adicionar cursos.| Evidente |
+| F25 | Editar curso | O sistema deve permitir que ao gestor alterar cursos cadastrados, podendo excluí-los se necessário. | Evidente |
+| F26 | Listar cursos | O sistema deve permitir a listagem de cursos cadastrados. | Evidente |
+| F27 | Adicionar turma | O sistema deve permitir ao gestor adicionar turmas. | Evidente |
+| F28 | Editar turma | O sistema deve permitir ao gestor alterar turmas cadastradas, podendo excluí-las se necessário. | Evidente |
+| F29 | Listar turmas | O sistema deve permitir a listagem de turmas cadastradas. | Evidente |
+| F30 | Definir slots de horário | O sistema deve permitir ao gestor definir os slots de horário de uma turma já cadastrada. | Evidente |
+| F31 | Editar slots de horário | O sistema deve permitir ao gestor alterar os slots de horário de uma turma já cadastrada, podendo excluí-los se necessário. | Evidente |
+| F32 | Visualizar slots de horário | O sistema deve permitir o professor visualizar slots de horário nos quais ele tem aula. | Evidente |
+| F33 | Filtrar visualização de horários | O sistema deve permitir a filtragem da visualização dos slots de horários por sala, disciplina e turma. | Evidente |
 
 ### 2.2. Requisitos não funcionais
 
@@ -49,7 +70,6 @@ Principais responsabilidades e não responsabilidades do sistema.
 | NF03 | Tecnologias de Desenvolvimento | Será desenvolvido usando o Django Framework na linguagem Python e HTML5 / JavaScript / CSS. | Implementação | Obrigatório | Transitório |
 | NF04 | Restrição de horários | Permitir que apenas gestores modifiquem os horários | Implementação | Obrigatório | Transitório |
 | NF05 | Exportação do arquivo de horários | O sistema deve permitir aos usuários exportar o arquivo de horários para outros formatos. | Especificação | Desejável | Transitório |
-
 ### 2.3. Diagrama Geral de Casos de uso
 
 ![](img/CDU2.jpeg)
