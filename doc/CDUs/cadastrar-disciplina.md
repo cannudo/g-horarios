@@ -26,8 +26,8 @@
 
 **3b. A conexão com a internet cai**
 
-3. O sistema exibe um alerta informando que não há conexão com a internet.
-4. O gestor volta ao passo 5 do fluxo principal.
+4. O sistema exibe um alerta informando que não há conexão com a internet.
+5. O gestor volta ao passo 5 do fluxo principal.
 
 **3c. O gestor tenta cadastrar um número de créditos semanais superior ao número de créditos totais ou ao número de slots semanais**
 
