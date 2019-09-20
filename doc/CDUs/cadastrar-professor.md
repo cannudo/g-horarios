@@ -8,6 +8,9 @@
 **Pré-Condições:**
 - Ter cadastro completo, estar logado no sistema.
 
+**Pós-condições**
+- Um professor é cadastrado no sistema.
+
 **Cenário de Sucesso Principal (ou Fluxo Básico):**
 
 1. O gestor indica que quer cadastrar um professor.
