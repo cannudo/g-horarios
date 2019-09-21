@@ -14,4 +14,4 @@ class SalaDeAula(models.Model):
     numero = models.IntegerField(unique = True)
 
 class Disciplina(models.Model):
-    pass
+    nome = models.CharField(max_length = 25)
