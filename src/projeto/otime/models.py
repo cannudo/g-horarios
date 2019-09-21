@@ -12,3 +12,6 @@ class SalaDeAula(models.Model):
     )
     tipo = models.CharField(max_length = 15, choices = tipos)
     numero = models.IntegerField(unique = True)
+
+class Disciplina(models.Model):
+    pass
