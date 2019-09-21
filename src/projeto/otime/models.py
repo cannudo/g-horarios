@@ -16,3 +16,4 @@ class SalaDeAula(models.Model):
 class Disciplina(models.Model):
     nome = models.CharField(max_length = 25)
     codigo = models.CharField(max_length = 25)
+    carga_horaria_total = models.IntegerField()
