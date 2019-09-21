@@ -10,3 +10,4 @@ class SalaDeAula(models.Model):
         ("Auditório", "Auditório"),
         ("Miniauditório", "Miniauditório"),
     )
+    tipo = models.CharField(max_length = 15, choices = tipos)
