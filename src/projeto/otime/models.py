@@ -23,3 +23,6 @@ class Professor(models.Models):
     telefone = models.CharField(max_length = 15)
     email = models.CharField(max_length = 90)
     matricula = models.CharField(max_length = 15)
+
+class SlotDeHorario(models.Model):
+    pass
