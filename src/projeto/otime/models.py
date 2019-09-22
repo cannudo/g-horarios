@@ -12,6 +12,8 @@ class SalaDeAula(models.Model):
     )
     tipo = models.CharField(max_length = 15, choices = tipos)
     numero = models.IntegerField()
+    def __str__(self):
+        return "Sala de aula #%d: %s" % (self.id, self.nome)
 
 class Disciplina(models.Model):
     nome = models.CharField(max_length = 25)
