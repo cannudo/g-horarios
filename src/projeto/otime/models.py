@@ -20,3 +20,4 @@ class Disciplina(models.Model):
 
 class Professor(models.Models):
     nome = models.CharField(max_length = 45)
+    telefone = models.CharField(max_length = 15)
