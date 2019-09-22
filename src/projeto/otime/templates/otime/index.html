@@ -19,5 +19,19 @@
     {% else %}
       <p>Não há salas de aula cadastradas.</p>
     {% endif %}
+    <h1>Disciplinas</h1>
+    {% if lista_de_disciplinas %}
+      <ul>
+        {% for disciplina in lista_de_disciplinas %}
+          <li>
+            <h2>{{ disciplina.nome }}</h2>
+            <p>Código: {{ disciplina.codigo }}</p>
+            <p>Carga horária total: {{ disciplina.carga_horaria_total }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>Não há disciplinas cadastradas.</p>
+    {% endif %}
   </body>
 </html>
