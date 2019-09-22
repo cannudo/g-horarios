@@ -18,7 +18,7 @@ class Disciplina(models.Model):
     codigo = models.CharField(max_length = 25)
     carga_horaria_total = models.IntegerField()
 
-class Professor(models.Models):
+class Professor(models.Model):
     nome = models.CharField(max_length = 45)
     telefone = models.CharField(max_length = 15)
     email = models.CharField(max_length = 90)
