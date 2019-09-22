@@ -33,5 +33,20 @@
     {% else %}
       <p>Não há disciplinas cadastradas.</p>
     {% endif %}
+    <h1>Professores</h1>
+    {% if lista_de_professores %}
+      <ul>
+        {% for professor in lista_de_professores %}
+          <li>
+            <h2>{{ professor.nome }}</h2>
+            <p>Telefone: {{ professor.telefone }}</p>
+            <p>E-mail: {{ professor.email }}</p>
+            <p>Matrícula: {{ professor.matricula }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>Não há professores cadastrados.</p>
+    {% endif %}
   </body>
 </html>
