@@ -25,4 +25,4 @@ class Professor(models.Models):
     matricula = models.CharField(max_length = 15)
 
 class SlotDeHorario(models.Model):
-    pass
+    posicao = models.IntegerField(unique = True)
