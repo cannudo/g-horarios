@@ -5,3 +5,4 @@ from .models import *
 admin.site.register(SalaDeAula)
 admin.site.register(Disciplina)
 admin.site.register(Professor)
+admin.site.register(SlotDeHorario)
