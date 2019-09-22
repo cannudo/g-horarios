@@ -19,4 +19,4 @@ class Disciplina(models.Model):
     carga_horaria_total = models.IntegerField()
 
 class Professor(models.Models):
-    pass
+    nome = models.CharField(max_length = 45)
