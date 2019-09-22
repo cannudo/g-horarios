@@ -22,3 +22,4 @@ class Professor(models.Models):
     nome = models.CharField(max_length = 45)
     telefone = models.CharField(max_length = 15)
     email = models.CharField(max_length = 90)
+    matricula = models.CharField(max_length = 15)
