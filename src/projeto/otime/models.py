@@ -27,6 +27,8 @@ class Professor(models.Model):
     telefone = models.CharField(max_length = 15)
     email = models.CharField(max_length = 90)
     matricula = models.CharField(max_length = 15)
+    def __str__(self):
+        return "Professor #%d: %s" % (self.id, self.nome)
 
 class SlotDeHorario(models.Model):
     posicao = models.IntegerField(unique = True)
