@@ -11,7 +11,7 @@ class SalaDeAula(models.Model):
         ("Miniauditório", "Miniauditório"),
     )
     tipo = models.CharField(max_length = 15, choices = tipos)
-    numero = models.IntegerField(unique = True)
+    numero = models.IntegerField()
 
 class Disciplina(models.Model):
     nome = models.CharField(max_length = 25)
