@@ -27,3 +27,4 @@ class Professor(models.Models):
 class SlotDeHorario(models.Model):
     posicao = models.IntegerField(unique = True)
     sala_de_aula = models.ForeignKey(SalaDeAula, on_delete = models.CASCADE)
+    disciplina = models.ForeignKey(Disciplina, on_delete = models.CASCADE)
