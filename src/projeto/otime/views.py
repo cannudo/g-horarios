@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from .models import SalaDeAula
 
 # Create your views here.
@@ -8,4 +7,4 @@ def index(request):
     contexto = {
         "lista_de_salas": lista_de_salas
     }
-    return HttpResponse("Olá, mundo! Isto é temporário.")
+    return render(request, "otime/index.html", contexto)
