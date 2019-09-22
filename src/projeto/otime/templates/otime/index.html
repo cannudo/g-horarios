@@ -5,6 +5,19 @@
     <title>O'Time</title>
   </head>
   <body>
-
+    <h1>Salas de aula</h1>
+    {% if lista_de_salas %}
+      <ul>
+        {% for sala_de_aula in lista_de_salas %}
+          <li>
+            <h2>{{ sala_de_aula.nome }}</h2>
+            <p>Tipo: {{ sala_de_aula.tipo }}</p>
+            <p>Número: {{ sala_de_aula.numero }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>Não há salas de aula cadastradas.</p>
+    {% endif %}
   </body>
 </html>
