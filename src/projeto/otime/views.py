@@ -12,3 +12,7 @@ def index(request):
         "lista_de_professores": lista_de_professores
     }
     return render(request, "otime/index.html", contexto)
+
+def reservarHorario(request):
+    contexto = {}
+    return render(request, "otime/reservar-horario.html", contexto)
