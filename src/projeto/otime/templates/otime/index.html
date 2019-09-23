@@ -49,4 +49,8 @@
       <p>Não há professores cadastrados.</p>
     {% endif %}
   </body>
+  {% if lista_de_salas and lista_de_disciplinas and lista_de_professores %}
+    <hr>
+    <p>Clique <a href="reservarHorario">aqui</a> para fazer uma ocupação no horário</p>
+  {% endif %}
 </html>
