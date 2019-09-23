@@ -25,6 +25,24 @@
         {% endfor %}
         <option selected disabled hidden>Professor</option>
       </select>
+      <hr>
+      <table>
+        <tr>
+          <th>Horário</th>
+          <th>Segunda</th>
+          <th>Terça</th>
+          <th>Quarta</th>
+          <th>Quinta</th>
+          <th>Sexta</th>
+          {% for horario in horarios.split %}
+            </tr>
+              <th>{{ horario }}</th>
+              {% for linha in "abcde"|make_list %}
+                <td><button style="background-color: white" type="submit">Cadastrar</button></td>
+              {% endfor %}
+            </tr>
+          {% endfor %}
+      </table>
     </form>
     {% else %}
       <p>Não pode reservar horário.</p>
