@@ -19,6 +19,12 @@
         {% endfor %}
         <option selected disabled hidden>Disciplina</option>
       </select>
+      <select required>
+        {% for professor in lista_de_professores %}
+          <option value="{{ professor.nome }}"></option>
+        {% endfor %}
+        <option selected disabled hidden>Professor</option>
+      </select>
     </form>
     {% else %}
       <p>Não pode reservar horário.</p>
