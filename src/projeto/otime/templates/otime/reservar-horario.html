@@ -5,13 +5,15 @@
     <title>Reserva de horário</title>
   </head>
   <body>
-    {% if lista_de_salas and lista_de_disciplinas and lista_de_professores %}
-    <select required>
-      {% for disciplina in lista_de_disciplinas %}
-        <option value="{{ disciplina.nome }}"></option>
-      {% endfor %}
-      <option selected disabled hidden>Disciplina</option>
-    </select>
+    <form method="post">
+      {% if lista_de_salas and lista_de_disciplinas and lista_de_professores %}
+      <select required>
+        {% for disciplina in lista_de_disciplinas %}
+          <option value="{{ disciplina.nome }}"></option>
+        {% endfor %}
+        <option selected disabled hidden>Disciplina</option>
+      </select>
+    </form>
     {% else %}
       <p>Não pode reservar horário.</p>
       <script type="text/javascript">
