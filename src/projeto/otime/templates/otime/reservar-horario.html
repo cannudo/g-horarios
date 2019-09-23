@@ -9,19 +9,19 @@
       {% if lista_de_salas and lista_de_disciplinas and lista_de_professores %}
       <select required>
         {% for sala_de_aula in lista_de_salas %}
-          <option value="{{ sala_de_aula.nome }}"></option>
+          <option value="{{ sala_de_aula.id }}">{{ sala_de_aula.nome }}</option>
         {% endfor %}
         <option selected disabled hidden>Sala</option>
       </select>
       <select required>
         {% for disciplina in lista_de_disciplinas %}
-          <option value="{{ disciplina.nome }}"></option>
+          <option value="{{ disciplina.id }}">{{ disciplina.nome }}</option>
         {% endfor %}
         <option selected disabled hidden>Disciplina</option>
       </select>
       <select required>
         {% for professor in lista_de_professores %}
-          <option value="{{ professor.nome }}"></option>
+          <option value="{{ professor.id }}">{{ professor.nome }}</option>
         {% endfor %}
         <option selected disabled hidden>Professor</option>
       </select>
