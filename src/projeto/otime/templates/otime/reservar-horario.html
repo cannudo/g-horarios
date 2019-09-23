@@ -5,6 +5,10 @@
     <title>Reserva de horário</title>
   </head>
   <body>
-
+    {% if lista_de_salas and lista_de_disciplinas and lista_de_professores %}
+      True
+    {% else %}
+      False
+    {% endif %}
   </body>
 </html>
