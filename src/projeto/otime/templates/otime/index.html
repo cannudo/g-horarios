@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>O'Time</title>
+  </head>
+  <body>
+    <h1>Salas de aula</h1>
+    {% if lista_de_salas %}
+      <ul>
+        {% for sala_de_aula in lista_de_salas %}
+          <li>
+            <h2>{{ sala_de_aula.nome }}</h2>
+            <p>Tipo: {{ sala_de_aula.tipo }}</p>
+            <p>Número: {{ sala_de_aula.numero }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>Não há salas de aula cadastradas.</p>
+    {% endif %}
+    <h1>Disciplinas</h1>
+    {% if lista_de_disciplinas %}
+      <ul>
+        {% for disciplina in lista_de_disciplinas %}
+          <li>
+            <h2>{{ disciplina.nome }}</h2>
+            <p>Código: {{ disciplina.codigo }}</p>
+            <p>Carga horária total: {{ disciplina.carga_horaria_total }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>Não há disciplinas cadastradas.</p>
+    {% endif %}
+    <h1>Professores</h1>
+    {% if lista_de_professores %}
+      <ul>
+        {% for professor in lista_de_professores %}
+          <li>
+            <h2>{{ professor.nome }}</h2>
+            <p>Telefone: {{ professor.telefone }}</p>
+            <p>E-mail: {{ professor.email }}</p>
+            <p>Matrícula: {{ professor.matricula }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>Não há professores cadastrados.</p>
+    {% endif %}
+  </body>
+</html>
