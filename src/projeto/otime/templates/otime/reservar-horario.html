@@ -43,7 +43,14 @@
             </tr>
           {% endfor %}
       </table>
-    </form>
+          </form>
+          <script type="text/javascript">
+            botoes = document.getElementsByTagName("button");
+            var posicao;
+            for (posicao = 0; posicao < botoes.length; posicao++) {
+              botoes[posicao].value = posicao;
+            };
+          </script>
     {% else %}
       <p>Não pode reservar horário.</p>
       <script type="text/javascript">
