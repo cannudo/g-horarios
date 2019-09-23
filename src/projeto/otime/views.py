@@ -22,6 +22,6 @@ def reservarHorario(request):
         "lista_de_salas": lista_de_salas,
         "lista_de_disciplinas": lista_de_disciplinas,
         "lista_de_professores": lista_de_professores,
-        "horarios": horarios
+        "horarios": horarios,
     }
     return render(request, "otime/reservar-horario.html", contexto)
