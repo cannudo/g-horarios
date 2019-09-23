@@ -7,56 +7,57 @@
   <body>
     <form method="post">
       {% if lista_de_salas and lista_de_disciplinas and lista_de_professores %}
-      <select required>
-        {% for sala_de_aula in lista_de_salas %}
-          <option value="{{ sala_de_aula.id }}">{{ sala_de_aula.nome }}</option>
-        {% endfor %}
-        <option selected disabled hidden>Sala</option>
-      </select>
-      <select required>
-        {% for disciplina in lista_de_disciplinas %}
-          <option value="{{ disciplina.id }}">{{ disciplina.nome }}</option>
-        {% endfor %}
-        <option selected disabled hidden>Disciplina</option>
-      </select>
-      <select required>
-        {% for professor in lista_de_professores %}
-          <option value="{{ professor.id }}">{{ professor.nome }}</option>
-        {% endfor %}
-        <option selected disabled hidden>Professor</option>
-      </select>
-      <hr>
-      <table>
-        <tr>
-          <th>Horário</th>
-          <th>Segunda</th>
-          <th>Terça</th>
-          <th>Quarta</th>
-          <th>Quinta</th>
-          <th>Sexta</th>
+        <select required>
+          {% for sala_de_aula in lista_de_salas %}
+            <option value="{{ sala_de_aula.id }}">{{ sala_de_aula.nome }}</option>
+          {% endfor %}
+          <option selected disabled hidden>Sala</option>
+        </select>
+        <select required>
+          {% for disciplina in lista_de_disciplinas %}
+            <option value="{{ disciplina.id }}">{{ disciplina.nome }}</option>
+          {% endfor %}
+          <option selected disabled hidden>Disciplina</option>
+        </select>
+        <select required>
+          {% for professor in lista_de_professores %}
+            <option value="{{ professor.id }}">{{ professor.nome }}</option>
+          {% endfor %}
+            <option selected disabled hidden>Professor</option>
+        </select>
+        <hr>
+        <table>
+          <tr>
+            <th>Horário</th>
+            <th>Segunda</th>
+            <th>Terça</th>
+            <th>Quarta</th>
+            <th>Quinta</th>
+            <th>Sexta</th>
+          </tr>
           {% for horario in horarios.split %}
-            </tr>
+            <tr>
               <th>{{ horario }}</th>
               {% for linha in "abcde"|make_list %}
                 <td><button style="background-color: white" type="submit">Cadastrar</button></td>
               {% endfor %}
             </tr>
           {% endfor %}
-      </table>
-          </form>
-          <script type="text/javascript">
-            botoes = document.getElementsByTagName("button");
-            var posicao;
-            for (posicao = 0; posicao < botoes.length; posicao++) {
-              botoes[posicao].value = posicao;
-            };
-          </script>
-    {% else %}
+        </table>
+      </form>
+      <script type="text/javascript">
+        botoes = document.getElementsByTagName("button");
+        var posicao;
+        for (posicao = 0; posicao < botoes.length; posicao++) {
+          botoes[posicao].value = posicao;
+        };
+      </script>
+      {% else %}
       <p>Não pode reservar horário.</p>
       <script type="text/javascript">
         alert("O sistema não conta com os requisitos para que um horário seja reservado. Adicione uma sala de aula, uma disciplina e um professor antes.");
         window.location.assign("http://127.0.0.1:8000/otime");
       </script>
-    {% endif %}
+      {% endif %}
   </body>
 </html>
