@@ -8,7 +8,11 @@
     {% if lista_de_salas and lista_de_disciplinas and lista_de_professores %}
       True
     {% else %}
-      False
+      <p>Não pode reservar horário.</p>
+      <script type="text/javascript">
+        alert("O sistema não conta com os requisitos para que um horário seja reservado. Adicione uma sala de aula, uma disciplina e um professor antes.");
+        window.location.assign("http://127.0.0.1:8000/otime");
+      </script>
     {% endif %}
   </body>
 </html>
