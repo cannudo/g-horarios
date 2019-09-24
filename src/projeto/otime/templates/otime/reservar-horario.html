@@ -5,6 +5,7 @@
     <title>Reserva de horário</title>
   </head>
   <body>
+    <h1> {{ texto }}</h1>
     <form method="post">
       {% csrf_token %}
       {% if lista_de_salas and lista_de_disciplinas and lista_de_professores %}
