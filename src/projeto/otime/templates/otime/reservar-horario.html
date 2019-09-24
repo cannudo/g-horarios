@@ -5,23 +5,23 @@
     <title>Reserva de horário</title>
   </head>
   <body>
-    <h1> {{ texto }}</h1>
+    <h1>{{ texto }}</h1>
     <form method="post">
       {% csrf_token %}
       {% if lista_de_salas and lista_de_disciplinas and lista_de_professores %}
-        <select required>
+        <select required name = "sala_de_aula">
           {% for sala_de_aula in lista_de_salas %}
             <option value="{{ sala_de_aula.id }}">{{ sala_de_aula.nome }}</option>
           {% endfor %}
           <option selected disabled hidden>Sala</option>
         </select>
-        <select required>
+        <select name = "disciplina" required>
           {% for disciplina in lista_de_disciplinas %}
             <option value="{{ disciplina.id }}">{{ disciplina.nome }}</option>
           {% endfor %}
           <option selected disabled hidden>Disciplina</option>
         </select>
-        <select required>
+        <select name = "professor" required>
           {% for professor in lista_de_professores %}
             <option value="{{ professor.id }}">{{ professor.nome }}</option>
           {% endfor %}
