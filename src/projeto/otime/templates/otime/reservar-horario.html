@@ -42,7 +42,7 @@
             <tr>
               <th>{{ horario }}</th>
               {% for linha in "abcde"|make_list %}
-                <td><button style="background-color: white" type="submit">Cadastrar</button></td>
+                <td><button style="background-color: white" type="submit" onclick="document.getElementById('posicao').value = id;">Cadastrar</button></td>
               {% endfor %}
             </tr>
           {% endfor %}
@@ -52,7 +52,6 @@
         botoes = document.getElementsByTagName("button");
         var posicao;
         for (posicao = 0; posicao < botoes.length; posicao++) {
-          botoes[posicao].value = posicao;
           botoes[posicao].id = posicao;
         };
       </script>
