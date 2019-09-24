@@ -14,8 +14,6 @@ def index(request):
     return render(request, "otime/index.html", contexto)
 
 def reservarHorario(request):
-    texto = "A requisição foi %s" % request.method
-
     lista_de_salas = SalaDeAula.objects.all()
     lista_de_disciplinas = Disciplina.objects.all()
     lista_de_professores = Professor.objects.all()
@@ -25,6 +23,5 @@ def reservarHorario(request):
         "lista_de_disciplinas": lista_de_disciplinas,
         "lista_de_professores": lista_de_professores,
         "horarios": horarios,
-        "texto": texto,
     }
     return render(request, "otime/reservar-horario.html", contexto)
