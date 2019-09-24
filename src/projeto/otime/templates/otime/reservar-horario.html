@@ -9,6 +9,7 @@
     <form method="post">
       {% csrf_token %}
       {% if lista_de_salas and lista_de_disciplinas and lista_de_professores %}
+        <input type="text" id="posicao" name="posicao" value="" hidden>
         <select required id="sala_de_aula" name="sala_de_aula">
           {% for sala_de_aula in lista_de_salas %}
             <option value="{{ sala_de_aula.id }}">{{ sala_de_aula.nome }}</option>
