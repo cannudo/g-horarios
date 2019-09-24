@@ -9,19 +9,19 @@
     <form method="post">
       {% csrf_token %}
       {% if lista_de_salas and lista_de_disciplinas and lista_de_professores %}
-        <select required name = "sala_de_aula">
+        <select required id="sala_de_aula" name="sala_de_aula">
           {% for sala_de_aula in lista_de_salas %}
             <option value="{{ sala_de_aula.id }}">{{ sala_de_aula.nome }}</option>
           {% endfor %}
           <option selected disabled hidden>Sala</option>
         </select>
-        <select name = "disciplina" required>
+        <select id="disciplina" name="disciplina" required>
           {% for disciplina in lista_de_disciplinas %}
             <option value="{{ disciplina.id }}">{{ disciplina.nome }}</option>
           {% endfor %}
           <option selected disabled hidden>Disciplina</option>
         </select>
-        <select name = "professor" required>
+        <select id="professor" name="professor" required>
           {% for professor in lista_de_professores %}
             <option value="{{ professor.id }}">{{ professor.nome }}</option>
           {% endfor %}
