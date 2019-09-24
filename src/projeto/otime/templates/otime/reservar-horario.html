@@ -6,6 +6,7 @@
   </head>
   <body>
     <form method="post">
+      {% csrf_token %}
       {% if lista_de_salas and lista_de_disciplinas and lista_de_professores %}
         <select required>
           {% for sala_de_aula in lista_de_salas %}
