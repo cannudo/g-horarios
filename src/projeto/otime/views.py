@@ -20,6 +20,7 @@ def reservarHorario(request):
         disciplina = get_object_or_404(Disciplina, pk = requisicao_post["disciplina"])
         professor = get_object_or_404(Professor, pk = requisicao_post["professor"])
         slot_de_horario = SlotDeHorario(posicao = requisicao_post["posicao"], sala_de_aula = sala_de_aula, disciplina = disciplina, professor = professor)
+        slot_de_horario.save()
         
     lista_de_salas = SalaDeAula.objects.all()
     lista_de_disciplinas = Disciplina.objects.all()
