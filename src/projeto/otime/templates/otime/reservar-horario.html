@@ -61,5 +61,12 @@
         window.location.assign("http://127.0.0.1:8000/otime");
       </script>
       {% endif %}
+      {% if slots_de_horario %}
+        <script type="text/javascript">
+          {% for slot in slots_de_horario %}
+            document.getElementById('{{ slot.posicao }}').innerHTML = "{{ slot.professor.nome }}<br>{{ slot.disciplina.nome }}<br>{{ slot.sala_de_aula.nome }}";
+          {% endfor %}
+        </script>
+      {% endif %}
   </body>
 </html>
