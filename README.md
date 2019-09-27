@@ -48,7 +48,7 @@ python get-pip.py
 É aconselhável fazer um _upgrade_ dele:
 
 ```sh
-python -m pip install --upgrade pip
+python3 -m pip install --upgrade pip
 ```
 
 - django 
