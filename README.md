@@ -45,7 +45,7 @@ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python get-pip.py
 ```
 
-Caso já esteja instalado, é aconselhável fazer um _upgrade_:
+É aconselhável fazer um _upgrade_ dele:
 
 ```sh
 python -m pip install --upgrade pip
@@ -63,8 +63,9 @@ Para realizar um clone do projeto, execute através do terminal ou cmd:
 
 ```sh
 git clone https://gitlab.devops.ifrn.edu.br/tads.cnat/pdsweb/2019.2/g-horarios.git
-cd g-horarios
 ```
+
+**Observação**: o comando acima clona o repositório através do protocolo HTTPS e exige que você digite suas credenciais da plataforma de hospedagem de códigos que você está utilizando (neste caso, o GitLab).
 
 O clone do git cria um diretório chamado `g-horarios` se não for informado um
 nome de diretório.
