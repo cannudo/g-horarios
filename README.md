@@ -59,7 +59,7 @@ pip install Django
 
 ### Clonar o repositório
 
-Para realizar um clone do projeto, execute:
+Para realizar um clone do projeto, execute através do terminal ou cmd:
 
 ```sh
 git clone https://gitlab.devops.ifrn.edu.br/tads.cnat/pdsweb/2019.2/g-horarios.git
