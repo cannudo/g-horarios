@@ -71,20 +71,29 @@ git clone https://gitlab.devops.ifrn.edu.br/tads.cnat/pdsweb/2019.2/g-horarios.g
 O clone do git cria um diretório chamado `g-horarios` se não for informado um
 nome de diretório.
 
-### Criar e ativar um ambiente virtual
-
+### Viajar até o repositório criado
+Para entrar no diretório recém-criado, ainda no terminal ou no cmd digite
 ```sh
-python -m venv nome
-nome\Scripts\activate.ps1
+cd g-horarios
+```
+
+### Criar o banco de dados
+Para rodar o script que cria o banco de dados, assumindo que você esteja dentro do diretório principal da aplicação, rode no terminal ou cmd:
+```sh
+python3 src/projeto/manage.py migrate
+```
+### Opcional: criar um usuário para a interface administrativa
+Até o momento, o banco de dados deve estar vazio. Para adicionar dados a ele, uma alternativa é criar um usuário para a interface administrativa. Rode no terminal ou cmd:
+```sh
+python3 src/projeto/manage.py createsuperuser
 ```
 
 ### Executar em modo desenvolvimento
 
-Para executar em modo de desenvolvimento,
-no diretório do projeto, digite:
+Para executar em modo de desenvolvimento, no terminal ou no cmd, rode:
 
 ```sh
-python manage.py runserver
+python3 src/projeto/manage.py runserver
 ```
 
 ## Documentação
