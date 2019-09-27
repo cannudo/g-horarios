@@ -2,9 +2,71 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Reserva de horário</title>
   </head>
   <body>
-
+    <form method="post">
+      {% csrf_token %}
+      {% if lista_de_salas and lista_de_disciplinas and lista_de_professores %}
+        <input type="text" id="posicao" name="posicao" value="" hidden>
+        <select required id="sala_de_aula" name="sala_de_aula">
+          {% for sala_de_aula in lista_de_salas %}
+            <option value="{{ sala_de_aula.id }}">{{ sala_de_aula.nome }}</option>
+          {% endfor %}
+          <option selected disabled hidden>Sala</option>
+        </select>
+        <select id="disciplina" name="disciplina" required>
+          {% for disciplina in lista_de_disciplinas %}
+            <option value="{{ disciplina.id }}">{{ disciplina.nome }}</option>
+          {% endfor %}
+          <option selected disabled hidden>Disciplina</option>
+        </select>
+        <select id="professor" name="professor" required>
+          {% for professor in lista_de_professores %}
+            <option value="{{ professor.id }}">{{ professor.nome }}</option>
+          {% endfor %}
+            <option selected disabled hidden>Professor</option>
+        </select>
+        <hr>
+        <table>
+          <tr>
+            <th>Horário</th>
+            <th>Segunda</th>
+            <th>Terça</th>
+            <th>Quarta</th>
+            <th>Quinta</th>
+            <th>Sexta</th>
+          </tr>
+          {% for horario in horarios.split %}
+            <tr>
+              <th>{{ horario }}</th>
+              {% for linha in "abcde"|make_list %}
+                <td><button style="background-color: white" type="submit" onclick="document.getElementById('posicao').value = id;">Cadastrar</button></td>
+              {% endfor %}
+            </tr>
+          {% endfor %}
+        </table>
+      </form>
+      <script type="text/javascript">
+        celulas = document.getElementsByTagName("td");
+        var posicao;
+        for (posicao = 0; posicao < celulas.length; posicao++) {
+          celulas[posicao].id = posicao;
+        };
+      </script>
+      {% else %}
+      <p>Não pode reservar horário.</p>
+      <script type="text/javascript">
+        alert("O sistema não conta com os requisitos para que um horário seja reservado. Adicione uma sala de aula, uma disciplina e um professor antes.");
+        window.location.assign("http://127.0.0.1:8000/otime");
+      </script>
+      {% endif %}
+      {% if slots_de_horario %}
+        <script type="text/javascript">
+          {% for slot in slots_de_horario %}
+            document.getElementById('{{ slot.posicao }}').innerHTML = "<p>{{ slot.professor.nome }}<br>{{ slot.disciplina.nome }}<br>{{ slot.sala_de_aula.nome }}</p>";
+          {% endfor %}
+        </script>
+      {% endif %}
   </body>
 </html>

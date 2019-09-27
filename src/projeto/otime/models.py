@@ -13,14 +13,14 @@ class SalaDeAula(models.Model):
     tipo = models.CharField(max_length = 15, choices = tipos)
     numero = models.IntegerField()
     def __str__(self):
-        return "Sala de aula #%d: %s" % (self.id, self.nome)
+        return "Sala de aula #%d: %s" % (int(self.id), self.nome)
 
 class Disciplina(models.Model):
     nome = models.CharField(max_length = 25)
     codigo = models.CharField(max_length = 25)
     carga_horaria_total = models.IntegerField()
     def __str__(self):
-        return "Disciplina #%d: %s" % (self.id, self.nome)
+        return "Disciplina #%d: %s" % (int(self.id), self.nome)
 
 class Professor(models.Model):
     nome = models.CharField(max_length = 45)
@@ -28,7 +28,7 @@ class Professor(models.Model):
     email = models.CharField(max_length = 90)
     matricula = models.CharField(max_length = 15)
     def __str__(self):
-        return "Professor #%d: %s" % (self.id, self.nome)
+        return "Professor #%d: %s" % (int(self.id), self.nome)
 
 class SlotDeHorario(models.Model):
     posicao = models.IntegerField(unique = True)
@@ -36,4 +36,4 @@ class SlotDeHorario(models.Model):
     disciplina = models.ForeignKey(Disciplina, on_delete = models.CASCADE)
     professor = models.ForeignKey(Professor, on_delete = models.CASCADE)
     def __str__(self):
-        return "Slot #%d" % self.posicao
+        return "Slot #%d" % int(self.posicao)
