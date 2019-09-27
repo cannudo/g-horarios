@@ -64,7 +64,7 @@
       {% if slots_de_horario %}
         <script type="text/javascript">
           {% for slot in slots_de_horario %}
-            document.getElementById('{{ slot.posicao }}').innerHTML = "{{ slot.professor.nome }}<br>{{ slot.disciplina.nome }}<br>{{ slot.sala_de_aula.nome }}";
+            document.getElementById('{{ slot.posicao }}').innerHTML = "<p>{{ slot.professor.nome }}<br>{{ slot.disciplina.nome }}<br>{{ slot.sala_de_aula.nome }}</p>";
           {% endfor %}
         </script>
       {% endif %}
