@@ -14,7 +14,7 @@ em seu computador para desenvolvimento e testes.
 Para baixar, compilar e executar em seu computador, você deve ter:
 
 - Sistema de controle de versões `git` ([https://www.git-scm.com/])
-- Kit de Desenvolvimento `python` ([https://www.python.org/])
+- Kit de Desenvolvimento `python` (3.*+) ([https://www.python.org/])
 - Framework para aplicações web `django` ([https://www.djangoproject.com/])
 
 ### Instalação
