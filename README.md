@@ -66,6 +66,7 @@ git clone https://gitlab.devops.ifrn.edu.br/tads.cnat/pdsweb/2019.2/g-horarios.g
 ```
 
 **Observação**: o comando acima clona o repositório através do protocolo HTTPS e exige que você digite suas credenciais da plataforma de hospedagem de códigos que você está utilizando (neste caso, o GitLab).
+- Se você preferir e já ter colocado a chave pública SSH da sua máquina na lista de aceitação de requisições SSH, poderá clonar com o comando ```git clone git@gitlab.devops.ifrn.edu.br:tads.cnat/pdsweb/2019.2/g-horarios.git```. Através deste método, a requisição não pede senha e a comunicação se torna mais segura.
 
 O clone do git cria um diretório chamado `g-horarios` se não for informado um
 nome de diretório.
