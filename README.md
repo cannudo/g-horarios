@@ -19,7 +19,7 @@ Para baixar, compilar e executar em seu computador, você deve ter:
 
 ### Instalação
 
-##### Ubuntu Linux
+##### Distribuições GNU/Linux baseadas em Debian
 
 **Importante**: É aconselhável fazer um _update_ do `apt-get`:
 
@@ -39,8 +39,7 @@ sudo apt-get install git
 sudo apt-get install python3
 ```
 
-**Importante**: caso não esteja instalado, instalar o `pip`, que é o software que usamos para instalar o Django
-
+**Importante**: é preciso que o pip esteja instalado, que é um gerenciador de pacotes Python. É por ele que instalaremos o Django.
 ```sh
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python get-pip.py
