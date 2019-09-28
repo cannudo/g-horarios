@@ -14,12 +14,12 @@ em seu computador para desenvolvimento e testes.
 Para baixar, compilar e executar em seu computador, você deve ter:
 
 - Sistema de controle de versões `git` ([https://www.git-scm.com/])
-- Kit de Desenvolvimento `python` ([https://www.python.org/])
+- Kit de Desenvolvimento `python` (3.*+) ([https://www.python.org/])
 - Framework para aplicações web `django` ([https://www.djangoproject.com/])
 
 ### Instalação
 
-##### Ubuntu Linux
+##### Distribuições GNU/Linux baseadas em Debian
 
 **Importante**: É aconselhável fazer um _update_ do `apt-get`:
 
@@ -39,17 +39,16 @@ sudo apt-get install git
 sudo apt-get install python3
 ```
 
-**Importante**: caso não esteja instalado, instalar o `pip`, que é o software que usamos para instalar o Django
-
+**Importante**: é preciso que o pip esteja instalado, que é um gerenciador de pacotes Python. É por ele que instalaremos o Django.
 ```sh
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python get-pip.py
 ```
 
-Caso já esteja instalado, é aconselhável fazer um _upgrade_:
+É aconselhável fazer um _upgrade_ dele:
 
 ```sh
-python -m pip install --upgrade pip
+python3 -m pip install --upgrade pip
 ```
 
 - django 
@@ -60,30 +59,41 @@ pip install Django
 
 ### Clonar o repositório
 
-Para realizar um clone do projeto, execute:
+Para realizar um clone do projeto, execute através do terminal ou cmd:
 
 ```sh
 git clone https://gitlab.devops.ifrn.edu.br/tads.cnat/pdsweb/2019.2/g-horarios.git
-cd g-horarios
 ```
+
+**Observação**: o comando acima clona o repositório através do protocolo HTTPS e exige que você digite suas credenciais da plataforma de hospedagem de códigos que você está utilizando (neste caso, o GitLab).
+- Se você preferir e já ter colocado a chave pública SSH da sua máquina na lista de aceitação de requisições SSH, poderá clonar com o comando ```git clone git@gitlab.devops.ifrn.edu.br:tads.cnat/pdsweb/2019.2/g-horarios.git```. Através deste método, a requisição não pede senha e a comunicação se torna mais segura.
 
 O clone do git cria um diretório chamado `g-horarios` se não for informado um
 nome de diretório.
 
-### Criar e ativar um ambiente virtual
-
+### Viajar até o repositório criado
+Para entrar no diretório recém-criado, ainda no terminal ou no cmd digite
 ```sh
-python -m venv nome
-nome\Scripts\activate.ps1
+cd g-horarios
+```
+
+### Criar o banco de dados
+Para rodar o script que cria o banco de dados, assumindo que você esteja dentro do diretório principal da aplicação, rode no terminal ou cmd:
+```sh
+python3 src/projeto/manage.py migrate
+```
+### Opcional: criar um usuário para a interface administrativa
+Até o momento, o banco de dados deve estar vazio. Para adicionar dados a ele, uma alternativa é criar um usuário para a interface administrativa. Rode no terminal ou cmd:
+```sh
+python3 src/projeto/manage.py createsuperuser
 ```
 
 ### Executar em modo desenvolvimento
 
-Para executar em modo de desenvolvimento,
-no diretório do projeto, digite:
+Para executar em modo de desenvolvimento, no terminal ou no cmd, rode:
 
 ```sh
-python manage.py runserver
+python3 src/projeto/manage.py runserver
 ```
 
 ## Documentação
