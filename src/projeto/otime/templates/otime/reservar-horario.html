@@ -41,7 +41,7 @@
             <tr>
               <th>{{ horario }}</th>
               {% for linha in "abcde"|make_list %}
-                <td><button style="background-color: white" type="submit" onclick="document.getElementById('posicao').value = id;">Cadastrar</button></td>
+                <td><button style="background-color: white" type="submit" onclick="document.getElementById('posicao').setAttribute('value', parentNode.id);">Cadastrar</button></td>
               {% endfor %}
             </tr>
           {% endfor %}
@@ -49,9 +49,9 @@
       </form>
       <script type="text/javascript">
         celulas = document.getElementsByTagName("td");
-        var posicao;
-        for (posicao = 0; posicao < celulas.length; posicao++) {
-          celulas[posicao].id = posicao;
+        var i;
+        for (i = 0; i < celulas.length; i++) {
+          celulas[i].id = i;
         };
       </script>
       {% else %}
