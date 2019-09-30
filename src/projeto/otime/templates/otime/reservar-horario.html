@@ -49,9 +49,9 @@
       </form>
       <script type="text/javascript">
         celulas = document.getElementsByTagName("td");
-        var posicao;
-        for (posicao = 0; posicao < celulas.length; posicao++) {
-          celulas[posicao].id = posicao;
+        var i;
+        for (i = 0; i < celulas.length; i++) {
+          celulas[i].id = i;
         };
       </script>
       {% else %}
