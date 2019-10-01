@@ -1,0 +1,90 @@
+<style>
+ 
+ @charset "utf-8";
+/* CSS Document */
+
+a{
+	text-decoration: none;
+}
+a:hover{
+	color:#C60;
+}
+
+h1{
+	font-size:25px;
+	text-align:center;
+}
+
+h2{
+	opacity:40%;
+	color:#369;
+}
+
+
+h3{
+	opacity:40%;
+	color:#000;
+}
+
+.Container{
+	position: relative;
+	margin: 0 auto;
+	width: 60%;
+	height: 60%;
+	margin-top: 40px;
+	text-align: left;
+	border:groove;
+	border-color-2px:#CCC;
+
+	
+}
+
+.link{
+	text-align:center;
+	font-size:18px;	
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+.seÃ§aosala{
+	opacity:40%;
+	color:#369;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+.seÃ§aoprofessor{
+	opacity:40%;
+	color:#369;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif
+	
+}
+.seÃ§aodisciplina{
+	opacity:40%;
+	color:#369;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif
+	
+}
+
+.imagemesquerda{
+	
+	
+	float: left;
+	width: 80px;
+	height: 609px;
+	margin-top: -18px;
+	margin-left: -22px;
+}
+
+.imagemdireita{
+	float: right;
+	width: 50px;
+	height: 609px;
+	margin-top: -16px;
+	margin-right: 38px;
+}
+body{
+	background-color:#FFC;
+	
+	
+	
+}
+
+ </style>

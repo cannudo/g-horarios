@@ -1,10 +1,22 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
-    <title>Reserva de horário</title>
-  </head>
-  <body>
+    <title>Reserva de horÃ¡rio</title>
+    <link rel="stylesheet" href="{% static "otime/css/estilo.css" %}">
+</head>
+
+<body>
+<aside class="imagemesquerda"> <img src='{% static "otime/img/1.png" %}'/>
+
+</aside>
+<aside class="imagemdireita"><img src='{% static "otime/img/2.png" %}' width="80" height="765" />
+</aside>
+
+<div class="Container">
+<h1>Reserva de horario</h1>
+
     <form method="post">
       {% csrf_token %}
       {% if lista_de_salas and lista_de_disciplinas and lista_de_professores %}
@@ -30,7 +42,7 @@
         <hr>
         <table>
           <tr>
-            <th>Horário</th>
+            <th>Horario</th>
             <th>Segunda</th>
             <th>Terça</th>
             <th>Quarta</th>
@@ -41,32 +53,26 @@
             <tr>
               <th>{{ horario }}</th>
               {% for linha in "abcde"|make_list %}
-                <td><button style="background-color: white" type="submit" onclick="document.getElementById('posicao').setAttribute('value', parentNode.id);">Cadastrar</button></td>
+                <td><button style="background-color: white" type="submit" onclick="document.getElementById('posicao').value = id;">Cadastrar</button></td>
               {% endfor %}
             </tr>
           {% endfor %}
         </table>
       </form>
       <script type="text/javascript">
-        celulas = document.getElementsByTagName("td");
-        var i;
-        for (i = 0; i < celulas.length; i++) {
-          celulas[i].id = i;
+        botoes = document.getElementsByTagName("button");
+        var posicao;
+        for (posicao = 0; posicao < botoes.length; posicao++) {
+          botoes[posicao].id = posicao;
         };
       </script>
       {% else %}
-      <p>Não pode reservar horário.</p>
+      <p>Nâo pode reservar horário.</p>
       <script type="text/javascript">
-        alert("O sistema não conta com os requisitos para que um horário seja reservado. Adicione uma sala de aula, uma disciplina e um professor antes.");
+        alert("O sistema nÃ£o conta com os requisitos para que um horÃ¡rio seja reservado. Adicione uma sala de aula, uma disciplina e um professor antes.");
         window.location.assign("http://127.0.0.1:8000/otime");
       </script>
       {% endif %}
-      {% if slots_de_horario %}
-        <script type="text/javascript">
-          {% for slot in slots_de_horario %}
-            document.getElementById('{{ slot.posicao }}').innerHTML = "<p>{{ slot.professor.nome }}<br>{{ slot.disciplina.nome }}<br>{{ slot.sala_de_aula.nome }}</p>";
-          {% endfor %}
-        </script>
-      {% endif %}
+      </div>
   </body>
 </html>
