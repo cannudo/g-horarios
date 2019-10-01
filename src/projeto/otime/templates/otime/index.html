@@ -47,9 +47,21 @@
    <label class="modal__bg" for="modal-1"></label>
    <div class="modal__inner">
      <label class="modal__close" for="modal-1"></label>
-     <h2>cadastrar Sala de Aula</h2>
-     <p>Aliquam in sagittis nulla. Curabitur euismod diam eget risus venenatis, sed dictum lectus bibendum. Nunc nunc nisi, hendrerit eget nisi id, rhoncus rutrum velit. Nunc vel mauris dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam fringilla quis nisi eget imperdiet.</p>
-     <label class="btn btn--blue">Click for more AWW</label>
+     <form  action="" method="post">
+       <h4>Nome</h4>
+       <input type="text" name="Nome" placeholder="Digite o nome">
+       <h4>Tipo</h4>
+       <select name="tipo">
+         <option>Escolha</option>
+         <option>Ensino Médio</option>
+         <option>Faculdade</option>
+         <option>Doutorado</option>
+       </select><br >
+       <h4>Numero</h4>
+       <input type="number" name="numero" min="1" max="200" placeholder="0">
+     </form>
+     <br>
+     <label class="btn btn--blue">Nâo estou fucionando</label>
    </div>
  </div>
  <!-- -->
@@ -79,9 +91,17 @@
    <label class="modal__bg" for="modal-2"></label>
    <div class="modal__inner">
      <label class="modal__close" for="modal-2"></label>
-     <h2>cadastrar Disciplina</h2>
-     <p>Aliquam in sagittis nulla. Curabitur euismod diam eget risus venenatis, sed dictum lectus bibendum. Nunc nunc nisi, hendrerit eget nisi id, rhoncus rutrum velit. Nunc vel mauris dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam fringilla quis nisi eget imperdiet.</p>
-     <label class="btn btn--blue">Click for more AWW</label>
+     <h2>Cadastrar Disciplina</h2>
+     <form  action="" method="post">
+       <h4>Nome</h4>
+       <input type="text" name="Nome" placeholder="Digite o nome">
+       <h4>codigo</h4>
+       <input type="text" name="codigo"  placeholder="Ex.: 000000000">
+       <h4>carga horaria</h4>
+       <input type="number" name="carga horaria" min="1" max="200" placeholder="0">
+     </form>
+     <br>
+     <label class="btn btn--blue">Nâo estou fucionando</label>
    </div>
  </div>
   <!-- -->
@@ -112,9 +132,19 @@
    <label class="modal__bg" for="modal-3"></label>
    <div class="modal__inner">
      <label class="modal__close" for="modal-3"></label>
-     <h2>cadastrar Professor</h2>
-     <p>Aliquam in sagittis nulla. Curabitur euismod diam eget risus venenatis, sed dictum lectus bibendum. Nunc nunc nisi, hendrerit eget nisi id, rhoncus rutrum velit. Nunc vel mauris dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam fringilla quis nisi eget imperdiet.</p>
-     <label class="btn btn--blue">Click for more AWW</label>
+     <h2>Cadastrar Professor</h2>
+     <form  action="" method="post">
+       <h4>Nome</h4>
+       <input type="text" name="Nome" placeholder="Digite o nome">
+       <h4>Telefone</h4>
+       <input type="text" name="telefone" class="form-control phone-mask" placeholder="Ex.: 0000-0000">
+       <h4>E-mail</h4>
+       <input type="e-mail" name="email" placeholder="Digite o e-mail">
+       <h4>Matricula</h4>
+       <input type="text" name="matricula" placeholder="Digite a matricula">
+     </form>
+     <br>
+     <label class="btn btn--blue">Nâo estou fucionando</label>
    </div>
  </div>
   </section>
