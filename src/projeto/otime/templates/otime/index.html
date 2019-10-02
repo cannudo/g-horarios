@@ -4,159 +4,157 @@
 <head>
     <meta charset="utf-8">
     <title>O'Time</title>
-    <link rel="stylesheet" href="{% static "otime/css/estilo.css" %}">
-      <link rel="stylesheet" href="{% static "otime/css/modal.css" %}">
+    <link rel="stylesheet" href='{% static "otime/css/estilo.css" %}'>
+    <link rel="stylesheet" href='{% static "otime/css/modal.css" %}'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
 <body>
-<aside class="imagemesquerda"> <img src='{% static "otime/img/1.png" %}'/>
-
-</aside>
-<aside class="imagemdireita"><img src='{% static "otime/img/2.png" %}' width="95" height="765" />
-</aside>
+  <aside class="imagemesquerda"> 
+    <img src='{% static "otime/img/1.png" %}'/>
+  </aside>
+  <aside class="imagemdireita">
+    <img src='{% static "otime/img/2.png" %}'/>
+  </aside>
 
   <h1>Página inicial</h1>
 
-<div class="Container">
-   <section class="seÃ§aosala">
+  <div class="Container">
+    <section class="sessaosala">
 
-    <h2>Salas de Aula</h2>
+      <h2>Salas de Aula</h2>
 
-    {% if lista_de_salas %}
-      <ul>
-        {% for sala_de_aula in lista_de_salas %}
-          <li>
-            <h3>{{ sala_de_aula.nome }}</h3>
-            <h3>Tipo:{{ sala_de_aula.tipo }}</h3>
-            <h3>NÃºmero: {{ sala_de_aula.numero }}</h3>
-          </li>
-        {% endfor %}
-      </ul>
-    {% else %}
-      <h3>Não há salas de aula cadastradas.</h3>
-    {% endif %}
-    <!-- modal1 -->
- <p>
-   <label class="btn" for="modal-1">cadastrar</label>
- </p>
- <input class="modal-state" id="modal-1" type="checkbox" />
- <div class="modal">
-   <label class="modal__bg" for="modal-1"></label>
-   <div class="modal__inner">
-     <label class="modal__close" for="modal-1"></label>
-     <form  action="" method="post">
-       <h4>Nome</h4>
-       <input type="text" name="Nome" placeholder="Digite o nome">
-       <h4>Tipo</h4>
-       <select name="tipo">
-         <option>Escolha</option>
-         <option>Ensino Médio</option>
-         <option>Faculdade</option>
-         <option>Doutorado</option>
-         <option>S</option>
-       </select><br >
-       <h4>Numero</h4>
-       <input type="number" name="numero" min="1" max="200" placeholder="0">
-     </form>
-     <br>
-     <label class="btn btn--blue">Nâo estou fucionando</label>
-   </div>
- </div>
- <!-- -->
-    </section>
-    <hr>
-     <section class="seÃ§aoprofessor">
-    <h2>Disciplinas</h2>
-    {% if lista_de_disciplinas %}
-      <ul>
-        {% for disciplina in lista_de_disciplinas %}
-          <li>
-            <h3>{{ disciplina.nome }}</h3>
-            <h3>CÃ³digo: {{ disciplina.codigo }}</h3>
-           <h3>Carga horÃ¡ria total: {{ disciplina.carga_horaria_total }}</h3>
-          </li>
-        {% endfor %}
-      </ul>
-    {% else %}
-      <h3>Não há disciplinas cadastradas.</h3>
-    {% endif %}
-    <!-- modal2 -->
- <p>
-   <label class="btn" for="modal-2">cadastrar</label>
- </p>
- <input class="modal-state" id="modal-2" type="checkbox" />
- <div class="modal">
-   <label class="modal__bg" for="modal-2"></label>
-   <div class="modal__inner">
-     <label class="modal__close" for="modal-2"></label>
-     <h2>Cadastrar Disciplina</h2>
-     <form  action="" method="post">
-       <h4>Nome</h4>
-       <input type="text" name="Nome" placeholder="Digite o nome">
-       <h4>codigo</h4>
-       <input type="text" name="codigo"  placeholder="Ex.: 000000000">
-       <h4>carga horaria</h4>
-       <input type="number" name="carga horaria" min="1" max="200" placeholder="0">
-     </form>
-     <br>
-     <label class="btn btn--blue">Nâo estou fucionando</label>
-   </div>
- </div>
+      {% if lista_de_salas %}
+        <ul>
+          {% for sala_de_aula in lista_de_salas %}
+            <li>
+              <h3>{{ sala_de_aula.nome }}</h3>
+              <h3>Tipo:{{ sala_de_aula.tipo }}</h3>
+              <h3>Número: {{ sala_de_aula.numero }}</h3>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <h3>Não há salas de aula cadastradas.</h3>
+      {% endif %}
+      <!-- modal1 -->
+  <p>
+    <label class="btn" for="modal-1">cadastrar</label>
+  </p>
+  <input class="modal-state" id="modal-1" type="checkbox" />
+  <div class="modal">
+    <label class="modal__bg" for="modal-1"></label>
+    <div class="modal__inner">
+      <label class="modal__close" for="modal-1"></label>
+      <form  action="" method="post">
+        <h4>Nome</h4>
+        <input type="text" name="Nome" placeholder="Digite o nome">
+        <h4>Tipo</h4>
+        <select name="tipo">
+          <option>Escolha</option>
+          <option>Ensino Médio</option>
+          <option>Faculdade</option>
+          <option>Doutorado</option>
+          <option>S</option>
+        </select><br >
+        <h4>Número</h4>
+        <input type="number" name="numero" min="1" max="200" placeholder="0">
+      </form>
+      <br>
+      <label class="btn btn--blue">Nâo estou funcionando</label>
+    </div>
+  </div>
   <!-- -->
+      </section>
+      <hr>
+      <section class="sessaoprofessor">
+      <h2>Disciplinas</h2>
+      {% if lista_de_disciplinas %}
+        <ul>
+          {% for disciplina in lista_de_disciplinas %}
+            <li>
+              <h3>{{ disciplina.nome }}</h3>
+              <h3>Código: {{ disciplina.codigo }}</h3>
+            <h3>Carga horária total: {{ disciplina.carga_horaria_total }}</h3>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <h3>Não há disciplinas cadastradas.</h3>
+      {% endif %}
+      <!-- modal2 -->
+  <p>
+    <label class="btn" for="modal-2">cadastrar</label>
+  </p>
+  <input class="modal-state" id="modal-2" type="checkbox" />
+  <div class="modal">
+    <label class="modal__bg" for="modal-2"></label>
+    <div class="modal__inner">
+      <label class="modal__close" for="modal-2"></label>
+      <h2>Cadastrar Disciplina</h2>
+      <form  action="" method="post">
+        <h4>Nome</h4>
+        <input type="text" name="Nome" placeholder="Digite o nome">
+        <h4>codigo</h4>
+        <input type="text" name="codigo"  placeholder="Ex.: 000000000">
+        <h4>carga horaria</h4>
+        <input type="number" name="carga horaria" min="1" max="200" placeholder="0">
+      </form>
+      <br>
+      <label class="btn btn--blue">Nâo estou funcionando</label>
+    </div>
+  </div>
+    <!-- -->
+      </section>
+      <hr>
+      <section class="sessaodisciplina">
+      <h2>Professores</h2>
+      {% if lista_de_professores %}
+        <ul>
+          {% for professor in lista_de_professores %}
+            <li>
+              <h3>{{ professor.nome }}</h3>
+              <h3>Telefone: {{ professor.telefone }}</h3>
+              <h3>E-mail: {{ professor.email }}</h3>
+              <h3>Matrí­cula: {{ professor.matricula }}</h3>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <h3>Não há professores cadastrados.</h3>
+      {% endif %}
+      <!-- modal3 -->
+  <p>
+    <label class="btn" for="modal-3">cadastrar</label>
+  </p>
+  <input class="modal-state" id="modal-3" type="checkbox" />
+  <div class="modal">
+    <label class="modal__bg" for="modal-3"></label>
+    <div class="modal__inner">
+      <label class="modal__close" for="modal-3"></label>
+      <h2>Cadastrar Professor</h2>
+      <form  action="" method="post">
+        <h4>Nome</h4>
+        <input type="text" name="Nome" placeholder="Digite o nome">
+        <h4>Telefone</h4>
+        <input type="text" name="telefone" class="form-control phone-mask" placeholder="Ex.: 0000-0000">
+        <h4>E-mail</h4>
+        <input type="e-mail" name="email" placeholder="Digite o e-mail">
+        <h4>Matricula</h4>
+        <input type="text" name="matricula" placeholder="Digite a matricula">
+      </form>
+      <br>
+      <label class="btn btn--blue">Nâo estou funcionando</label>
+    </div>
+  </div>
     </section>
-    <hr>
-    <section class="seÃ§aodisciplina">
-    <h2>Professores</h2>
-    {% if lista_de_professores %}
-      <ul>
-        {% for professor in lista_de_professores %}
-          <li>
-            <h3>{{ professor.nome }}</h3>
-            <h3>Telefone: {{ professor.telefone }}</h3>
-            <h3>E-mail: {{ professor.email }}</h3>
-            <h3>MatrÃ­cula: {{ professor.matricula }}</h3>
-          </li>
-        {% endfor %}
-      </ul>
-    {% else %}
-      <h3>Não há professores cadastrados.</h3>
-    {% endif %}
-    <!-- modal3 -->
- <p>
-   <label class="btn" for="modal-3">cadastrar</label>
- </p>
- <input class="modal-state" id="modal-3" type="checkbox" />
- <div class="modal">
-   <label class="modal__bg" for="modal-3"></label>
-   <div class="modal__inner">
-     <label class="modal__close" for="modal-3"></label>
-     <h2>Cadastrar Professor</h2>
-     <form  action="" method="post">
-       <h4>Nome</h4>
-       <input type="text" name="Nome" placeholder="Digite o nome">
-       <h4>Telefone</h4>
-       <input type="text" name="telefone" class="form-control phone-mask" placeholder="Ex.: 0000-0000">
-       <h4>E-mail</h4>
-       <input type="e-mail" name="email" placeholder="Digite o e-mail">
-       <h4>Matricula</h4>
-       <input type="text" name="matricula" placeholder="Digite a matricula">
-     </form>
-     <br>
-     <label class="btn btn--blue">Nâo estou fucionando</label>
-   </div>
- </div>
-  </section>
-</div>
- <!-- -->
+  </div>
+  <!-- -->
 </body>
   {% if lista_de_salas and lista_de_disciplinas and lista_de_professores %}
 
     <footer>
     <article class="link">
-    Clique <a href="reservarHorario">aqui</a> para reservar horÃ¡rio.</p>
+    Clique <a href="reservarHorario">aqui</a> para reservar horário.</p>
   {% endif %}
   </article>
   </footer>

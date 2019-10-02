@@ -1,5 +1,4 @@
-<style>
- 
+
  @charset "utf-8";
 /* CSS Document */
 
@@ -34,32 +33,32 @@ h3{
 	margin-top: 40px;
 	text-align: left;
 	border:groove;
-	border-color-2px:#CCC;
-
+	border-color:#CCC;
+	border: 2px;
 	
 }
 
 .link{
 	text-align:center;
 	font-size:18px;	
-	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .seÃ§aosala{
 	opacity:40%;
 	color:#369;
-	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .seÃ§aoprofessor{
 	opacity:40%;
 	color:#369;
-	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	
 }
 .seÃ§aodisciplina{
 	opacity:40%;
 	color:#369;
-	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	
 }
 
@@ -82,9 +81,4 @@ h3{
 }
 body{
 	background-color:#FFC;
-	
-	
-	
 }
-
- </style>

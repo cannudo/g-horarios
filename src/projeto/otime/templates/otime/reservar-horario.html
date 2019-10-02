@@ -3,46 +3,41 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
-    <title>Reserva de horÃ¡rio</title>
-    <link rel="stylesheet" href="{% static "otime/css/estilo.css" %}">
+    <title>Reserva de horário</title>
+    <link rel="stylesheet" href='{% static "otime/css/estilo.css" %}'>
 </head>
 
 <body>
-<aside class="imagemesquerda"> <img src='{% static "otime/img/1.png" %}'/>
-
-</aside>
-<aside class="imagemdireita"><img src='{% static "otime/img/2.png" %}' width="80" height="765" />
-</aside>
-
 <div class="Container">
-<h1>Reserva de horario</h1>
+<h1>Reserva de horário</h1>
 
     <form method="post">
       {% csrf_token %}
       {% if lista_de_salas and lista_de_disciplinas and lista_de_professores %}
         <input type="text" id="posicao" name="posicao" value="" hidden>
         <select required id="sala_de_aula" name="sala_de_aula">
+            <option value="" hidden>Sala</option>
           {% for sala_de_aula in lista_de_salas %}
             <option value="{{ sala_de_aula.id }}">{{ sala_de_aula.nome }}</option>
-          {% endfor %}
-          <option selected disabled hidden>Sala</option>
+          {% endfor %}  
         </select>
         <select id="disciplina" name="disciplina" required>
+            <option value="" hidden>Disciplina</option>
           {% for disciplina in lista_de_disciplinas %}
             <option value="{{ disciplina.id }}">{{ disciplina.nome }}</option>
           {% endfor %}
-          <option selected disabled hidden>Disciplina</option>
         </select>
         <select id="professor" name="professor" required>
+            <option value="" hidden>Professor</option>
           {% for professor in lista_de_professores %}
             <option value="{{ professor.id }}">{{ professor.nome }}</option>
           {% endfor %}
-            <option selected disabled hidden>Professor</option>
+            
         </select>
         <hr>
         <table>
           <tr>
-            <th>Horario</th>
+            <th>Horário</th>
             <th>Segunda</th>
             <th>Terça</th>
             <th>Quarta</th>
