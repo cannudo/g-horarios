@@ -6,6 +6,7 @@
   </head>
   <body>
     <form method="post">
+      
       {% csrf_token %}
       {% if lista_de_salas and lista_de_disciplinas and lista_de_professores %}
         <input type="text" id="posicao" name="posicao" value="" hidden>
@@ -13,21 +14,21 @@
             <option hidden value="">Sala</option>
           {% for sala_de_aula in lista_de_salas %}
             <option value="{{ sala_de_aula.id }}">{{ sala_de_aula.nome }}</option>
-          {% endfor %} 
+          {% endfor %}
         </select>
         <select id="disciplina" name="disciplina" required>
             <option hidden value="">Disciplina</option>
           {% for disciplina in lista_de_disciplinas %}
             <option value="{{ disciplina.id }}">{{ disciplina.nome }}</option>
           {% endfor %}
-          
+
         </select>
         <select id="professor" name="professor" required>
           <option hidden value="">Professor</option>
           {% for professor in lista_de_professores %}
             <option value="{{ professor.id }}">{{ professor.nome }}</option>
           {% endfor %}
-            
+
         </select>
         <hr>
         <table>
