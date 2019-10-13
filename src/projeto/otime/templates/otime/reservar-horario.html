@@ -18,9 +18,35 @@
         <!-- Font Awesome JS -->
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+<style>
+
+.Container,body{
+position:relative;
+margin-left:15%;
+margin-right:20%;
+background-color:#CCC;
+
+	
+}
+.Container{
+	
+border:groove;
+}
+
+.navegaçao{
+	position:relative;
+	margin-left:30%;
+		
+}
+
+</style>
     </head>
     <body>
 
+
+<div class="Container">
+  <br>
       <form method="post">
 
         {% csrf_token %}
@@ -88,6 +114,6 @@
           </script>
         {% endif %}
     </div>
-
+</div>
     </body>
 </html>
