@@ -50,7 +50,7 @@ def criar_professor(request):
 
     if form.is_valid():
         form.save()
-        return redirect('lista_professores')
+        return redirect('professores')
 
     return render(request, 'otime/professor-form.html', {'form': form})
 

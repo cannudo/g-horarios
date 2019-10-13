@@ -18,7 +18,7 @@
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-      
+
       </head>
       <body>
          <!----------------------->
@@ -27,33 +27,33 @@
               <tr>
                 <th> PROFESSORES
 
-    <!-----------Botão Adicionar Professor--------------->    
+    <!-----------Botão Adicionar Professor--------------->
       <a id="botao_novo_professor" href="{% url 'criar_professores' %}" class="btn btn-outline-light">Novo</a>
-    <!----------------------------------------------------->    
+    <!----------------------------------------------------->
 
-    <!-----------Botão Adicionar Professor--------------->    
+    <!-----------Botão Adicionar Professor--------------->
       <a id="btn_voltar_prof_index" href="http://127.0.0.1:8000" class="btn btn-outline-light">Voltar</a>
-    <!----------------------------------------------------->    
+    <!----------------------------------------------------->
 
 
                 </th>
               </tr>
-            </thead>              
+            </thead>
             <tbody>
-              {% for professor in professores %}        
-                <tr class="rows" data-href="{% url 'atualizar_professor' professor.id %}">      
-                   <td>{{ professor.nome }}</td>         
+              {% for professor in lista_de_professores %}        
+                <tr class="rows" data-href="{% url 'atualizar_professor' professor.id %}">
+                   <td>{{ professor.nome }}</td>
                 </tr>
               {% endfor %}
-            </tbody>                      
+            </tbody>
         </table>
         </body>
 
         <!-- jQuery CDN - Slim version (=without AJAX) -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="{% static 'jquery/jquery.mim.js' %}"></script>
-        <script src="{% static 'jquery/jquery-3.2.1.slim.min.js' %}"></script> 
-         <script src="{% static 'jquery/jquery.js' %}"></script> 
+        <script src="{% static 'jquery/jquery-3.2.1.slim.min.js' %}"></script>
+         <script src="{% static 'jquery/jquery.js' %}"></script>
 
         <!-- Popper.JS -->
         <script src="{% static 'popper/popper.mim.js' %}"></script>
@@ -62,7 +62,7 @@
         <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
         <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
         <!-- javascript JS -->
-        <script type="text/javascript">$('#meuModal').on('shown.bs.modal', function () {$('#meuInput').trigger('focus')})</script>  
+        <script type="text/javascript">$('#meuModal').on('shown.bs.modal', function () {$('#meuInput').trigger('focus')})</script>
         <script type="text/javascript">
           $(".rows").click(
   function(e){
@@ -70,6 +70,6 @@
     return false;
   }
 )
-        </script>  
+        </script>
 
 </html>
