@@ -45,10 +45,6 @@ def professores(request):
     lista_de_professores = Professor.objects.all()
     return render(request,'otime/professores.html',{'lista_de_professores':lista_de_professores})
 
-def lista_professores(request):
-    professores = Professor.objects.all()
-    return render(request, 'otime/professores.html', {'professores': professores})
-
 def criar_professor(request):
     form = FormProfessor(request.POST or None)
 
