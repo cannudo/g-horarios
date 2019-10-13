@@ -2,8 +2,6 @@ from django.shortcuts import render, get_object_or_404,redirect
 from .models import *
 from .forms import *
 
-
-###############--Pagina Principal--#####################
 def index(request):
     lista_de_salas = SalaDeAula.objects.all()
     lista_de_disciplinas = Disciplina.objects.all()
@@ -14,9 +12,6 @@ def index(request):
         "lista_de_professores": lista_de_professores
     }
     return render(request, "otime/index.html", contexto)
-
-
-###############--Resevar Horário--#####################    
 
 def reservarHorario(request):
     if request.method == "POST":
@@ -42,26 +37,17 @@ def reservarHorario(request):
     return render(request, "otime/reservar-horario.html", contexto)
 
 
-###############################--Salas--#####################################        
-    
 def salas(request):
-
     lista_de_salas = SalaDeAula.objects.all()
     return render(request,'otime/salas.html',{'lista_de_salas':lista_de_salas})
 
-##############################--Professores--################################    
-
-
 def professores(request):
-
     lista_de_professores = Professor.objects.all()
     return render(request,'otime/professores.html',{'lista_de_professores':lista_de_professores})
-
 
 def lista_professores(request):
     professores = Professor.objects.all()
     return render(request, 'otime/professores.html', {'professores': professores})
-
 
 def criar_professor(request):
     form = FormProfessor(request.POST or None)
@@ -71,7 +57,6 @@ def criar_professor(request):
         return redirect('lista_professores')
 
     return render(request, 'otime/professor-form.html', {'form': form})
-
 
 def atualizar_professor(request, id):
     professor = Professor.objects.get(id=id)
@@ -83,7 +68,6 @@ def atualizar_professor(request, id):
 
     return render(request, 'otime/professor-form.html', {'form': form, 'professor': professor})
 
-
 def deletar_professor(request, id):
     professor = Professor.objects.get(id=id)
 
@@ -93,18 +77,6 @@ def deletar_professor(request, id):
 
     return render(request, 'otime/prof-delete-confirm.html', {'professor': professor})
 
- 
-##############################--Disciplinas--################################## 
-
-
-
-
 def disciplinas(request):
-
-
     lista_de_disciplinas = Disciplina.objects.all()
     return render(request,'otime/disciplinas.html',{'lista_de_disciplinas':lista_de_disciplinas})
-
-##############################----------------################################## 
-
-
