@@ -18,9 +18,9 @@
 
 #botao_salvar_disciplina {
     position: absolute;
-    right: 270px;
+    right: 25%;
     width: 10%;
-    height: 5%;
+    height: 4%;
 }
 
 #botao_voltar_disciplina1 {
@@ -33,24 +33,23 @@
 
 #botao_deletar_disciplina {
     position: absolute;
-    right: 450px;
+    right: 45%;
     width: 10%;
-    top: 466px;
-    height: 5%;
+    height: 4%;
 }
 
 #botao_voltar_disciplina {
     position: absolute;
-    right: 630px;
-    top: 466px;
+    right: 35%;
     width: 10%;
-    height: 5%;
+    height: 4%;
 }
 
 #botao_nova_disciplina {
     display: block;
-    margin-left: 1000px;
-    margin-right: 10px;
+    width: 10%;
+    height: 10%;
+    margin-left: 90%;
     margin-top: -25px;
 }
 
@@ -61,8 +60,9 @@
 
 #btn_voltar_disc_index {
     display: block;
-    margin-left: 850px;
-    margin-right: 160px;
+    margin-left: 80%;
+    width: 10%;
+    height: 10%;
     margin-top: -38px;
 }
 

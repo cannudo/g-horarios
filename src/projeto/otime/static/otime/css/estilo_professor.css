@@ -134,39 +134,37 @@ input[type=submit]:hover {
 
 #botao_salvar_professor {
     position: absolute;
-    right: 270px;
+    right: 26.5%;
     width: 10%;
-    height: 5%;
+    height: 4%;
 }
 
 #botao_voltar_professor1 {
     position: absolute;
-    right: 450px;
+    right: 36.5%;
     width: 10%;
-    top: 466px;
-    height: 5%;
+    height: 4%;
 }
 
 #botao_deletar_professor {
     position: absolute;
-    right: 450px;
+    right: 46.5%;
     width: 10%;
-    top: 466px;
-    height: 5%;
+    height: 4%;
 }
 
 #botao_voltar_professor {
     position: absolute;
-    right: 630px;
-    top: 466px;
+    right: 36.5%;
     width: 10%;
-    height: 5%;
+    height: 4%;
 }
 
 #botao_novo_professor {
+    width: 10%;
+    height: 10%;
     display: block;
-    margin-left: 1000px;
-    margin-right: 10px;
+    margin-left: 90%;
     margin-top: -25px;
 }
 
@@ -177,8 +175,9 @@ input[type=submit]:hover {
 
 #btn_voltar_prof_index {
     display: block;
-    margin-left: 850px;
-    margin-right: 160px;
+    margin-left: 80%;
+    width: 10%;
+    height: 10%;
     margin-top: -38px;
 }
 

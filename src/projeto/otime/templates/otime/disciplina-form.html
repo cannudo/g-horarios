@@ -29,11 +29,11 @@
                 <a id="botao_voltar_disciplina1" href="http://127.0.0.1:8000/disciplinas" class="btn btn-outline-primary ">Voltar</a> 
                 {% endif%}
             </form>
-        </div>
         {% if disciplina %}
             <a id="botao_deletar_disciplina" href='{% url "deletar_disciplina" disciplina.id %}' class="btn btn-outline-danger">Deletar</a>
             <a id="botao_voltar_disciplina"  href="http://127.0.0.1:8000/lista_de_disciplinas" class="btn btn-outline-primary ">Voltar</a>
         {% endif %}
+        </div>
 
     </body>
     <!-- jQuery CDN - Slim version (=without AJAX) -->
