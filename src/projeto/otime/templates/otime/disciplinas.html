@@ -18,86 +18,92 @@
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
     </head>
-        <body>
-        <table id='minhaTabela'>
-     <thead>
-          <tr>
-               <th>DISCIPLINAS</th>
-          <tr>
-     </thead>
-     <tbody>
-       {% for lista_de_disciplina in lista_de_disciplinas%}
-          <tr>
-            <td>{{ lista_de_disciplina.nome }}</td>
-          </tr>
-           {% endfor %}
+    <body>
+      <table id='minhaTabela'>
+      <thead>
+        <tr>
+          <th>DISCIPLINAS</th>
+        <tr>
+      </thead>
+      <tbody>
+      {% for lista_de_disciplina in lista_de_disciplinas%}
+        <tr>
+          <td>{{ lista_de_disciplina.nome }}</td>
+        </tr>
+      {% endfor %}
+      </table> 
+    </body>
 
-</table> 
-        </body>
-     <!-- jQuery CDN - Slim version (=without AJAX) -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-        <script src="{% static 'jquery/jquery.mim.js' %}"></script>
-        <script src="{% static 'jquery/jquery-3.2.1.slim.min.js' %}"></script>
-         <script src="{% static 'jquery/jquery.js' %}"></script>
-        <!-- Popper.JS -->
-        <script src="{% static 'popper/popper.mim.js' %}"></script>
-        <!-- Bootstrap JS -->
-        <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
-        <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-        <script type="text/javascript">$('#meuModal').on('shown.bs.modal', function () {$('#meuInput').trigger('focus')})</script>
-        <script type="text/javascript"> var tabela = document.getElementById("minhaTabela");
-var linhas = tabela.getElementsByTagName("tr");
-
-for(var i = 0; i < linhas.length; i++){
-  var linha = linhas[i];
-  linha.addEventListener("click", function(){
-    //Adicionar ao atual
-    selLinha(this, false); //Selecione apenas um
-    //selLinha(this, true); //Selecione quantos quiser
-  });
-}
-
-/**
-Caso passe true, você pode selecionar multiplas linhas.
-Caso passe false, você só pode selecionar uma linha por vez.
-**/
-function selLinha(linha, multiplos){
-  if(!multiplos){
-    var linhas = linha.parentElement.getElementsByTagName("tr");
-    for(var i = 0; i < linhas.length; i++){
-      var linha_ = linhas[i];
-      linha_.classList.remove("selecionado");
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="{% static 'jquery/jquery.mim.js' %}"></script>
+    <script src="{% static 'jquery/jquery-3.2.1.slim.min.js' %}"></script>
+    <script src="{% static 'jquery/jquery.js' %}"></script>
+    <!-- Popper.JS -->
+    <script src="{% static 'popper/popper.mim.js' %}"></script>
+    <!-- Bootstrap JS -->
+    <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script type="text/javascript">$('#meuModal').on('shown.bs.modal', function () {$('#meuInput').trigger('focus')})</script>
+    <script type="text/javascript"> var tabela = document.getElementById("minhaTabela");
+    var linhas = tabela.getElementsByTagName("tr");
+    for(var i = 0; i < linhas.length; i++)
+    {
+      var linha = linhas[i];
+      linha.addEventListener
+      (
+        "click", function()
+        {
+          //Adicionar ao atual
+          selLinha(this, false); //Selecione apenas um
+          //selLinha(this, true); //Selecione quantos quiser
+        }
+      );
     }
-  }
-  linha.classList.toggle("selecionado");
-}
 
-/**
-Exemplo de como capturar os dados
-**/
-var btnVisualizar = document.getElementById("visualizarDados");
+    /**
+    Caso passe true, você pode selecionar multiplas linhas.
+    Caso passe false, você só pode selecionar uma linha por vez.
+    **/
+    function selLinha(linha, multiplos)
+    {
+      if(!multiplos)
+      {
+        var linhas = linha.parentElement.getElementsByTagName("tr");
+        for(var i = 0; i < linhas.length; i++)
+        {
+          var linha_ = linhas[i];
+          linha_.classList.remove("selecionado");
+        }
+      }
+      linha.classList.toggle("selecionado");
+    }
 
-btnVisualizar.addEventListener("click", function(){
-  var selecionados = tabela.getElementsByClassName("selecionado");
-  //Verificar se eestá selecionado
-  if(selecionados.length < 1){
-    alert("Selecione pelo menos uma linha");
-    return false;
-  }
+    /**
+    Exemplo de como capturar os dados
+    **/
+    var btnVisualizar = document.getElementById("visualizarDados");
 
-  var dados = "";
-
-  for(var i = 0; i < selecionados.length; i++){
-    var selecionado = selecionados[i];
-    selecionado = selecionado.getElementsByTagName("td");
-    dados += "ID: " + selecionado[0].innerHTML + " - Nome: " + selecionado[1].innerHTML + " - Idade: " + selecionado[2].innerHTML + "\n";
-  }
-
-  alert(dados);
-});</script>
-
-
-
-
-
+    btnVisualizar.addEventListener
+    (
+      "click", function()
+      {
+        var selecionados = tabela.getElementsByClassName("selecionado");
+        //Verificar se eestá selecionado
+        if(selecionados.length < 1)
+        {
+          alert("Selecione pelo menos uma linha");
+          return false;
+        }
+        var dados = "";
+        for(var i = 0; i < selecionados.length; i++)
+        {
+          var selecionado = selecionados[i];
+          selecionado = selecionado.getElementsByTagName("td");
+          dados += "ID: " + selecionado[0].innerHTML + " - Nome: " + selecionado[1].innerHTML + " - Idade: " + selecionado[2].innerHTML + "\n";
+        }
+        alert(dados);
+      }
+  );
+  </script>
 </html>

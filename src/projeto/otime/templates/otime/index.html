@@ -87,7 +87,6 @@
                 </div>
               </div>
             </div>
-            <!-------->
 
             <!-- botao saiba mais-->
             <h1><strong>O'time</strong></h1>
@@ -96,24 +95,18 @@
             <button type="button" class="btn btn-outline-primary" id="botao" data-toggle="modal" data-target="#exampleModalCenter">
                 Saiba mais
             </button>
-           <!------->
 
         </main>
         </body>
          <!-- jQuery CDN - Slim version (=without AJAX) -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-        <script src="{% static 'jquery/jquery.mim.js' %}"></script>
-        <script src="{% static 'jquery/jquery-3.2.1.slim.min.js' %}"></script>
-         <script src="{% static 'jquery/jquery.js' %}"></script>
+        <script src='{% static "jquery/jquery.mim.js" %}'></script>
+        <script src='{% static "jquery/jquery-3.2.1.slim.min.js" %}'></script>
+         <script src='{% static "jquery/jquery.js" %}'></script>
         <!-- Popper.JS -->
-        <script src="{% static 'popper/popper.mim.js' %}"></script>
+        <script src='{% static "popper/popper.mim.js" %}'></script>
         <!-- Bootstrap JS -->
-        <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
-        <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+        <script src='{% static "bootstrap/js/bootstrap.js" %}'></script>
+        <script src='{% static "bootstrap/js/bootstrap.bundle.min.js" %}'></script>
         <script type="text/javascript">$('#meuModal').on('shown.bs.modal', function () {$('#meuInput').trigger('focus')})</script>
-
-
-
-
-
 </html>
