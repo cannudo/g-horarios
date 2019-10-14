@@ -6,14 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <title>O'time</title>
         <!-- Bootstrap CSS CDN -->
         <link rel="stylesheet" href='{% static "otime/bootstrap/bootstrap.css" %}'>
         <link rel="stylesheet" href='{% static "otime/bootstrap/bootstrap.js" %}'>
         <!-- Our Custom CSS -->
         <link rel="stylesheet" href='{% static "otime/css/estilo_professor.css" %}'>
-
         <!-- Font Awesome JS -->
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
@@ -31,21 +29,20 @@
                 {% endif%}
             </form>
         </div>
-            {% if professor %}
-               <a id="botao_deletar_professor" href='{% url "deletar_professor" professor.id %}' class="btn btn-outline-danger">Deletar</a>
-               <a id="botao_voltar_professor"  href="http://127.0.0.1:8000/listar_professores" class="btn btn-outline-primary ">Voltar</a>
-            {% endif %}
-
+        {% if professor %}
+            <a id="botao_deletar_professor" href='{% url "deletar_professor" professor.id %}' class="btn btn-outline-danger">Deletar</a>
+            <a id="botao_voltar_professor"  href="http://127.0.0.1:8000/listar_professores" class="btn btn-outline-primary ">Voltar</a>
+        {% endif %}
     </body>
-                 <!-- jQuery CDN - Slim version (=without AJAX) -->
-                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-                <script src='{% static "jquery/jquery.mim.js" %}'></script>
-                <script src='{% static "jquery/jquery-3.2.1.slim.min.js" %}'></script>
-                 <script src='{% static "jquery/jquery.js" %}'></script>
-                <!-- Popper.JS -->
-                <script src='{% static "popper/popper.mim.js" %}'></script>
-                <!-- Bootstrap JS -->
-                <script src='{% static "bootstrap/js/bootstrap.js" %}'></script>
-                <script src='{% static "bootstrap/js/bootstrap.bundle.min.js" %}'></script>
-                <script type="text/javascript">$('#meuModal').on('shown.bs.modal', function(){$('#meuInput').trigger('focus')})</script>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src='{% static "jquery/jquery.mim.js" %}'></script>
+    <script src='{% static "jquery/jquery-3.2.1.slim.min.js" %}'></script>
+    <script src='{% static "jquery/jquery.js" %}'></script>
+    <!-- Popper.JS -->
+    <script src='{% static "popper/popper.mim.js" %}'></script>
+    <!-- Bootstrap JS -->
+    <script src='{% static "bootstrap/js/bootstrap.js" %}'></script>
+    <script src='{% static "bootstrap/js/bootstrap.bundle.min.js" %}'></script>
+    <script type="text/javascript">$('#meuModal').on('shown.bs.modal', function(){$('#meuInput').trigger('focus')})</script>
 </html>
