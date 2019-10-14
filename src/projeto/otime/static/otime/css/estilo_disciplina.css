@@ -25,10 +25,10 @@
 
 #botao_voltar_disciplina1 {
     position: absolute;
-    right: 450px;
+    right: 35%;
     width: 10%;
     top: 298px;
-    height: 5%;
+    height: 4%;
 }
 
 #botao_deletar_disciplina {
