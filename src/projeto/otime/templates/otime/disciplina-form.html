@@ -11,27 +11,28 @@
         <link rel="stylesheet" href='{% static "otime/bootstrap/bootstrap.css" %}'>
         <link rel="stylesheet" href='{% static "otime/bootstrap/bootstrap.js" %}'>
         <!-- Our Custom CSS -->
+        <link rel="stylesheet" href='{% static "otime/css/estilo_disciplina.css" %}'>
         <link rel="stylesheet" href='{% static "otime/css/estilo_professor.css" %}'>
         <!-- Font Awesome JS -->
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
     </head>
     <body>
-        <p>PROFESSOR</p>
-        <div id="form-professor" class="form-group">
+        <p>DISCIPLINA</p>
+        <div id="form-disciplina" class="form-group">
             <form method="POST">
                 {% csrf_token %}
                 {{ form }}
                 <br><br>
-                <button id="botao_salvar_professor" class="btn btn-outline-success" type="submit">Salvar</button>
-                {% if professor == null %}
-                <a id="botao_voltar_professor1" href="http://127.0.0.1:8000/professores" class="btn btn-outline-primary ">Voltar</a> 
+                <button id="botao_salvar_disciplina" class="btn btn-outline-success" type="submit">Salvar</button>
+                {% if disciplina == null %}
+                <a id="botao_voltar_disciplina1" href="http://127.0.0.1:8000/disciplinas" class="btn btn-outline-primary ">Voltar</a> 
                 {% endif%}
             </form>
         </div>
-        {% if professor %}
-            <a id="botao_deletar_professor" href='{% url "deletar_professor" professor.id %}' class="btn btn-outline-danger">Deletar</a>
-            <a id="botao_voltar_professor"  href="http://127.0.0.1:8000/listar_professores" class="btn btn-outline-primary ">Voltar</a>
+        {% if disciplina %}
+            <a id="botao_deletar_disciplina" href='{% url "deletar_disciplina" disciplina.id %}' class="btn btn-outline-danger">Deletar</a>
+            <a id="botao_voltar_disciplina"  href="http://127.0.0.1:8000/lista_de_disciplinas" class="btn btn-outline-primary ">Voltar</a>
         {% endif %}
 
     </body>

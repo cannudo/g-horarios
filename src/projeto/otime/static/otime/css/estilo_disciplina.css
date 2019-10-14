@@ -1,0 +1,72 @@
+#lista_de_disciplinas ul {
+    position: center;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0px;
+    color: #000;
+    text-align: center;
+}
+
+#form-disciplina {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 50px;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#botao_salvar_disciplina {
+    position: absolute;
+    right: 270px;
+    width: 10%;
+    height: 5%;
+}
+
+#botao_voltar_disciplina1 {
+    position: absolute;
+    right: 450px;
+    width: 10%;
+    top: 466px;
+    height: 5%;
+}
+
+#botao_deletar_disciplina {
+    position: absolute;
+    right: 450px;
+    width: 10%;
+    top: 466px;
+    height: 5%;
+}
+
+#botao_voltar_disciplina {
+    position: absolute;
+    right: 630px;
+    top: 466px;
+    width: 10%;
+    height: 5%;
+}
+
+#botao_nova_disciplina {
+    display: block;
+    margin-left: 1000px;
+    margin-right: 10px;
+    margin-top: -25px;
+}
+
+#botao_nova_disciplina:hover {
+    background-color: #28A745;
+    color: #fff;
+}
+
+#btn_voltar_disc_index {
+    display: block;
+    margin-left: 850px;
+    margin-right: 160px;
+    margin-top: -38px;
+}
+
+#btn_voltar_disc_index:hover {
+    background-color: #007BFF;
+    color: #fff;
+}

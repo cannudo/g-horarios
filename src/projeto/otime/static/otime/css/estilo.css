@@ -1,20 +1,16 @@
 /*
     DEMO STYLE
 */
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-
     background: #fafafa;
-
 }
 
-
-
-.cores{
-     background: linear-gradient(to top, #33cccc 0%, #0066ff 100%);
+.cores {
+    background: linear-gradient(to top, #33cccc 0%, #0066ff 100%);
 }
 
 p {
@@ -25,9 +21,6 @@ p {
     color: #999;
 }
 
-
-
-
 a,
 a:hover,
 a:focus {
@@ -36,13 +29,11 @@ a:focus {
     transition: all 0.3s;
 }
 
-
-img{
-
+img {
     width: 50px;
 }
 
-main{
+main {
     text-align: left;
 }
 
@@ -50,33 +41,31 @@ i,
 span {
     display: inline-block;
 }
-main{
-    text-align:center;
-    margin-top:15%;
 
-    font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+main {
+    text-align: center;
+    margin-top: 15%;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-h1{
+h1 {
     margin-right: 220px;
     font-size: 60px;
-
-
 }
-h2{
+
+h2 {
     margin-right: -85px;
 }
-#botao{
-    margin-right: 300px;
 
+#botao {
+    margin-right: 300px;
 }
 
-#listaSala{
+#listaSala {
     font-size: 100px;
 }
 
-ul{
-
+ul {
     list-style-type: none;
 }
 
@@ -85,176 +74,162 @@ ul{
     TABELA SALA
 ----------------------------------------------------- */
 
-#salas{
-  width:80%;
-  margin:0 auto;
-  border:0;
-  box-shadow: 0 5px 30px darkgrey;
-  border-spacing: 0;
+#salas {
+    width: 80%;
+    margin: 0 auto;
+    border: 0;
+    box-shadow: 0 5px 30px darkgrey;
+    border-spacing: 0;
 }
 
 #salas li ul {
-  font-weight: bold;
-  background-color: black;
-  color:white;
-
-  padding:5px 10px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
 }
 
-#salas li{
-  padding:5px 10px;
-  text-align: center;
-
-  cursor: pointer; /**importante para não mostrar cursor de texto**/
+#salas li {
+    padding: 5px 10px;
+    text-align: center;
+    cursor: pointer;
+    /**importante para não mostrar cursor de texto**/
 }
-
 
 
 /**Cores**/
-#salas li:nth-child(odd){
-  background-color: #eee;
+
+#salas li:nth-child(odd) {
+    background-color: #eee;
 }
 
+
 /**Cor quando passar por cima**/
+
 #salas li:hover {
-  background-color: #000;
-  color: #fff;
+    background-color: #000;
+    color: #fff;
 }
+
 
 /**Cor quando selecionado**/
+
 #salas li.selecionado {
-  background-color: #aff7ff;
+    background-color: #aff7ff;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-body{
-  font-family:sans-serif;
+body {
+    font-family: sans-serif;
 }
 
-#minhaTabela{
-  width:80%;
-  margin:0 auto;
-  border:0;
-  box-shadow: 0 5px 30px darkgrey;
-  border-spacing: 0;
+#minhaTabela {
+    width: 80%;
+    margin: 0 auto;
+    border: 0;
+    box-shadow: 0 5px 30px darkgrey;
+    border-spacing: 0;
 }
 
-#minhaTabela thead th{
-  font-weight: bold;
-  background-color: black;
-  color:white;
-
-  padding:5px 10px;
+#minhaTabela thead th {
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
 }
 
-#minhaTabela tr td{
-  padding:5px 10px;
-  text-align: center;
-
-  cursor: pointer; /**importante para não mostrar cursor de texto**/
+#minhaTabela tr td {
+    padding: 5px 10px;
+    text-align: center;
+    cursor: pointer;
+    /**importante para não mostrar cursor de texto**/
 }
 
-#minhaTabela tr td:last-child{
-  text-align: center;
+#minhaTabela tr td:last-child {
+    text-align: center;
 }
+
 
 /**Cores**/
-#minhaTabela tr:nth-child(odd){
-  background-color: #eee;
+
+#minhaTabela tr:nth-child(odd) {
+    background-color: #eee;
 }
+
 
 /**Cor quando passar por cima**/
-#minhaTabela tr:hover td{
-  background-color: #feffb7;
+
+#minhaTabela tr:hover td {
+    background-color: #feffb7;
 }
+
 
 /**Cor quando selecionado**/
-#minhaTabela tr.selecionado td{
-  background-color: #aff7ff;
+
+#minhaTabela tr.selecionado td {
+    background-color: #aff7ff;
 }
-
-
 
 
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
-#listaSalas{
- list-style-type: none;
 
+#listaSalas {
+    list-style-type: none;
 }
+
 
 /**Cor quando passar por cima**/
-#listaSalas li:hover{
-  background-color: #66c2ff;
+
+#listaSalas li:hover {
+    background-color: #66c2ff;
 }
+
 
 /**Cor quando selecionado**/
-#listaSalas  li.selecionado ul{
-  background-color: red;
+
+#listaSalas li.selecionado ul {
+    background-color: red;
 }
 
-#listaSalas li:hover{
-  color: #fff;
+#listaSalas li:hover {
+    color: #fff;
 }
 
 #listaSalas li {
-  padding:10px 10px;
-  text-align: left;
-
-  cursor: pointer; /**importante para não mostrar cursor de texto**/
+    padding: 10px 10px;
+    text-align: left;
+    cursor: pointer;
+    /**importante para não mostrar cursor de texto**/
 }
-
-
 
 .content {
-  margin-left: 1160px;
-  padding-left: 210px;
-
-/*--------------------------------*/
-
-}
-.login{
-
-  padding-left: 95%;
-  background-color: #fff;
-
+    margin-left: 1160px;
+    padding-left: 210px;
+    /*--------------------------------*/
 }
 
-#sidebar {     /*Barra lateal*/
+.login {
+    padding-left: 95%;
+    background-color: #fff;
+}
+
+#sidebar {
+    /*Barra lateal*/
     min-width: 250px;
     max-width: 250px;
     height: 800px;
     position: fixed;
-    background-color: rgba(0,0,0,.9);
+    background-color: rgba(0, 0, 0, .9);
     color: #fff;
     transition: all 0.3s;
-     float: left;
+    float: left;
 }
-
-
 
 #sidebar.active .sidebar-header,
 #sidebar.active .CTAs {
     display: none;
 }
-
 
 #sidebar.active .sidebar-header strong {
     display: block;
@@ -275,7 +250,6 @@ body{
     display: block;
     font-size: 1.8em;
     margin-bottom: 5px;
-
 }
 
 #sidebar.active ul ul a {
@@ -291,10 +265,10 @@ body{
     transform: translateX(50%);
 }
 
-#sidebar .sidebar-header { /*cor do local otime*/
+#sidebar .sidebar-header {
+    /*cor do local otime*/
     padding: 20px;
     background: #000;
-
 }
 
 #sidebar .sidebar-header strong {
@@ -325,7 +299,7 @@ body{
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
-   background-color: rgba(0,0,0,.8);
+    background-color: rgba(0, 0, 0, .8);
 }
 
 a[data-toggle="collapse"] {
@@ -369,6 +343,7 @@ a.article:hover {
     color: #fff !important;
 }
 
+
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
@@ -379,6 +354,7 @@ a.article:hover {
     min-height: 100vh;
     transition: all 0.3s;
 }
+
 
 /* ---------------------------------------------------
     MEDIAQUERIES
@@ -391,7 +367,6 @@ a.article:hover {
         text-align: center;
         margin-left: -80px !important;
     }
-
     #sidebar.active {
         margin-left: 0 !important;
     }
@@ -424,3 +399,4 @@ a.article:hover {
     #sidebarCollapse span {
         display: none;
     }
+}

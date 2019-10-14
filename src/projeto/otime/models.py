@@ -30,7 +30,8 @@ class Disciplina(models.Model):
     def __str__(self):
         return "Disciplina #%d: %s" % (int(self.id), self.nome)
 
-
+    class Meta:
+        verbose_name_plural = 'disciplinas'  
 
 ##############################--Professores--################################            
 

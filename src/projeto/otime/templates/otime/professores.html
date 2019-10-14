@@ -31,7 +31,7 @@
       </thead>
       <tbody>
         {% for professor in lista_de_professores %}        
-          <tr class="rows" data-href="{% url 'atualizar_professor' professor.id %}">
+          <tr class="rows" data-href='{% url "atualizar_professor" professor.id %}'>
             <td>{{ professor.nome }}</td>
           </tr>
         {% endfor %}
