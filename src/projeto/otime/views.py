@@ -112,6 +112,7 @@ def modelo(request):
         metodo = request.POST['metodo']
         if metodo == "criar":
             professor = get_object_or_404(Professor, pk = request.POST["id"])
+            professor.save()
         elif metodo == "atualizar":
             # Atualizará um objeto Professor
             pass
