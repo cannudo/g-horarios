@@ -106,4 +106,5 @@ def deletar_disciplina(request, id):
     return render(request, 'otime/disc-delete-confirm.html', {'disciplina': disciplina})
 
 def modelo(request):
-    pass
+    professor = Professor.objects.all()
+    return render(request, 'otime/professores.html', {'lista_de_professores': None})
