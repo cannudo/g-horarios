@@ -104,3 +104,20 @@ def deletar_disciplina(request, id):
         return redirect('lista_de_disciplinas')
 
     return render(request, 'otime/disc-delete-confirm.html', {'disciplina': disciplina})
+
+def modelo(request):
+    lista_de_professores = Professor.objects.all()
+
+    if request.method == 'POST':
+        metodo = request.POST['metodo']
+        if metodo == "criar":
+            professor = get_object_or_404(Professor, pk = request.POST["id"])
+            professor.save()
+        elif metodo == "atualizar":
+            # Atualizará um objeto Professor
+            pass
+        elif metodo == "deletar":
+            # Deletará um objeto Professor
+            pass
+
+    return render(request, 'otime/professores.html', {'lista_de_professores': lista_de_professores})
