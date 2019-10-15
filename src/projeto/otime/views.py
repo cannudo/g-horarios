@@ -104,3 +104,6 @@ def deletar_disciplina(request, id):
         return redirect('lista_de_disciplinas')
 
     return render(request, 'otime/disc-delete-confirm.html', {'disciplina': disciplina})
+
+def modelo(request):
+    pass
