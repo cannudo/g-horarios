@@ -109,6 +109,6 @@ def modelo(request):
     lista_de_professores = Professor.objects.all()
 
     if request.method == 'POST':
-        pass
+        metodo = request.POST['metodo']
 
     return render(request, 'otime/professores.html', {'lista_de_professores': lista_de_professores})
