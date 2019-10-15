@@ -110,5 +110,11 @@ def modelo(request):
 
     if request.method == 'POST':
         metodo = request.POST['metodo']
+        if metodo == "criar":
+            # Criará um objeto Professor
+        elif metodo == "atualizar":
+            # Atualizará um objeto Professor
+        elif metodo == "deletar":
+            # Deletará um objeto Professor
 
     return render(request, 'otime/professores.html', {'lista_de_professores': lista_de_professores})
