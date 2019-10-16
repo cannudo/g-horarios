@@ -73,7 +73,7 @@ def atualizar_professor(request, id):
 
     if form.is_valid():
         form.save()
-        return redirect('lista_de_professores')
+        return redirect('professores')
 
     return render(request, 'otime/professor-form.html', {'form': form, 'professor': professor})
 
@@ -83,7 +83,7 @@ def atualizar_disciplina(request, id):
 
     if form.is_valid():
         form.save()
-        return redirect('lista_de_disciplinas')
+        return redirect('disciplinas')
 
     return render(request, 'otime/disciplina-form.html', {'form': form, 'disciplina': disciplina})
 
@@ -92,7 +92,7 @@ def deletar_professor(request, id):
 
     if request.method == 'POST':
         professor.delete()
-        return redirect('lista_de_professores')
+        return redirect('professores')
 
     return render(request, 'otime/prof-delete-confirm.html', {'professor': professor})
 
@@ -101,7 +101,7 @@ def deletar_disciplina(request, id):
 
     if request.method == 'POST':
         disciplina.delete()
-        return redirect('lista_de_disciplinas')
+        return redirect('disciplinas')
 
     return render(request, 'otime/disc-delete-confirm.html', {'disciplina': disciplina})
 

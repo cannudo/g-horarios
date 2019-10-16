@@ -22,16 +22,20 @@
     <table id='minhaTabela'>
       <thead>
         <tr>
-          <th> DISCIPLINAS  
-            <a id="botao_nova_disciplina" href='{% url "criar_disciplinas" %}' class="btn btn-outline-light">Novo</a>    
-            <a id="btn_voltar_disc_index" href="http://127.0.0.1:8000" class="btn btn-outline-light">Voltar</a>
+          <th> DISCIPLINAS 
+          <a id="botao_nova_disciplina" href='{% url "criar_disciplinas" %}' class="btn btn-outline-light">Novo</a>
+          <br><br>    
+          <a id="btn_voltar_disc_index" href="http://127.0.0.1:8000" class="btn btn-outline-light">Voltar</a>
+          <div class="row">
+            <div class="column">Nome</div><div class="column">Código</div><div class="column">Carga Horária</div>
+          </div>
           </th>
         </tr>
       </thead>
       <tbody>
         {% for disciplina in lista_de_disciplinas %}        
           <tr class="rows" data-href='{% url "atualizar_disciplina" disciplina.id %}'>
-            <td>{{ disciplina.nome }}</td>
+            <td class="column">{{ disciplina.nome }}</td> <td class="column">{{ disciplina.codigo }}</td><td class="column">{{ disciplina.carga_horaria_total }}</td>
           </tr>
         {% endfor %}
       </tbody>

@@ -60,7 +60,7 @@
 
 #btn_voltar_disc_index {
     display: block;
-    margin-left: 80%;
+    margin-left: 90%;
     width: 10%;
     height: 10%;
     margin-top: -38px;
@@ -70,3 +70,23 @@
     background-color: #007BFF;
     color: #fff;
 }
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .row {
+    padding-left: 15%;
+    align-self: center;
+  }
