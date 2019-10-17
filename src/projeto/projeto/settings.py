@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 
+
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -26,6 +28,11 @@ SECRET_KEY = 'fzlb%21#!_5)z9e&qhqjwna92gj-rgb&1@4$r9dh%)8x_)uh8c'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+STATICFILES_DIRS = [
+    "otime/templates/static"
+
+]
 
 
 # Application definition
@@ -78,6 +85,15 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+
+
+    #default': {
+     #   'ENGINE': 'django.db.backends.mysql',
+      #  'NAME': 'django',
+       # 'USER': 'root',
+        #'PASSWORD':'',
+
+
     }
 }
 

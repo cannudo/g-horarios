@@ -1,56 +1,96 @@
+
 <!DOCTYPE html>
-<html lang="pt-br">
+{% load static%}
+<html>
   <head>
     <meta charset="utf-8">
-    <title>O'Time</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>O'time</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href='{% static "otime/bootstrap/bootstrap.css" %}'>
+    <link rel="stylesheet" href='{% static "otime/bootstrap/bootstrap.js" %}'>
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href='{% static "otime/css/estilo.css" %}'>
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
   </head>
   <body>
-    <h1>Salas de aula</h1>
-    {% if lista_de_salas %}
-      <ul>
-        {% for sala_de_aula in lista_de_salas %}
-          <li>
-            <h2>{{ sala_de_aula.nome }}</h2>
-            <p>Tipo: {{ sala_de_aula.tipo }}</p>
-            <p>Número: {{ sala_de_aula.numero }}</p>
-          </li>
-        {% endfor %}
+    <!-- menu  -->
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <a href=""><h2>O'Time</h2></a>
+      </div>
+      <ul class="list-unstyled components">
+        <li>
+          <a href="salas" ><i class="fas fa-door-open"></i> Salas </a>
+        </li>
+        <li>
+          <a href="disciplinas"><i class="fas fa-book"></i> Disciplinas</a>
+        </li>
+        <li>
+          <a href="professores"><i class="fas fa-graduation-cap"></i> Professores</a>
+        </li>
+        <li>
+          <a href=""><i class="fas fa-users"></i> Turmas</a>
+        </li>
+        <li>
+          <a href="reservarHorario"><i class="fas fa-calendar-alt"></i> Reservar horários</a>
+        </li>
       </ul>
-    {% else %}
-      <p>Não há salas de aula cadastradas.</p>
-    {% endif %}
-    <h1>Disciplinas</h1>
-    {% if lista_de_disciplinas %}
-      <ul>
-        {% for disciplina in lista_de_disciplinas %}
-          <li>
-            <h2>{{ disciplina.nome }}</h2>
-            <p>Código: {{ disciplina.codigo }}</p>
-            <p>Carga horária total: {{ disciplina.carga_horaria_total }}</p>
-          </li>
-        {% endfor %}
+      <ul class="list-unstyled">
+        <li>
+          <a href=""><i class="fas fa-briefcase"></i> Sobre</a>
+        </li>
+        <li>
+          <a href=""><i class="fas fa-paper-plane"></i> Contato</a>
+        </li>
       </ul>
-    {% else %}
-      <p>Não há disciplinas cadastradas.</p>
-    {% endif %}
-    <h1>Professores</h1>
-    {% if lista_de_professores %}
-      <ul>
-        {% for professor in lista_de_professores %}
-          <li>
-            <h2>{{ professor.nome }}</h2>
-            <p>Telefone: {{ professor.telefone }}</p>
-            <p>E-mail: {{ professor.email }}</p>
-            <p>Matrícula: {{ professor.matricula }}</p>
-          </li>
-        {% endfor %}
-      </ul>
-    {% else %}
-      <p>Não há professores cadastrados.</p>
-    {% endif %}
+    </nav>
+    <!--ícone login-->
+      <div class="login">
+        <a href="" data-target="#login"><img src='{% static "otime/img/avatar.svg" %}'/></a>
+      </div>
+    <main>
+    <!-- Modal saiba mais -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">O'Time</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Gerenciador de horários...
+            </div>
+            <!-- botao fechar modal -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- botao saiba mais-->
+      <h1><strong>O'time</strong></h1>
+      <h2>Gerenciador de horários escolares</h2>
+      <button type="button" class="btn btn-outline-primary" id="botao" data-toggle="modal" data-target="#exampleModalCenter">
+        Saiba mais
+      </button>
+  </main>
   </body>
-  {% if lista_de_salas and lista_de_disciplinas and lista_de_professores %}
-    <hr>
-    <p>Clique <a href="reservarHorario">aqui</a> para fazer uma ocupação no horário</p>
-  {% endif %}
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src='{% static "jquery/jquery.mim.js" %}'></script>
+  <script src='{% static "jquery/jquery-3.2.1.slim.min.js" %}'></script>
+    <script src='{% static "jquery/jquery.js" %}'></script>
+  <!-- Popper.JS -->
+  <script src='{% static "popper/popper.mim.js" %}'></script>
+  <!-- Bootstrap JS -->
+  <script src='{% static "bootstrap/js/bootstrap.js" %}'></script>
+  <script src='{% static "bootstrap/js/bootstrap.bundle.min.js" %}'></script>
+  <script type="text/javascript">$('#meuModal').on('shown.bs.modal', function () {$('#meuInput').trigger('focus')})</script>
 </html>
