@@ -212,7 +212,7 @@ ul {
     /*Barra lateal*/
     min-width: 250px;
     max-width: 250px;
-    height: 800px;
+    height: 100%;
     position: fixed;
     background-color: rgba(0, 0, 0, .9);
     color: #fff;
