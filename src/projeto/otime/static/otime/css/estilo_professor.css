@@ -3,7 +3,7 @@ body {
     background-color: #fafafa
 }
 
-#lista_de_professores ul {
+ul {
     position: center;
     padding: 0;
     margin: 0 auto;
@@ -21,18 +21,28 @@ h4 {
     height: 45px;
 }
 
+h2{
+
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+}
+h2:hover{
+
+   color: silver;
+
+}
+
 p {
     font-weight: bold;
     background-color: black;
     color: white;
     width: 1000px;
     margin: 0 auto;
-    padding: 20px 10px 00A2FD;
+    padding: 20px 10px;
 }
 
-td {
-    cursor: pointer;
-}
+
 
 ul,
 li {
@@ -63,18 +73,18 @@ a {
     background-color: black;
     color: white;
     padding: 5px 10px;
+    text-align: center;
 }
 
 #minhaTabela tr td {
     padding: 5px 10px;
     text-align: center;
-    cursor: pointer;
-    /**importante para não mostrar cursor de texto**/
 }
 
 #minhaTabela tr td:last-child {
     text-align: center;
 }
+
 
 /**Cores**/
 
@@ -82,19 +92,6 @@ a {
     background-color: #eee;
 }
 
-
-/**Cor quando passar por cima**/
-
-#minhaTabela tr:hover td {
-    background-color: #feffb7;
-}
-
-
-/**Cor quando selecionado**/
-
-#minhaTabela tr.selecionado td {
-    background-color: #aff7ff;
-}
 
 input[type=text],
 select {
@@ -133,37 +130,39 @@ input[type=submit]:hover {
 
 #botao_salvar_professor {
     position: absolute;
-    right: 26.5%;
+    right: 270px;
     width: 10%;
-    height: 4%;
+    height: 5%;
 }
 
 #botao_voltar_professor1 {
     position: absolute;
-    right: 36.5%;
+    right: 450px;
     width: 10%;
-    height: 4%;
+    top: 466px;
+    height: 5%;
 }
 
 #botao_deletar_professor {
     position: absolute;
-    right: 46.5%;
+    right: 450px;
     width: 10%;
-    height: 4%;
+    top: 466px;
+    height: 5%;
 }
 
 #botao_voltar_professor {
     position: absolute;
-    right: 36.5%;
+    right: 630px;
+    top: 466px;
     width: 10%;
-    height: 4%;
+    height: 5%;
 }
 
 #botao_novo_professor {
-    width: 10%;
-    height: 10%;
     display: block;
-    margin-left: 90%;
+    margin-left: 1000px;
+    margin-right: 10px;
     margin-top: -25px;
 }
 
@@ -174,9 +173,8 @@ input[type=submit]:hover {
 
 #btn_voltar_prof_index {
     display: block;
-    margin-left: 80%;
-    width: 10%;
-    height: 10%;
+    margin-left: 850px;
+    margin-right: 160px;
     margin-top: -38px;
 }
 

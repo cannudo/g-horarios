@@ -9,6 +9,7 @@ body {
     background: #fafafa;
 }
 
+
 .cores {
     background: linear-gradient(to top, #33cccc 0%, #0066ff 100%);
 }
@@ -92,8 +93,7 @@ ul {
 #salas li {
     padding: 5px 10px;
     text-align: center;
-    cursor: pointer;
-    /**importante para não mostrar cursor de texto**/
+  
 }
 
 
@@ -118,9 +118,8 @@ ul {
     background-color: #aff7ff;
 }
 
-body {
-    font-family: sans-serif;
-}
+
+
 
 #minhaTabela {
     width: 80%;
@@ -140,8 +139,6 @@ body {
 #minhaTabela tr td {
     padding: 5px 10px;
     text-align: center;
-    cursor: pointer;
-    /**importante para não mostrar cursor de texto**/
 }
 
 #minhaTabela tr td:last-child {
@@ -155,20 +152,18 @@ body {
     background-color: #eee;
 }
 
-
-/**Cor quando passar por cima**/
-
-#minhaTabela tr:hover td {
-    background-color: #feffb7;
-}
-
-
-/**Cor quando selecionado**/
-
 #minhaTabela tr.selecionado td {
     background-color: #aff7ff;
 }
 
+#slot:hover{
+
+    background-color: #fff;
+}
+
+#drop{
+    text-align: center;
+}
 
 /* ---------------------------------------------------
     SIDEBAR STYLE
@@ -199,8 +194,7 @@ body {
 #listaSalas li {
     padding: 10px 10px;
     text-align: left;
-    cursor: pointer;
-    /**importante para não mostrar cursor de texto**/
+   
 }
 
 .content {
