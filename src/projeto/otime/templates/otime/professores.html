@@ -27,13 +27,13 @@
           </tr>
         </thead>
         <tbody>
-          {% for professor in lista_de_professores %}        
+          {% for professor in lista_de_professores %}
             <tr>
               <td>{{ professor.nome }}</td>
               <td>
                 <a href='{% url "criar_professores" %}'><button type="submit" class="btn btn-outline-success">Novo </button> <a href='{% url "atualizar_professor" professor.id %}'>
                 <button type="submit"  class="btn btn-outline-primary"> Alterar </button>
-                <a href='{% url "deletar_professor" professor.id %}'><button type="submit" class="btn btn-outline-danger"> Deletar </button></a>  
+                <a href='{% url "deletar_professor" professor.id %}'><button type="submit" class="btn btn-outline-danger"> Deletar </button></a>
               </td>
             </tr>
           {% endfor %}
@@ -43,8 +43,8 @@
       <!-- jQuery CDN - Slim version (=without AJAX) -->
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
       <script src='{% static "jquery/jquery.mim.js" %}'></script>
-      <script src='{% static "jquery/jquery-3.2.1.slim.min.js" %}'></script> 
-      <script src='{% static "jquery/jquery.js" %}'></script> 
+      <script src='{% static "jquery/jquery-3.2.1.slim.min.js" %}'></script>
+      <script src='{% static "jquery/jquery.js" %}'></script>
       <!-- Popper.JS -->
       <script src='{% static "popper/popper.mim.js" %}'></script>
       <!-- Bootstrap JS -->

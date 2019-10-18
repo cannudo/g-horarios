@@ -13,6 +13,7 @@
     <link rel="stylesheet" href='{% static "otime/bootstrap/bootstrap.js" %}'>
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href='{% static "otime/css/estilo.css" %}'>
+    <link rel="stylesheet" href='{% static "otime/css/modal.css" %}'>
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
@@ -54,32 +55,32 @@
         <a href="" data-target="#login"><img src='{% static "otime/img/avatar.svg" %}'/></a>
       </div>
     <main>
-    <!-- Modal saiba mais -->
-      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">O'Time</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              Gerenciador de horários...
-            </div>
-            <!-- botao fechar modal -->
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-            </div>
+      <!-- Modal saiba mais -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Saiba mais</h2>
+            <span class="close">&times;</span>
+          </div>
+          <div class="modal-body">
+            <h3>Some text to enable scrolling..</h3>
+                 <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                 <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                 <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <div class="modal-footer">
+            <button  type="button" class="btn btn-outline-primary" id="Fecha" >Fecha</button>
           </div>
         </div>
       </div>
+    </div>
       <!-- botao saiba mais-->
       <h1><strong>O'Time</strong></h1>
       <h2>Gerenciador de horários escolares</h2>
-      <button type="button" class="btn btn-outline-primary" id="botao" data-toggle="modal" data-target="#exampleModalCenter">
-        Saiba mais
-      </button>
+      <button type="button" class="btn btn-outline-primary" id="myBtn">Saiba mais</button>
   </main>
   </body>
     <!-- jQuery CDN - Slim version (=without AJAX) -->
@@ -92,5 +93,36 @@
   <!-- Bootstrap JS -->
   <script src='{% static "bootstrap/js/bootstrap.js" %}'></script>
   <script src='{% static "bootstrap/js/bootstrap.bundle.min.js" %}'></script>
-  <script type="text/javascript">$('#meuModal').on('shown.bs.modal', function () {$('#meuInput').trigger('focus')})</script>
+  <script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+//Fecha o modal
+var Fecha = document.getElementById("Fecha");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+if (event.target == modal) {
+  modal.style.display = "none";
+}
+
+Fecha.onclick = function() {
+  modal.style.display = "none";
+}
+
+}
+</script>
 </html>
