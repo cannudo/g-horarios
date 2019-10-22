@@ -128,21 +128,6 @@ input[type=submit]:hover {
     margin: 0 auto;
 }
 
-#botao_salvar_professor {
-    position: absolute;
-    right: 270px;
-    width: 10%;
-    height: 5%;
-}
-
-#botao_voltar_professor1 {
-    position: absolute;
-    right: 450px;
-    width: 10%;
-    top: 466px;
-    height: 5%;
-}
-
 #botao_deletar_professor {
     position: absolute;
     right: 450px;
