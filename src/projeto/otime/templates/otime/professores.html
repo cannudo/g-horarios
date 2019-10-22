@@ -66,6 +66,7 @@
             </div>
             <div class="modal-body">
               <form class="" method="post">
+                {% csrf_token %}
               <div class="form-group">
                 <label for="addInputNome">Nome:</label>
                 <input type="text" class="form-control" id="addInputNome" name="Nome" placeholder="Nome do professor" required>
