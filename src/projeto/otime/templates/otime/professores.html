@@ -47,8 +47,8 @@
             <tr>
               <td>{{ professor.nome }}</td>
               <td>
-                <a href='{% url "atualizar_professor" professor.id %}'><button type="submit" class="btn btn-outline-primary"> Alterar </button></a>
-                <a href='{% url "deletar_professor" professor.id %}'><button type="submit" class="btn btn-outline-danger"> Deletar </button></a>
+                <a href='{% url "atualizar_professor" professor.id %}'><button type="submit" class="btn btn-outline-primary btn-sm"> Alterar </button></a>
+                <a href='{% url "deletar_professor" professor.id %}'><button type="submit" class="btn btn-outline-danger btn-sm"> Deletar </button></a>
               </td>
             </tr>
           {% endfor %}
@@ -76,7 +76,7 @@
               </div>
               <div class="form-group">
                 <label for="addInputEmail">E-mail:</label>
-                <input type="text" class="form-control" id="addInputEmail" name="email" placeholder="E-mail do professor" required>
+                <input type="email" class="form-control" id="addInputEmail" name="email" placeholder="E-mail do professor" required>
               </div>
               <div class="form-group">
                 <label for="addInputMatricula">Matricula:</label>
@@ -84,8 +84,8 @@
               </div>
             </div>
             <div class="modal-footer">
-                <button  type="Reset" class="btn btn-outline-primary" id="Fecha" >Fecha</button>
-                <input id="Fecha" class="btn btn-outline-success" type="submit" value="Salvar">
+                <button  type="Reset" class="btn btn-outline-danger" id="Fecha" >Fechar</button>
+                <button id="Fecha" class="btn btn-outline-success" type="submit" value="Salvar">Salvar</button>
               </form>
             </div>
           </div>
