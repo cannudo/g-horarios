@@ -49,15 +49,13 @@ def salas(request):
 
 def professores(request):
     if request.method == "POST":
-        print("Caiu nos professores")
+        requisicao_post = request.POST
+        professor = Professor(nome = requisicao_post["nome"], telefone = requisicao_post["telefone"], email = requisicao_post["email"], matricula = requisicao_post["matricula"])
+        professor.save()        
+        
     lista_de_professores = Professor.objects.all()
     return render(request,'otime/professores.html',{'lista_de_professores':lista_de_professores})
 
-def disciplinas(request):
-    if request.method == "POST":
-        print("Caiu nas disciplinas")
-    lista_de_disciplinas = Disciplina.objects.all()
-    return render(request,'otime/disciplinas.html',{'lista_de_disciplinas':lista_de_disciplinas})
 
 def criar_professor(request):
     if request.method == "POST":
@@ -69,6 +67,13 @@ def criar_professor(request):
         return redirect('professores')
 
     return render(request, 'otime/professor-form.html', {'form': form})
+
+def disciplinas(request):
+    if request.method == "POST":
+        print("Caiu nas disciplinas")
+    lista_de_disciplinas = Disciplina.objects.all()
+    return render(request,'otime/disciplinas.html',{'lista_de_disciplinas':lista_de_disciplinas})
+
 
 def criar_disciplina(request):
     if request.method == "POST":

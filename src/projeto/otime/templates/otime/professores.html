@@ -47,8 +47,7 @@
             <tr>
               <td>{{ professor.nome }}</td>
               <td>
-                <a href='{% url "criar_professores" %}'><button type="submit" class="btn btn-outline-success">Novo </button> <a href='{% url "atualizar_professor" professor.id %}'>
-                <button type="submit"  class="btn btn-outline-primary"> Alterar </button>
+                <a href='{% url "atualizar_professor" professor.id %}'><button type="submit" class="btn btn-outline-primary"> Alterar </button></a>
                 <a href='{% url "deletar_professor" professor.id %}'><button type="submit" class="btn btn-outline-danger"> Deletar </button></a>
               </td>
             </tr>
@@ -69,24 +68,24 @@
                 {% csrf_token %}
               <div class="form-group">
                 <label for="addInputNome">Nome:</label>
-                <input type="text" class="form-control" id="addInputNome" name="Nome" placeholder="Nome do professor" required>
+                <input type="text" class="form-control" id="addInputNome" name="nome" placeholder="Nome do professor" required>
               </div>
               <div class="form-group">
                 <label for="addInputTelefone">Telefone:</label>
-                <input type="text" class="form-control" id="addInputTelefone" name="Telefone" placeholder="Telefone do professor" required>
+                <input type="text" class="form-control" id="addInputTelefone" name="telefone" placeholder="Telefone do professor" required>
               </div>
               <div class="form-group">
                 <label for="addInputEmail">E-mail:</label>
-                <input type="text" class="form-control" id="addInputEmail" name="Email" placeholder="E-mail do professor" required>
+                <input type="text" class="form-control" id="addInputEmail" name="email" placeholder="E-mail do professor" required>
               </div>
               <div class="form-group">
                 <label for="addInputMatricula">Matricula:</label>
-                <input type="text" class="form-control" id="addInputMatricula" name="Matricula" placeholder="Matricula do professor" required>
+                <input type="text" class="form-control" id="addInputMatricula" name="matricula" placeholder="Matricula do professor" required>
               </div>
             </div>
             <div class="modal-footer">
                 <button  type="Reset" class="btn btn-outline-primary" id="Fecha" >Fecha</button>
-                <button id="Fecha" class="btn btn-outline-success" type="submit">Salvar</button>
+                <input id="Fecha" class="btn btn-outline-success" type="submit" value="Salvar">
               </form>
             </div>
           </div>
