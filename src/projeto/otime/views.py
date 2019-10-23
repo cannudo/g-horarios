@@ -56,18 +56,6 @@ def professores(request):
     lista_de_professores = Professor.objects.all()
     return render(request,'otime/professores.html',{'lista_de_professores':lista_de_professores})
 
-
-def criar_professor(request):
-    if request.method == "POST":
-        print("Caiu em criar professor")
-    form = FormProfessor(request.POST or None)
-
-    if form.is_valid():
-        form.save()
-        return redirect('professores')
-
-    return render(request, 'otime/professor-form.html', {'form': form})
-
 def disciplinas(request):
     if request.method == "POST":
         print("Caiu nas disciplinas")
