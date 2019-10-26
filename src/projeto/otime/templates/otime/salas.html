@@ -11,7 +11,9 @@
         <link rel="stylesheet" href='{% static "otime/bootstrap/bootstrap.css" %}'>
         <link rel="stylesheet" href='{% static "otime/bootstrap/bootstrap.js" %}'>
         <!-- Our Custom CSS -->
-        <link rel="stylesheet" href='{% static "otime/css/estilo.css" %}'>
+        <!--<link rel="stylesheet" href='{% static "otime/css/estilo.css" %}'>-->
+        <link rel="stylesheet" href='{% static "otime/css/estilo_disciplina.css" %}'>
+        <link rel="stylesheet" href='{% static "otime/css/estilo_professor.css" %}'>
         <!-- Font Awesome JS -->
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
@@ -20,14 +22,25 @@
       <table id='minhaTabela'>
         <thead>
           <tr>
-            <th>SALAS</th>
+            <th>SALAS
+              <a id="botao_nova_disciplina" href='{% url "criar_sala" %}' class="btn btn-outline-light">Novo</a>
+              <br><br>    
+              <a id="btn_voltar_disc_index" href="http://127.0.0.1:8000" class="btn btn-outline-light">Voltar</a>
+              <div class="row">
+                <div class="column">Nome</div><div class="column">Tipo</div><div class="column">Número</div>
+              </div>
+            </th>
           <tr>
         </thead>
-        {% for sala_de_aula in lista_de_salas %}
-        <tr>
-          <td>{{ sala_de_aula.nome }}</td>
-        </tr>
-        {% endfor %}
+        <tbody>
+          {% for sala_de_aula in lista_de_salas %}
+
+              <td class="column">{{ sala_de_aula.nome }}</td> 
+              <td class="column">{{ sala_de_aula.tipo }}</td>
+              <td class="column">{{ sala_de_aula.numero }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
       </table>     
       <!-- jQuery CDN - Slim version (=without AJAX) -->
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
