@@ -3,8 +3,6 @@ from .models import *
 from .forms import *
 
 def index(request):
-    if request.method == "POST":
-        print("Caiu na index")
     lista_de_salas = SalaDeAula.objects.all()
     lista_de_disciplinas = Disciplina.objects.all()
     lista_de_professores = Professor.objects.all()
@@ -16,8 +14,6 @@ def index(request):
     return render(request, "otime/index.html", contexto)
 
 def reservarHorario(request):
-    if request.method == "POST":
-        print("Caiu na reserva")
     if request.method == "POST":
         requisicao_post = request.POST
         sala_de_aula = get_object_or_404(SalaDeAula, pk = requisicao_post["sala_de_aula"])
@@ -42,8 +38,6 @@ def reservarHorario(request):
 
 
 def salas(request):
-    if request.method == "POST":
-        print("Caiu nas salas")
     lista_de_salas = SalaDeAula.objects.all()
     return render(request,'otime/salas.html',{'lista_de_salas':lista_de_salas})
 
@@ -51,21 +45,17 @@ def professores(request):
     if request.method == "POST":
         requisicao_post = request.POST
         professor = Professor(nome = requisicao_post["nome"], telefone = requisicao_post["telefone"], email = requisicao_post["email"], matricula = requisicao_post["matricula"])
-        professor.save()        
-        
+        professor.save()
+
     lista_de_professores = Professor.objects.all()
     return render(request,'otime/professores.html',{'lista_de_professores':lista_de_professores})
 
 def disciplinas(request):
-    if request.method == "POST":
-        print("Caiu nas disciplinas")
     lista_de_disciplinas = Disciplina.objects.all()
     return render(request,'otime/disciplinas.html',{'lista_de_disciplinas':lista_de_disciplinas})
 
 
 def criar_disciplina(request):
-    if request.method == "POST":
-        print("Caiu em criar disciplina")
     form = FormDisciplina(request.POST or None)
 
     if form.is_valid():
@@ -75,8 +65,6 @@ def criar_disciplina(request):
     return render(request, 'otime/disciplina-form.html', {'form': form})
 
 def atualizar_professor(request, id):
-    if request.method == "POST":
-        print("Caiu em atualizar professor")
     professor = Professor.objects.get(id=id)
     form =  FormProfessor(request.POST or None, instance=professor)
 
