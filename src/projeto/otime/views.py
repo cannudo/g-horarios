@@ -102,9 +102,9 @@ def atualizar_sala(request, id):
 
     if form.is_valid():
         form.save()
-        return redirect('salas')
+        return redirect('sala')
 
-    return render(request, 'otime/disciplina-form.html', {'form': form, 'disciplina': disciplina})
+    return render(request, 'otime/sala-form.html', {'form': form, 'sala': sala})
 
 def deletar_professor(request, id):
     professor = Professor.objects.get(id=id)
@@ -123,6 +123,15 @@ def deletar_disciplina(request, id):
         return redirect('disciplinas')
 
     return render(request, 'otime/disc-delete-confirm.html', {'disciplina': disciplina})
+
+def deletar_sala(request, id):
+    sala = SalaDeAula.objects.get(id=id)
+
+    if request.method == 'POST':
+        sala.delete()
+        return redirect('sala')
+
+    return render(request, 'otime/disc-delete-confirm.html', {'sala': sala})
 
 def modelo(request):
     lista_de_professores = Professor.objects.all()
