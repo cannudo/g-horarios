@@ -14,7 +14,7 @@
 **Cenário de Sucesso Principal (ou Fluxo Básico):**
 
 1. O gestor clica na opção "Salas" do menu e em seguida seleciona o botão ***Novo***. 
-2. O sistema abre o formulário para cadastro de sala de aula, contendo os campos para **nome**, **número**, **capacidade** e **tipo**.
+2. O sistema abre o formulário para cadastro de sala de aula, contendo os campos para **nome**, **tipo** e **número**.
 3. O gestor preenche todos os campos e clica no botão ***Salvar***.
 4. O sistema exibe uma mensagem de confirmação do cadastramento.
 5. CDU finalizado.

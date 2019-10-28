@@ -13,10 +13,11 @@
 
 **Cenário de Sucesso Principal (ou Fluxo Básico):**
 
-1. O gestor indica que quer cadastrar um professor.
-2. O sistema abre o formulário para cadastro de professor, contendo os  campos para **nome**, **telefone**, **e-mail** e **matrícula**.
-3. O gestor preenche o form e clica no botão para confirmar o cadastro.
-4. O sistema envia uma mensagem de cadastro com sucesso.
+1. O gestor clica na opção "Professores" do menu e em seguida seleciona o botão **Novo**. 
+2. O sistema abre o formulário para cadastro de um professor, contendo os campos para **nome**, **telefone**, **email** e **matrícula**.
+3. O gestor preenche todos os campos e clica no botão ***Salvar***.
+4. O sistema exibe uma mensagem de confirmação do cadastramento.
+5. CDU finalizado.
 
 **Fluxos alternativos ou excepcionais**
 
