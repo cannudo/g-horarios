@@ -129,9 +129,9 @@ def deletar_sala(request, id):
 
     if request.method == 'POST':
         sala.delete()
-        return redirect('sala')
+        return redirect('salas')
 
-    return render(request, 'otime/disc-delete-confirm.html', {'sala': sala})
+    return render(request, 'otime/sala-delete-confirm.html', {'sala': sala})
 
 def modelo(request):
     lista_de_professores = Professor.objects.all()
