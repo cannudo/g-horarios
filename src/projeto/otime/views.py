@@ -42,18 +42,16 @@ def salas(request):
     return render(request,'otime/salas.html',{'lista_de_salas':lista_de_salas})
 
 def professores(request):
-    if request.method == "POST":
-        requisicao_post = request.POST
-        professor = Professor(nome = requisicao_post["nome"], telefone = requisicao_post["telefone"], email = requisicao_post["email"], matricula = requisicao_post["matricula"])
-        professor.save()
+    form =  FormProfessor(request.POST or None)
+    if form.is_valid():
+        form.save()
 
     lista_de_professores = Professor.objects.all()
-    return render(request,'otime/professores.html',{'lista_de_professores':lista_de_professores})
+    return render(request,'otime/professores.html',{'lista_de_professores':lista_de_professores, 'form':form})
 
 def disciplinas(request):
     lista_de_disciplinas = Disciplina.objects.all()
     return render(request,'otime/disciplinas.html',{'lista_de_disciplinas':lista_de_disciplinas})
-
 
 def criar_disciplina(request):
     form = FormDisciplina(request.POST or None)
@@ -72,7 +70,7 @@ def atualizar_professor(request, id):
         form.save()
         return redirect('professores')
 
-    return render(request, 'otime/professor-form.html', {'form': form, 'professor': professor})
+    return render(request, 'otime/professores.html', {'form': form, 'professor': professor})
 
 def atualizar_disciplina(request, id):
     disciplina = Disciplina.objects.get(id=id)

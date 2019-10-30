@@ -61,92 +61,36 @@
               <span class="close">&times;</span>
             </div>
             <div class="modal-body">
-              <form class="" method="post">
-                {% csrf_token %}
-              <div class="form-group">
-                <label for="addInputNome">Nome:</label>
-                <input type="text" class="form-control" id="addInputNome" name="nome" placeholder="Nome do professor" required>
-              </div>
-              <div class="form-group">
-                <label for="addInputTelefone">Telefone:</label>
-                <input type="text" class="form-control" id="addInputTelefone" name="telefone" placeholder="Telefone do professor" required>
-              </div>
-              <div class="form-group">
-                <label for="addInputEmail">E-mail:</label>
-                <input type="email" class="form-control" id="addInputEmail" name="email" placeholder="E-mail do professor" required>
-              </div>
-              <div class="form-group">
-                <label for="addInputMatricula">Matricula:</label>
-                <input type="text" class="form-control" id="addInputMatricula" name="matricula" placeholder="Matricula do professor" required>
-              </div>
+              <form method="post">
+              {% csrf_token %}
+              {{ form }}
             </div>
-            <div class="modal-footer">
-                <button  type="Reset" class="btn btn-outline-danger" id="Fecha" >Fechar</button>
+              <div class="modal-footer">
+                <button type="Reset" class="btn btn-outline-danger" id="Fecha">Fechar</button>
                 <button id="Fecha" class="btn btn-outline-success" type="submit" value="Salvar">Salvar</button>
-              </form>
-            </div>
+              </form>           
           </div>
         </div>
       </div>
-      
-      <!-- Modal Novo -->
-      <div id="myModal2" class="modal2">
+
+            <!-- Modal Novo -->
+      <div id="myModal" class="modal">
         <!-- Modal content -->
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h3>ALTERAR PROFESSOR</h3>
-              <span2 class="close2">&times;</span2>
+              <h3>NOVO PROFESSOR</h3>
+              <span class="close">&times;</span>
             </div>
             <div class="modal-body">
-              <form class="" method="post">
+              <form method="get">
               {% csrf_token %}
-              <div class="form-group">
-                <label for="addInputNome">Nome:</label>
-                <input type="text" class="form-control" id="addInputNome" name="nome" placeholder="Nome do professor" required>
-              </div>
-              <div class="form-group">
-                <label for="addInputTelefone">Telefone:</label>
-                <input type="text" class="form-control" id="addInputTelefone" name="telefone" placeholder="Telefone do professor" required>
-              </div>
-              <div class="form-group">
-                <label for="addInputEmail">E-mail:</label>
-                <input type="email" class="form-control" id="addInputEmail" name="email" placeholder="E-mail do professor" required>
-              </div>
-              <div class="form-group">
-                <label for="addInputMatricula">Matricula:</label>
-                <input type="text" class="form-control" id="addInputMatricula" name="matricula" placeholder="Matricula do professor" required>
-              </div>
-              </div>
+              {{ form }}
+            </div>
               <div class="modal-footer">
-                <button  type="Reset" class="btn btn-outline-danger" id="Fecha2" >Fechar</button>
-                <button id="Fecha2" class="btn btn-outline-success" type="submit" value="Salvar">Salvar</button>
-              </div>
-              </form>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      <!-- Modal Novo -->
-      <div id="myModal3" class="modal3">
-        <!-- Modal content -->
-        <div class="modal-dialog">
-          <div class="modal3-content">
-            <div class="modal-header">
-              <h3>DELETAR PROFESSOR</h3>
-              <span class="close3">&times;</span>
-            </div>
-            <div class="modal-body">
-              <form class="" method="post">
-                {% csrf_token %}
-                <h5>Tem certeza que deseja remover {{ professor.nome }} ?</h5>
-                <div class="modal-footer">
-                <button class="btn btn-outline-success" type="submit">Confirmar</button>
-                <button type="Reset" class="btn btn-outline-danger" id="Fecha3">Fechar</button>
-              </form>
-              </div>
-            </div>
+                <button type="Reset" class="btn btn-outline-danger" id="Fecha">Fechar</button>
+                <button id="Fecha" class="btn btn-outline-success" type="submit" value="Salvar">Salvar</button>
+              </form>           
           </div>
         </div>
       </div>
@@ -163,7 +107,6 @@
       <script src='{% static "bootstrap/js/bootstrap.js" %}'></script>
       <script src='{% static "bootstrap/js/bootstrap.bundle.min.js" %}'></script>
       <!-- javascript JS -->
-      <script type="text/javascript">$('#meuModal').on('shown.bs.modal', function () {$('#meuInput').trigger('focus')})</script>
       <script type="text/javascript">
       $(".rows").click
       (
@@ -204,62 +147,6 @@
     }
     Fecha.onclick = function() {
       modal.style.display = "none";
-      }
-    }
-    </script>
-
-    <script>
-    // Get the modal
-    var modal2 = document.getElementById("myModal2");
-    // Get the button that opens the modal
-    var btn2 = document.getElementById("myBtn2");
-    //Fecha o modal
-    var Fecha2 = document.getElementById("Fecha2");
-    // Get the <span> element that closes the modal
-     var span2 = document.getElementsByClassName("close2")[0];
-    // When the user clicks the button, open the modal
-    btn2.onclick = function() {
-    modal2.style.display = "block";
-    }
-    // When the user clicks on <span> (x), close the modal
-    span2.onclick = function() {
-      modal2.style.display = "none";
-    }
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-    if (event.target == modal2) {
-      modal2.style.display = "none";
-    }
-    Fecha2.onclick = function() {
-      modal2.style.display = "none";
-      }
-    }
-    </script>
-
-    <script>
-    // Get the modal
-    var modal3 = document.getElementById("myModal3");
-    // Get the button that opens the modal
-    var btn3 = document.getElementById("myBtn3");
-    //Fecha o modal
-    var Fecha3 = document.getElementById("Fecha3");
-    // Get the <span> element that closes the modal
-     var span3 = document.getElementsByClassName("close3")[0];
-    // When the user clicks the button, open the modal
-    btn3.onclick = function() {
-    modal3.style.display = "block";
-    }
-    // When the user clicks on <span> (x), close the modal
-    span3.onclick = function() {
-      modal3.style.display = "none";
-    }
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-    if (event.target == modal3) {
-      modal3.style.display = "none";
-    }
-    Fecha3.onclick = function() {
-      modal3.style.display = "none";
       }
     }
     </script>
