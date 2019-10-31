@@ -1,3 +1,126 @@
+body {
+    margin: 0;
+    background-color: #fafafa
+}
+
+ul {
+    position: center;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0px;
+    color: #000;
+    text-align: center;
+}
+
+h4 {
+    background-color: #000;
+    color: #fff;
+    width: 800px;
+    margin: 0 auto;
+    height: 45px;
+}
+
+h2{
+
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+}
+h2:hover{
+
+   color: silver;
+
+}
+
+p {
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
+
+
+ul,
+li {
+    text-align: left;
+    padding: 10px;
+    width: 800px;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+#minhaTabela {
+    width: 80%;
+    margin: 0 auto;
+    border: 0;
+    box-shadow: 0 5px 30px darkgrey;
+    border-spacing: 0;
+}
+
+#minhaTabela thead th {
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+#minhaTabela tr td {
+    padding: 5px 10px;
+    text-align: center;
+}
+
+#minhaTabela tr td:last-child {
+    text-align: center;
+}
+
+
+/**Cores**/
+
+#minhaTabela tr:nth-child(odd) {
+    background-color: #eee;
+}
+
+
+input[type=text],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+
 #lista_de_disciplinas ul {
     position: center;
     padding: 0;
@@ -18,38 +141,39 @@
 
 #botao_salvar_disciplina {
     position: absolute;
-    right: 25%;
+    right: 270px;
     width: 10%;
-    height: 4%;
+    height: 5%;
 }
 
 #botao_voltar_disciplina1 {
     position: absolute;
-    right: 35%;
+    right: 450px;
     width: 10%;
     top: 298px;
-    height: 4%;
+    height: 5%;
 }
 
 #botao_deletar_disciplina {
     position: absolute;
-    right: 45%;
+    right: 450px;
     width: 10%;
-    height: 4%;
+    top: 466px;
+    height: 5%;
 }
 
 #botao_voltar_disciplina {
     position: absolute;
-    right: 35%;
+    right: 630px;
+    top: 466px;
     width: 10%;
-    height: 4%;
+    height: 5%;
 }
 
 #botao_nova_disciplina {
     display: block;
-    width: 10%;
-    height: 10%;
-    margin-left: 90%;
+    margin-left: 1000px;
+    margin-right: 10px;
     margin-top: -25px;
 }
 
@@ -60,9 +184,8 @@
 
 #btn_voltar_disc_index {
     display: block;
-    margin-left: 90%;
-    width: 10%;
-    height: 10%;
+    margin-left: 850px;
+    margin-right: 160px;
     margin-top: -38px;
 }
 
@@ -70,23 +193,3 @@
     background-color: #007BFF;
     color: #fff;
 }
-
-/* Create three equal columns that floats next to each other */
-.column {
-    float: left;
-    width: 33.33%;
-    padding: 10px;
-    /* Should be removed. Only for demonstration */
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  .row {
-    padding-left: 15%;
-    align-self: center;
-  }

@@ -28,11 +28,11 @@
                 <a id="botao_voltar_professor1" href="http://127.0.0.1:8000/professores" class="btn btn-outline-primary ">Voltar</a> 
                 {% endif%}
             </form>
+        </div>
         {% if professor %}
             <a id="botao_deletar_professor" href='{% url "deletar_professor" professor.id %}' class="btn btn-outline-danger">Deletar</a>
             <a id="botao_voltar_professor"  href="http://127.0.0.1:8000/professores" class="btn btn-outline-primary ">Voltar</a>
         {% endif %}
-        </div>
 
     </body>
     <!-- jQuery CDN - Slim version (=without AJAX) -->
