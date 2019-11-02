@@ -102,7 +102,7 @@ def atualizar_sala(request, id):
 
     if form.is_valid():
         form.save()
-        return redirect('sala')
+        return redirect('salas')
 
     return render(request, 'otime/sala-form.html', {'form': form, 'sala': sala})
 
