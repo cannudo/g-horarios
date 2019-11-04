@@ -1,12 +1,13 @@
 ### Caso de Uso: Cadastrar disciplina
 ---
-**Ator principal:** Gestor.
+**Ator principal:** 
+- Gestor.
 
 **Interessados e Interesses:**
 - Gestor: deseja cadastrar disciplinas.
 
 **Pré-Condições:**
-- Ter cadastro completo, estar logado no sistema.
+- Ter clicado em lista diciplina.
 
 **Pós-condições**
 - Uma disciplina é cadastrado no sistema.

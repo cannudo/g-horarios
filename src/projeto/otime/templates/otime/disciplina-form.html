@@ -12,7 +12,7 @@
         <link rel="stylesheet" href='{% static "otime/bootstrap/bootstrap.js" %}'>
         <!-- Our Custom CSS -->
         <link rel="stylesheet" href='{% static "otime/css/estilo_disciplina.css" %}'>
-        <link rel="stylesheet" href='{% static "otime/css/estilo_professor.css" %}'>
+      
         <!-- Font Awesome JS -->
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
@@ -29,12 +29,11 @@
                 <a id="botao_voltar_disciplina1" href="http://127.0.0.1:8000/disciplinas" class="btn btn-outline-primary ">Voltar</a> 
                 {% endif%}
             </form>
+        </div>
         {% if disciplina %}
-            
             <a id="botao_deletar_disciplina" href='{% url "deletar_disciplina" disciplina.id %}' class="btn btn-outline-danger">Deletar</a>
             <a id="botao_voltar_disciplina"  href="http://127.0.0.1:8000/disciplinas" class="btn btn-outline-primary ">Voltar</a>
         {% endif %}
-        </div>
 
     </body>
     <!-- jQuery CDN - Slim version (=without AJAX) -->
@@ -46,6 +45,4 @@
     <script src='{% static "popper/popper.mim.js" %}'></script>
     <!-- Bootstrap JS -->
     <script src='{% static "bootstrap/js/bootstrap.js" %}'></script>
-    <script src='{% static "bootstrap/js/bootstrap.bundle.min.js" %}'></script>
-    <script type="text/javascript">$('#meuModal').on('shown.bs.modal', function(){$('#meuInput').trigger('focus')})</script>
 </html>
