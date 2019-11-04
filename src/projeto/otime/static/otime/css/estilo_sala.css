@@ -1,0 +1,93 @@
+#lista_de_disciplinas ul {
+    position: center;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0px;
+    color: #000;
+    text-align: center;
+}
+
+#form-sala {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 50px;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#botao_salvar_disciplina {
+    position: absolute;
+    right: 25%;
+    width: 10%;
+    height: 4%;
+}
+
+#botao_voltar_disciplina1 {
+    position: absolute;
+    right: 35%;
+    width: 10%;
+    top: 298px;
+    height: 4%;
+}
+
+#botao_deletar_disciplina {
+    position: absolute;
+    right: 45%;
+    width: 10%;
+    height: 4%;
+}
+
+#botao_voltar_disciplina {
+    position: absolute;
+    right: 35%;
+    width: 10%;
+    height: 4%;
+}
+
+#botao_nova_disciplina {
+    display: block;
+    width: 10%;
+    height: 10%;
+    margin-left: 90%;
+    margin-top: -25px;
+}
+
+#botao_nova_disciplina:hover {
+    background-color: #28A745;
+    color: #fff;
+}
+
+#btn_voltar_disc_index {
+    display: block;
+    margin-left: 90%;
+    width: 10%;
+    height: 10%;
+    margin-top: -38px;
+}
+
+#btn_voltar_disc_index:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .row {
+    padding-left: 15%;
+    align-self: center;
+  }

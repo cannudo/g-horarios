@@ -14,10 +14,10 @@
 
 **Cenário de Sucesso Principal (ou Fluxo Básico):**
 
-1. O gestor clica no botão novo na pagina de disciplina.
-2. O sistema redireciona para a pagina com formulário para cadastro de disciplina, contendo os  campos para **código**, **nome** e **carga horária total**.
-3. O gestor preenche o formulario e clica no botão salvar.
-4. O sistema redireciona para a pagina de diciplina.
+1. O gestor clica na opção "Disciplinas" do menu e em seguida seleciona o botão **Novo**. 
+2. O sistema abre o formulário para cadastro de um professor, contendo os campos para **nome**, **código** e **carga_horária**.
+3. O gestor preenche todos os campos e clica no botão **Salvar**.
+4. O sistema exibe uma mensagem de confirmação do cadastramento.
 5. CDU finalizado.
 
 **Fluxos alternativos ou excepcionais**
@@ -25,4 +25,14 @@
 **3a. O ator preenche algum dado incorreto**
 
 3. O sistema retorna uma mensagem de erro, informando quais dados precisam ser corrigidos.
-4. Volta ao passo 4 do fluxo principal.
+4. Volta ao passo 3 do fluxo principal.
+
+**3b. A conexão com a internet cai**
+
+3. O sistema exibe um alerta informando que não há conexão com a internet.
+4. O gestor volta ao passo 4 do fluxo principal.
+
+**3c. O gestor tenta cadastrar um número de créditos semanais superior ao número de créditos totais ou ao número de slots semanais**
+
+3. O sistema exibe um erro acima do campo de quantidade de créditos semanais e solicita correção.
+4. O gestor volta ao passo 3 do fluxo principal.

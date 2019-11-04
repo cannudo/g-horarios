@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>O'time</title>
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href='{% static "otime/bootstrap/bootstrap.css" %}'>
+        <link rel="stylesheet" href='{% static "otime/bootstrap/bootstrap.js" %}'>
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href='{% static "otime/css/estilo_sala.css" %}'>
+        <link rel="stylesheet" href='{% static "otime/css/estilo_professor.css" %}'>
+        <!-- Font Awesome JS -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <p>Sala</p>
+        <div id="form-sala" class="form-group">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form }}
+                <br><br>
+                <button id="botao_salvar_sala" class="btn btn-outline-success" type="submit">Salvar</button>
+                {% if sala == null %}
+                <a id="botao_voltar_disciplina1" href="http://127.0.0.1:8000/salas" class="btn btn-outline-primary ">Voltar</a> 
+                {% endif%}
+            </form>
+        {% if sala %}
+            
+            <a id="botao_deletar_disciplina" href='{% url "deletar_sala" sala.id %}' class="btn btn-outline-danger">Deletar</a>
+            <a id="botao_voltar_disciplina"  href="http://127.0.0.1:8000/salas" class="btn btn-outline-primary ">Voltar</a>
+        {% endif %}
+        </div>
+
+    </body>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src='{% static "jquery/jquery.mim.js" %}'></script>
+    <script src='{% static "jquery/jquery-3.2.1.slim.min.js" %}'></script>
+    <script src='{% static "jquery/jquery.js" %}'></script>
+    <!-- Popper.JS -->
+    <script src='{% static "popper/popper.mim.js" %}'></script>
+    <!-- Bootstrap JS -->
+    <script src='{% static "bootstrap/js/bootstrap.js" %}'></script>
+    <script src='{% static "bootstrap/js/bootstrap.bundle.min.js" %}'></script>
+    <script type="text/javascript">$('#meuModal').on('shown.bs.modal', function(){$('#meuInput').trigger('focus')})</script>
+</html>
