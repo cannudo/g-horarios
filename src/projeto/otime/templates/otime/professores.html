@@ -72,28 +72,9 @@
           </div>
         </div>
       </div>
-
-            <!-- Modal Novo -->
-      <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h3>NOVO PROFESSOR</h3>
-              <span class="close">&times;</span>
-            </div>
-            <div class="modal-body">
-              <form method="get">
-              {% csrf_token %}
-              {{ form }}
-            </div>
-              <div class="modal-footer">
-                <button type="Reset" class="btn btn-outline-danger" id="Fecha">Fechar</button>
-                <button id="Fecha" class="btn btn-outline-success" type="submit" value="Salvar">Salvar</button>
-              </form>           
-          </div>
-        </div>
       </div>
+       
+        {% include "otime/modals/editar-prof.html" %}
 
       </body>
       <!-- jQuery CDN - Slim version (=without AJAX) -->
@@ -151,3 +132,4 @@
     }
     </script>
 </html>
+
