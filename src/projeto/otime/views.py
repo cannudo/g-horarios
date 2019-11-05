@@ -73,13 +73,14 @@ def criar_sala(request):
 
 def atualizar_professor(request, id):
     professor = Professor.objects.get(id=id)
-    form =  FormProfessor(request.POST or None, instance=professor)
+    form =  FormProfessor(request.GET or None, instance=professor)
 
     if form.is_valid():
         form.save()
+        professor.update()
         return redirect('professores')
 
-    return render(request, 'otime/professores.html', {'form': form, 'professor': professor})
+    return render(request, 'otime/modais/editar-prof.html', {'form': form, 'professor': professor})
 
 def atualizar_disciplina(request, id):
     disciplina = Disciplina.objects.get(id=id)
