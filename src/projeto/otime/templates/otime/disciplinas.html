@@ -23,16 +23,24 @@
 #novobtn{
   width: 100px;
   margin-left: 1400px;
+  margin-top:-35px;
+
+ 
   
   
 }
 
 #minhaTabela{
-  height: 50px;
-
-
+	height: -20px;
 }
 
+#ajuste{
+  margin-left: 100px;
+  
+}
+
+
+	
 
  </style>
   </head>
@@ -41,28 +49,26 @@
       <a href='{% url "index"%}'><h2>O'Time</h2></a>
         
         <thead>
-            <thead>
-          
-            <th>DISCIPLINAS</th> 
-            <th>OPÇÕES</th>
-          
-        
-            <th><a href='{% url "criar_disciplinas" %}'><button type="submit" class="btn btn-outline-success" id="novobtn">Novo</button></th>
+          <div class="ajuste">
+          <tr>
             
-        </thead>
+              
+            <th  width="890" >DISCIPLINAS</th>
+            <th  width="536" style="text-align: left" >OPÇÕES</th>
+             
+            </tr>
+    </div>
+            <tr>
+              <th colspan="2"><a href='{% url "criar_disciplinas" %}'><button type="submit" class="btn btn-outline-success" id="novobtn">Novo</button></th>
+            </tr>
         <tbody>
           {% for disciplina in lista_de_disciplinas %}
             <tr>
-              <td>{{ disciplina.nome }}</td> 
-              <td>
-                
-                <a href='{% url "atualizar_disciplina" disciplina.id %}'>
-                <button type="submit"  class="btn btn-outline-primary"> Alterar </button>
-                <a href='{% url "deletar_disciplina" disciplina.id %}'><button type="submit" class="btn btn-outline-danger"> Deletar </button></a> 
-               </td>
+              <td colspan="2">{{ disciplina.nome }}</td> 
             </tr>
           {% endfor %}
-        </tbody>
+        <tr>
+        <td colspan="2"></tbody>
       </table>
       </body>
       <!-- jQuery CDN - Slim version (=without AJAX) -->

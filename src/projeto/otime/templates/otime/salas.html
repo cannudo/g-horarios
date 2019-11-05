@@ -19,6 +19,28 @@
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
 <style type="text/css">
+
+
+
+
+#posiçao2{
+	margin-right: -150px;
+  
+  
+}
+#posiçao1{
+	margin-right: -150px;
+  
+  
+}
+
+#posiçao3{
+	margin-right: 100px;
+  
+  
+}
+
+
        
 #botao_nova_disciplina{
   width: 100px;
@@ -33,9 +55,7 @@
   margin-left: 1270px;
   margin-top: -85px;
   margin-right: -400px;
-
-
-
+ 
 
 }
  </style>
@@ -45,6 +65,7 @@
 
     </head>
     <body>
+    	
       <table id='minhaTabela'>
         <thead>
           <tr>
@@ -53,7 +74,7 @@
               <br><br>    
               <a id="btn_voltar_disc_index" href="http://127.0.0.1:8000" class="btn btn-outline-light">Voltar</a>
               <div class="row">
-                <div class="column">Nome</div><div class="column">Tipo</div><div class="column">Número</div>
+                <div class="column" id="posiçao1">Nome</div><div class="column" id="posiçao2">Tipo</div><div class="column" id="posiçao3">Número</div>
               </div>
             </th>
           <tr>
@@ -66,8 +87,10 @@
               <td class="column">{{ sala_de_aula.numero }}</td>
             </tr>
           {% endfor %}
+
         </tbody>
-      </table>     
+      </table>   
+     
       <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src='{% static "jquery/jquery.mim.js" %}'></script>
