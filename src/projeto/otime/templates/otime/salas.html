@@ -18,64 +18,73 @@
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
+
 <style type="text/css">
-
-
-
 
 #posiçao2{
 	margin-right: -150px;
-  
-  
 }
 #posiçao1{
 	margin-right: -150px;
-  
-  
 }
 
 #posiçao3{
 	margin-right: 100px;
   
-  
 }
-
-
-       
+ 
 #botao_nova_disciplina{
   width: 100px;
   margin-left: 1400px;
-
-
-  
-}
-
-#btn_voltar_disc_index{
-  width: 100px;
-  margin-left: 1270px;
-  margin-top: -85px;
-  margin-right: -400px;
  
 
 }
+
+#btn_voltar_disc_index{
+	width: 100px;
+	margin-left: 1270px;
+	margin-top: -85px;
+	margin-right: -400px;
+	
+}
+
+.novo{
+	float:left;
+	display:inline-block;
+	position:relative;
+	
+	
+}
+
+
+
+
+
  </style>
 
-
-
-
-    </head>
-    <body>
-    	
-      <table id='minhaTabela'>
+</head>
+<body>
+  
+      
+      
+     
+ <table id='minhaTabela'>
         <thead>
           <tr>
             <th>SALAS
+             
+            <article class="novo">
               <a id="botao_nova_disciplina" href='{% url "criar_sala" %}' class="btn btn-outline-light">Novo</a>
-              <br><br>    
+             
+              <br></br>
+              
+              
               <a id="btn_voltar_disc_index" href="http://127.0.0.1:8000" class="btn btn-outline-light">Voltar</a>
+             </article>
+             
               <div class="row">
                 <div class="column" id="posiçao1">Nome</div><div class="column" id="posiçao2">Tipo</div><div class="column" id="posiçao3">Número</div>
-              </div>
+               
             </th>
           <tr>
         </thead>
@@ -90,7 +99,7 @@
 
         </tbody>
       </table>   
-     
+  
       <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src='{% static "jquery/jquery.mim.js" %}'></script>
