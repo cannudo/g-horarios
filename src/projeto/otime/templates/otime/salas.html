@@ -21,15 +21,18 @@
 
 <style type="text/css">
 
-#posiçao2{
-	margin-right: -150px;
+.column1{
+	margin-left: 10px;
 }
-#posiçao1{
-	margin-right: -150px;
+.column2{
+	margin-left: 470px;
+	
 }
 
-#posiçao3{
-	margin-right: 100px;
+.column3{
+	margin-left: 1020px;
+	margin-bottom:-10px;
+	
   
 }
  
@@ -42,7 +45,7 @@
 
 #btn_voltar_disc_index{
 	width: 100px;
-	margin-left: 1270px;
+	margin-left: 1290px;
 	margin-top: -85px;
 	margin-right: -400px;
 	
@@ -55,9 +58,6 @@
 	
 	
 }
-
-
-
 
 
  </style>
@@ -73,17 +73,18 @@
           <tr>
             <th>SALAS
              
-            <article class="novo">
+           
               <a id="botao_nova_disciplina" href='{% url "criar_sala" %}' class="btn btn-outline-light">Novo</a>
              
               <br></br>
               
               
               <a id="btn_voltar_disc_index" href="http://127.0.0.1:8000" class="btn btn-outline-light">Voltar</a>
-             </article>
+            
              
               <div class="row">
-                <div class="column" id="posiçao1">Nome</div><div class="column" id="posiçao2">Tipo</div><div class="column" id="posiçao3">Número</div>
+              
+                <div class="column1" id="posiçao1">Nome</div><div class="column2" id="posiçao2">Tipo</div><div class="column3" id="posiçao3">Número</div>
                
             </th>
           <tr>
