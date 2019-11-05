@@ -25,22 +25,31 @@
   margin-left: 1400px;
   margin-top:-35px;
 
- 
-  
-  
+
 }
 
 #minhaTabela{
 	height: -20px;
-}
-
-#ajuste{
-  margin-left: 100px;
-  
-}
-
-
 	
+}
+
+
+.disciplina{
+	margin-left:-600px;
+	
+	
+}
+.opçoes{
+	margin-left:-360px;
+	
+	
+}
+
+.codigo{
+	margin-left:-760px;
+	
+	
+}
 
  </style>
   </head>
@@ -53,8 +62,8 @@
           <tr>
             
               
-            <th  width="890" >DISCIPLINAS</th>
-            <th  width="536" style="text-align: left" >OPÇÕES</th>
+            <th  width="1293" ><div class="disciplina">DISCIPLINAS</div></th>
+            <th  width="145" style="text-align: left" ><div class="opçoes">OPÇÕES</div></th>
              
             </tr>
     </div>
@@ -64,7 +73,7 @@
         <tbody>
           {% for disciplina in lista_de_disciplinas %}
             <tr>
-              <td colspan="2">{{ disciplina.nome }}</td> 
+              <td colspan="2"><div class="codigo">{{ disciplina.nome }}</div></td> 
             </tr>
           {% endfor %}
         <tr>
