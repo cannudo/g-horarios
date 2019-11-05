@@ -22,16 +22,17 @@
 <style type="text/css">
 
 .column1{
-	margin-left: 10px;
+	margin-left: -60px;
 }
 .column2{
-	margin-left: 470px;
+	margin-left: 540px;
 	
 }
 
 .column3{
-	margin-left: 1020px;
+	margin-left: 890px;
 	margin-bottom:-10px;
+	margin-top: -25px;
 	
   
 }
@@ -51,14 +52,21 @@
 	
 }
 
+.num1{
+	 margin-left: -140px;
+	
+	
+}
+.num3{
+	margin-left: -260px;
+	
+	
+}
  </style>
 
 </head>
 <body>
   
-      
-      
-     
  <table id='minhaTabela'>
         <thead>
           <tr>
@@ -75,7 +83,7 @@
              
               <div class="row">
               
-                <div class="column1" id="posiçao1">Nome</div><div class="column2" id="posiçao2">Tipo</div><div class="column3" id="posiçao3">Número</div>
+                <div class="column1">Nome</div><div class="column2">Tipo</div><div class="column3">Número</div>
                
             </th>
           <tr>
@@ -83,9 +91,9 @@
         <tbody>
           {% for sala_de_aula in lista_de_salas %}
             <tr class="rows" data-href='{% url "atualizar_sala" sala_de_aula.id %}'>
-              <td class="column">{{ sala_de_aula.nome }}</td> 
-              <td class="column">{{ sala_de_aula.tipo }}</td>
-              <td class="column">{{ sala_de_aula.numero }}</td>
+              <td class="column"><div class="num1">{{ sala_de_aula.nome }}</div></td> 
+              <td class="column"><div class="num2">{{ sala_de_aula.tipo }}</div></td>
+              <td class="column"><div class="num3">{{ sala_de_aula.numero }}</div></td>
             </tr>
           {% endfor %}
 
