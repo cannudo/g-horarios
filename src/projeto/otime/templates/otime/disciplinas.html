@@ -23,35 +23,32 @@
 #novobtn{
   width: 100px;
   margin-left: 1400px;
-  float: left;
-
-
+  
   
 }
 
 #minhaTabela{
-  height: 10px;
+  height: 50px;
+
 
 }
 
+
  </style>
-
-
-
-
   </head>
   <body>
     <table id='minhaTabela'>
       <a href='{% url "index"%}'><h2>O'Time</h2></a>
-      
+        
         <thead>
-          <a href='{% url "criar_disciplinas" %}'><button type="submit" class="btn btn-outline-success" id="novobtn">Novo</button>
-          <tr>
-            
-
-            <th>DISCIPLINAS</th>
+            <thead>
+          
+            <th>DISCIPLINAS</th> 
             <th>OPÇÕES</th>
-          </tr>
+          
+        
+            <th><a href='{% url "criar_disciplinas" %}'><button type="submit" class="btn btn-outline-success" id="novobtn">Novo</button></th>
+            
         </thead>
         <tbody>
           {% for disciplina in lista_de_disciplinas %}
