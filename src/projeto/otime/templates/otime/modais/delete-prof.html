@@ -1,48 +1,19 @@
-
-    <!-- Modal -->
-      <div id="MyModal2" class="modal2">
-        <!-- Modal content -->
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h3>DELETAR PROFESSOR</h3>
-            </div>
-            <div class="modal-body">
-              <form method="POST">
-              {% csrf_token %}
-              <h2>Tem certeza que deseja remover {{ professor.nome }} ?</h2>
-            </div>
-              <div class="modal-footer">
-                <button type="Reset" class="btn btn-outline-danger" id="Fechar">Fechar</button>
-                <button id="Fechar" class="btn btn-outline-success" type="submit" value="Salva">Salvar</button>
-              </form>           
-          </div>
-        </div>
+<div class="modal fade" id="myBtn3" role="dialog">
+  <div class="modal-dialog">   
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>DELETAR PROFESSOR</h3>
       </div>
+      <div class="modal-body">
+        <form method="POST">
+          {% csrf_token %}
+          <h2>Tem certeza que deseja remover {{ professor.nome }} ?</h2>
       </div>
-
-    <script>
-    // Get the modal
-    var modal2 = document.getElementById("MyModal2");
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn3");
-    //Fecha o modal
-    var Fechar = document.getElementById("Fechar");
-    // Get the <span> element that closes the modal
-    btn.onclick = function() {
-    modal2.style.display = "block";
-    }
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-      modal2.style.display = "none";
-    }
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-    if (event.target == modal2) {
-      modal2.style.display = "none";
-    }
-    Fechar.onclick = function() {
-      modal2.style.display = "none";
-      }
-    }
-    </script> 
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+        <button type="submit" class="btn btn-outline-success" data-dismiss="modal" value="Salvar">Salvar</button>
+        </form>           
+      </div>
+    </div> 
+  </div>
+</div>
