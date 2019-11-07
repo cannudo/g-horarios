@@ -17,12 +17,75 @@
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+
+
+<style type="text/css">
+
+#logo{
+  width: 200px;
+  height: 100px;
+  margin-right: -15px;
+  margin-bottom: -15px;
+  margin-left: -5px;
+}
+.logo,img.logoimg{
+  width:200px;
+  height:100px;
+  
+}
+
+.central{
+  height: 200px;
+  margin-top: 60px;
+  margin-right: 60px;
+  margin-bottom: 60px;
+  margin-left: 60px;
+  padding-top: 60px;
+  padding-right: 60px;
+  padding-bottom: 60px;
+  padding-left: 60px;
+}
+
+.Container{
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+.login{
+  margin-left: -35px;
+  
+}
+
+.lado {
+  margin-left: 57px;
+  
+}
+
+.saibamais {
+  
+  margin-left: -55px;
+}
+
+
+
+
+</style>
+
+
+
   </head>
   <body>
     <!-- menu  -->
+    <div class="Container">
     <nav id="sidebar">
+      <div id="logo">
+      <a href='{% url "index"%}'><img src=  '{% static "otime/img/hora.png"  %}' title="O'Time" class="logoimg" /></a>
+       </div>
       <div class="sidebar-header">
-        <a href=""><h2>O'Time</h2></a>
+        
       </div>
       <ul class="list-unstyled components">
         <li>
@@ -52,9 +115,10 @@
     </nav>
     <!--ícone login-->
       <div class="login">
-        <a href="" data-target="#login"><img src='{% static "otime/img/avatar.svg" %}'/></a>
+        <a href="" data-target="#login"><img src='{% static "otime/img/avatar.svg" %}' id="imglogin"/></a>
       </div>
     <main>
+      <div class="central">
       <!-- Modal saiba mais -->
       <div id="myModal" class="modal">
         <!-- Modal content -->
@@ -63,6 +127,7 @@
           <div class="modal-header">
             <h2>Saiba mais</h2>
             <span class="close">&times;</span>
+
           </div>
           <div class="modal-body">
             <h3>Some text to enable scrolling..</h3>
@@ -80,8 +145,16 @@
       <!-- botao saiba mais-->
       <h1><strong>O'Time</strong></h1>
       <h2>Gerenciador de horários escolares</h2>
+      <div class="saibamais">
+     <aside class="lado">
       <button type="button" class="btn btn-outline-primary" id="myBtn">Saiba mais</button>
+      </aside>
+    </div>
+  </div>
+
+   
   </main>
+</div>
   </body>
     <!-- jQuery CDN - Slim version (=without AJAX) -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
