@@ -37,9 +37,7 @@ def reservarHorario(request):
     return render(request, "otime/reservar-horario.html", contexto)
 
 
-def salas(request):
-    lista_de_salas = SalaDeAula.objects.all()
-    return render(request,'otime/salas.html',{'lista_de_salas':lista_de_salas})
+
 
 def professores(request):
     form =  FormProfessor(request.POST or None)
@@ -48,6 +46,44 @@ def professores(request):
 
     lista_de_professores = Professor.objects.all()
     return render(request,'otime/professores.html',{'lista_de_professores':lista_de_professores, 'form':form})
+
+
+
+def atualizar_professor(request, id):
+    professor = Professor.objects.get(id=id)
+    form =  FormProfessor(request.POST or None, instance=professor)
+
+    if form.is_valid():
+        form.save()
+        return redirect('professores')
+
+    if request.method == 'POST':
+        professor.delete()
+        return redirect('professores')    
+
+    return render(request, 'otime/modais/editar-prof.html', {'form': form, 'professor': professor})
+
+
+def deletar_professor(request, id):
+    professor = Professor.objects.get(id=id)
+
+    if request.method == 'POST':
+        professor.delete()
+        return redirect('professores')
+
+    return render(request, 'otime/modais/editar-prof.html', {'professor': professor})
+
+
+
+
+
+
+
+def salas(request):
+    lista_de_salas = SalaDeAula.objects.all()
+    return render(request,'otime/salas.html',{'lista_de_salas':lista_de_salas})
+
+
 
 def disciplinas(request):
     lista_de_disciplinas = Disciplina.objects.all()
@@ -71,16 +107,7 @@ def criar_sala(request):
 
     return render(request, 'otime/sala-form.html', {'form': form})
 
-def atualizar_professor(request, id):
-    professor = Professor.objects.get(id=id)
-    form =  FormProfessor(request.GET or None, instance=professor)
 
-    if form.is_valid():
-        form.save()
-        professor.update()
-        return redirect('professores')
-
-    return render(request, 'otime/modais/editar-prof.html', {'form': form, 'professor': professor})
 
 def atualizar_disciplina(request, id):
     disciplina = Disciplina.objects.get(id=id)
@@ -102,14 +129,7 @@ def atualizar_sala(request, id):
 
     return render(request, 'otime/sala-form.html', {'form': form, 'sala': sala})
 
-def deletar_professor(request, id):
-    professor = Professor.objects.get(id=id)
 
-    if request.method == 'POST':
-        professor.delete()
-        return redirect('professores')
-
-    return render(request, 'otime/prof-delete-confirm.html', {'professor': professor})
 
 def deletar_disciplina(request, id):
     disciplina = Disciplina.objects.get(id=id)
