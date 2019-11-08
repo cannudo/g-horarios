@@ -43,8 +43,7 @@
             <tr>
               <td>{{ professor.nome }}</td>
               <td>
-                <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#myBtn2"> Alterar </button>
-                <button type="button" class="btn btn-outline-danger"  data-toggle="modal" data-target="#myBtn3"> Deletar </button>
+               <a href="{{professor.id}}">Detalhes</a>
               </td>
             </tr>
           {% endfor %}
@@ -52,10 +51,11 @@
       </table>
 
       <div class="modal fade" id="myBtn" role="dialog">
-        <div class="modal-dialog">   
+        <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
               <h3>NOVO PROFESSOR</h3>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
               <form method="POST">
@@ -64,18 +64,12 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
-              <button type="submit" class="btn btn-outline-success" data-dismiss="modal" value="Salvar">Salvar</button>
-              </form>           
+              <button type="submit" class="btn btn-outline-success" >Salvar</button>
+              </form>
             </div>
-          </div> 
+          </div>
         </div>
       </div>
-       
-      {% include "otime/modais/editar-prof.html" %}
-
-      {% include "otime/modais/delete-prof.html" %}
-
-
       </body>
       <!-- jQuery CDN - Slim version (=without AJAX) -->
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
@@ -103,6 +97,5 @@
           $(".dropdown-toggle").dropdown();
       });
      </script>
-  
-</html>
 
+</html>
