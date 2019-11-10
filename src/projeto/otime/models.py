@@ -61,3 +61,7 @@ class SlotDeHorario(models.Model):
 
 class Turma(models.Model):
     nome = models.CharField(max_length = 100)
+    opcoes = (
+        ("Matutino", "Matutino"),
+        ("Vespertino", "Vespertino")
+    )
