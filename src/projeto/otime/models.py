@@ -48,6 +48,14 @@ class Professor(models.Model):
 
 ##############################--Slot de Horários--################################
 
+class Turma(models.Model):
+    nome = models.CharField(max_length = 100)
+    opcoes = (
+    ("Matutino", "Matutino"),
+    ("Vespertino", "Vespertino")
+    )
+    turno = models.CharField(max_length = 15, choices = opcoes)
+
 class SlotDeHorario(models.Model):
     posicao = models.IntegerField(unique = True)
     sala_de_aula = models.ForeignKey(SalaDeAula, on_delete = models.CASCADE)
@@ -59,11 +67,3 @@ class SlotDeHorario(models.Model):
 
     class Meta:
         verbose_name_plural = 'Slots de horarios'
-
-class Turma(models.Model):
-    nome = models.CharField(max_length = 100)
-    opcoes = (
-        ("Matutino", "Matutino"),
-        ("Vespertino", "Vespertino")
-    )
-    turno = models.CharField(max_length = 15, choices = opcoes)
