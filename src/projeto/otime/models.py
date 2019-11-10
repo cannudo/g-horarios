@@ -65,3 +65,4 @@ class Turma(models.Model):
         ("Matutino", "Matutino"),
         ("Vespertino", "Vespertino")
     )
+    turno = models.CharField(max_length = 15, choices = opcoes)
