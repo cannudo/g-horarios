@@ -60,4 +60,4 @@ class SlotDeHorario(models.Model):
         verbose_name_plural = 'Slots de horarios'
 
 class Turma(models.Model):
-    pass
+    nome = models.CharField(max_length = 100)
