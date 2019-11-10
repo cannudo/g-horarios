@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-###############################--Salas--##################################### 
+###############################--Salas--#####################################
 
 class SalaDeAula(models.Model):
     nome = models.CharField(max_length = 40)
@@ -19,9 +19,9 @@ class SalaDeAula(models.Model):
         return "Sala de aula #%d: %s" % (int(self.id), self.nome)
 
     class Meta:
-        verbose_name_plural = 'Salas de aulas'    
+        verbose_name_plural = 'Salas de aulas'
 
-##############################--Disciplinas--################################## 
+##############################--Disciplinas--##################################
 
 class Disciplina(models.Model):
     nome = models.CharField(max_length = 25)
@@ -31,9 +31,9 @@ class Disciplina(models.Model):
         return "Disciplina #%d: %s" % (int(self.id), self.nome)
 
     class Meta:
-        verbose_name_plural = 'disciplinas'  
+        verbose_name_plural = 'disciplinas'
 
-##############################--Professores--################################            
+##############################--Professores--################################
 
 class Professor(models.Model):
     nome = models.CharField(max_length = 45)
@@ -44,9 +44,9 @@ class Professor(models.Model):
         return "Professor #%d: %s" % (int(self.id), self.nome)
 
     class Meta:
-        verbose_name_plural = 'professores'    
+        verbose_name_plural = 'professores'
 
-##############################--Slot de Horários--################################         
+##############################--Slot de Horários--################################
 
 class SlotDeHorario(models.Model):
     posicao = models.IntegerField(unique = True)
@@ -57,5 +57,7 @@ class SlotDeHorario(models.Model):
         return "Slot #%d" % int(self.posicao)
 
     class Meta:
-        verbose_name_plural = 'Slots de horarios'    
-    
+        verbose_name_plural = 'Slots de horarios'
+
+class Turma(models.Model):
+    pass
