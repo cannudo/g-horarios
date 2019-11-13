@@ -23,7 +23,13 @@
         <thead>
           <tr>
             <th>DISCIPLINAS</th>
-            <th>OPÇÕES</th>
+            <th>
+              <div class="bs-example">
+                <div class="btn-group">
+                  <a href='{% url "criar_disciplinas" %}'><button type="submit" class="btn btn-outline-light">Novo</button>
+                </div>
+              </div>
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -31,7 +37,7 @@
             <tr>
               <td>{{ disciplina.nome }}</td> 
               <td>
-                <a href='{% url "criar_disciplinas" %}'><button type="submit" class="btn btn-outline-success">Novo</button>
+                
                 <a href='{% url "atualizar_disciplina" disciplina.id %}'>
                 <button type="submit"  class="btn btn-outline-primary"> Alterar </button>
                 <a href='{% url "deletar_disciplina" disciplina.id %}'><button type="submit" class="btn btn-outline-danger"> Deletar </button></a> 
