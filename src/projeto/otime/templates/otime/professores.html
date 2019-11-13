@@ -43,8 +43,8 @@
             <tr>
               <td>{{ professor.nome }}</td>
               <td>
-                <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#myBtn2"> Alterar </button>
-                <button type="button" class="btn btn-outline-danger"  data-toggle="modal" data-target="#myBtn3"> Deletar </button>
+                <button type="button" name='professor' value='{{ professor }}' class="btn btn-outline-primary" data-toggle="modal" data-target="#myBtn2"> Alterar </button>
+                <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#myBtn3"> Deletar </button>
               </td>
             </tr>
           {% endfor %}
@@ -58,23 +58,58 @@
               <h3>NOVO PROFESSOR</h3>
             </div>
             <div class="modal-body">
-              <form method="POST">
+              <form method='post'>
                 {% csrf_token %}
                 {{ form }}
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
-              <button type="submit" class="btn btn-outline-success" data-dismiss="modal" value="Salvar">Salvar</button>
+              <button type="submit" class="btn btn-outline-success" value="Salvar">Salvar</button>
               </form>           
             </div>
           </div> 
         </div>
       </div>
        
-      {% include "otime/modais/editar-prof.html" %}
+      <div class="modal fade" id="myBtn2" role="dialog">
+        <div class="modal-dialog">   
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>ATUALIZAR PROFESSOR</h3>
+            </div>
+            <div class="modal-body">
+              <form method="GET">
+                {% csrf_token %}
+                {{ form }}
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+              <button type="submit" class="btn btn-outline-success" value="Salvar">Salvar</button>
+              </form>           
+            </div>
+          </div> 
+        </div>
+      </div>
 
-      {% include "otime/modais/delete-prof.html" %}
-
+      <div class="modal fade" id="myBtn3" role="dialog">
+        <div class="modal-dialog">   
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>DELETAR PROFESSOR</h3>
+            </div>
+            <div class="modal-body">
+              <form method="POST">
+                {% csrf_token %}
+                <h2>Tem certeza que deseja remover {{ professor.nome }} ?</h2>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+              <button type="submit" class="btn btn-outline-success" value="Salvar">Salvar</button>
+              </form>           
+            </div>
+          </div> 
+        </div>
+      </div>
 
       </body>
       <!-- jQuery CDN - Slim version (=without AJAX) -->
