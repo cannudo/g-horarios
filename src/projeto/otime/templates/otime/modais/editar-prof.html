@@ -1,0 +1,20 @@
+<div class="modal fade" id="myBtn2" role="dialog">
+  <div class="modal-dialog">   
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>ATUALIZAR PROFESSOR</h3>
+        <button type="button" class="close" data-dismiss="modal">×</button>
+      </div>
+      <div class="modal-body">
+        <form method="GET">
+          {% csrf_token %}
+          {{ form }}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+        <button type="submit" class="btn btn-outline-success" data-dismiss="modal" value="Salvar">Salvar</button>
+        </form>           
+      </div>
+    </div> 
+  </div>
+</div>
