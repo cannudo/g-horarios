@@ -57,7 +57,7 @@
               <tr>
                 <th>{{ horario }}</th>
                 {% for linha in "abcde"|make_list %}
-                  <td><input id="slot"  class="btn btn-ligth" type="checkbox" onclick="document.getElementById('posicao').setAttribute('value', parentNode.id);"></input></td>
+                  <td><input id="slot" name="horarios" class="btn btn-ligth" type="checkbox" onclick="document.getElementById('posicao').setAttribute('value', parentNode.id);"></input></td>
                 {% endfor %}
               </tr>
             {% endfor %}
