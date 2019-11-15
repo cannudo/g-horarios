@@ -73,13 +73,20 @@ def criar_sala(request):
 
 def atualizar_professor(request, id):
     professor = Professor.objects.get(id=id)
-    form =  FormProfessor(request.POST or None, instance=professor)
+    form =  FormProfessor(request.GET or None, instance=professor)
 
     if form.is_valid():
         form.save()
+
+    if request.method == 'GET':
+        professor.update()
         return redirect('professores')
 
-    return render(request, 'otime/professores.html', {'form': form, 'professor': professor})
+    if request.method == 'POST':
+        professor.delete()
+        return redirect('professores')
+
+    return render(request, 'professores.html', {'form': form, 'professor': professor})
 
 def atualizar_disciplina(request, id):
     disciplina = Disciplina.objects.get(id=id)
@@ -100,15 +107,6 @@ def atualizar_sala(request, id):
         return redirect('salas')
 
     return render(request, 'otime/sala-form.html', {'form': form, 'sala': sala})
-
-def deletar_professor(request, id):
-    professor = Professor.objects.get(id=id)
-
-    if request.method == 'POST':
-        professor.delete()
-        return redirect('professores')
-
-    return render(request, 'otime/prof-delete-confirm.html', {'professor': professor})
 
 def deletar_disciplina(request, id):
     disciplina = Disciplina.objects.get(id=id)
