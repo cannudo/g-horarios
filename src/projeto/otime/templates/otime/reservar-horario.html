@@ -42,6 +42,7 @@
               <option value="{{ professor.id }}">{{ professor.nome }}</option>
             {% endfor %}
         </select>
+        <button type="submit" class="btn btn-light">Cadastrar</button>
           <hr>
           <table id="minhaTabela">
             <tr>
@@ -65,7 +66,7 @@
         <script type="text/javascript">
           celulas = document.getElementsByTagName("td");
           var i;
-          for (i = 0; i < celulas.length; i++) 
+          for (i = 0; i < celulas.length; i++)
           {
             celulas[i].id = i;
           };
