@@ -55,9 +55,11 @@ class Turma(models.Model):
     )
     turno = models.CharField(max_length = 15, choices = opcoes)
     nome = models.CharField(max_length = 50)
-    def __init__(self, arg):
-        super(Turma, self).__init__()
-        self.arg = arg
+    def __str__(self):
+        return "Turma #%d: %s" % (int(self.id), self.nome)
+        
+    class Meta:
+        verbose_name_plural = 'turma'
 
 ##############################--Slot de Horários--################################
 
@@ -66,6 +68,7 @@ class SlotDeHorario(models.Model):
     sala_de_aula = models.ForeignKey(SalaDeAula, on_delete = models.CASCADE)
     disciplina = models.ForeignKey(Disciplina, on_delete = models.CASCADE)
     professor = models.ForeignKey(Professor, on_delete = models.CASCADE)
+    turma = models.ForeignKey(Turma, on_delete = models.CASCADE)
     def __str__(self):
         return "Slot #%d" % int(self.posicao)
 

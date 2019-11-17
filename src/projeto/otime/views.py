@@ -71,6 +71,14 @@ def criar_sala(request):
 
     return render(request, 'otime/sala-form.html', {'form': form})
 
+def turmas(request):
+    form =  FormTurma(request.POST or None)
+    if form.is_valid():
+        form.save()
+
+    lista_de_turmas = Turma.objects.all()
+    return render(request,'otime/turmas.html',{'lista_de_turmas':lista_de_turmas, 'form':form})
+
 def atualizar_professor(request, id):
     professor = Professor.objects.get(id=id)
     form =  FormProfessor(request.POST or None, instance=professor)
