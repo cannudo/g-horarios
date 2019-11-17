@@ -71,6 +71,12 @@ def criar_sala(request):
 
     return render(request, 'otime/sala-form.html', {'form': form})
 
+##View para exibir as turmas cadastradas e
+##selecionar a que irá ser definida os horarios na view de reserva de horario.
+def seletor_turmas(request):
+    lista_de_turmas = Turma.objects.all()
+    return render(request,'otime/seletor_turmas.html',{'lista_de_turmas':lista_de_turmas})
+
 def turmas(request):
     form =  FormTurma(request.POST or None)
     if form.is_valid():
