@@ -15,13 +15,14 @@ def index(request):
 
 def reservarHorario(request, id):
     if request.method == "POST":
+        turma = get_object_or_404(Turma, pk = id)
         sala_de_aula = get_object_or_404(SalaDeAula, pk = request.POST["sala_de_aula"])
         disciplina = get_object_or_404(Disciplina, pk = request.POST["disciplina"])
         professor = get_object_or_404(Professor, pk = request.POST["professor"])
         for horario in request.POST.getlist("horarios"):
-            slot_de_horario = SlotDeHorario(posicao = horario, sala_de_aula = sala_de_aula, disciplina = disciplina, professor = professor)
-            slot_de_horario.save()
+            slot_de_horario = SlotDeHorario(turma = turma, posicao = horario, sala_de_aula = sala_de_aula, disciplina = disciplina, professor = professor)
 
+            slot_de_horario.save()
     slots_de_horario = SlotDeHorario.objects.all()
     lista_de_salas = SalaDeAula.objects.all()
     lista_de_disciplinas = Disciplina.objects.all()
@@ -86,7 +87,7 @@ def atualizar_turma(request, id):
 
     if request.method == 'POST':
         turma.delete()
-        return redirect('turmas')    
+        return redirect('turmas')
 
     return render(request, 'otime/modais/editar-turma.html', {'form': form, 'turma': turma})
 
@@ -100,7 +101,7 @@ def atualizar_professor(request, id):
 
     if request.method == 'POST':
         professor.delete()
-        return redirect('professores')    
+        return redirect('professores')
 
     return render(request, 'otime/modais/editar-prof.html', {'form': form, 'professor': professor})
 
