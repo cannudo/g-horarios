@@ -30,7 +30,7 @@
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">DELETAR PROFESSOR</h4>
+          <h4 class="modal-title">DELETAR DISCIPLINA</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         
@@ -38,7 +38,7 @@
         <div class="modal-body">
           <form method="post">
           {% csrf_token %}
-          <h4>Tem certeza que deseja remover <strong>{{ professor.nome }} </strong>?</h4>
+          <h4>Tem certeza que deseja remover <strong>{{ disciplina.nome }} </strong>?</h4>
         </div>
         <!-- Modal footer -->
         <div class="modal-footer">
@@ -52,21 +52,21 @@
   </div>
   
 </div>
-    <table id='minhaTabela'>
+        <table id='minhaTabela'>
       <a href='{% url "index"%}'><h2>O'Time</h2></a>
         <thead>
           <tr>
-            <th>PROFESSOR</th>
-             <th>E-MAIL</th>
-              <th>TELEFONE</th>
+            <th>DISCIPLINA</th>
+             <th>CÓDIGO</th>
+              <th>CARGA HORÁRIA TOTAL</th>
               <th>OPÇÕES</th> 
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>{{professor.nome}}</td>
-            <td>{{professor.email}}</td>
-            <td>{{professor.telefone}}</td>
+            <td>{{disciplina.nome}}</td>
+            <td>{{disciplina.codigo}}</td>
+            <td>{{disciplina.carga_horaria_total}}</td>
             <td>
               <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#Alterar"><i class="fas fa-edit"></i> Alterar </button>
               <button type="button" class="btn btn-outline-danger"  data-toggle="modal" data-target="#Deletar"> <i class="fas fa-trash-alt"></i> Deletar </button>
@@ -80,7 +80,7 @@
         <div class="modal-dialog">   
           <div class="modal-content">
             <div class="modal-header">
-              <h3>ALTERAR PROFESSOR</h3>
+              <h3>ALTERAR DISCIPLINA</h3>
               <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
@@ -93,6 +93,6 @@
                   <button type="submit" class="btn btn-success" >Salvar</button>
                 </form> 
              </div>
-   </body>
-</html>                   
+    </body>
+</html>                  
     

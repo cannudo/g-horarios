@@ -38,8 +38,21 @@ def reservarHorario(request):
 
 
 def salas(request):
+    form = FormSala(request.POST or None)
+    if form.is_valid():
+        form.save()
+
     lista_de_salas = SalaDeAula.objects.all()
-    return render(request,'otime/salas.html',{'lista_de_salas':lista_de_salas})
+    return render(request,'otime/salas.html',{'lista_de_salas':lista_de_salas, 'form': form})
+
+def disciplinas(request):
+    form = FormDisciplina(request.POST or None)
+
+    if form.is_valid():
+        form.save()
+
+    lista_de_disciplinas = Disciplina.objects.all()
+    return render(request,'otime/disciplinas.html',{'lista_de_disciplinas':lista_de_disciplinas, 'form': form})
 
 def professores(request):
     form =  FormProfessor(request.POST or None)
@@ -49,54 +62,19 @@ def professores(request):
     lista_de_professores = Professor.objects.all()
     return render(request,'otime/professores.html',{'lista_de_professores':lista_de_professores, 'form':form})
 
-def disciplinas(request):
-    lista_de_disciplinas = Disciplina.objects.all()
-    return render(request,'otime/disciplinas.html',{'lista_de_disciplinas':lista_de_disciplinas})
-
-def criar_disciplina(request):
-    form = FormDisciplina(request.POST or None)
-
-    if form.is_valid():
-        form.save()
-        return redirect('disciplinas')
-
-    return render(request, 'otime/disciplina-form.html', {'form': form})
-
-def criar_sala(request):
-    form = FormSala(request.POST or None)
-
-    if form.is_valid():
-        form.save()
-        return redirect('salas')
-
-    return render(request, 'otime/sala-form.html', {'form': form})
-
 def atualizar_professor(request, id):
     professor = Professor.objects.get(id=id)
-    form =  FormProfessor(request.GET or None, instance=professor)
+    form =  FormProfessor(request.POST or None, instance=professor)
 
     if form.is_valid():
         form.save()
-
-    if request.method == 'GET':
-        professor.update()
         return redirect('professores')
 
     if request.method == 'POST':
         professor.delete()
-        return redirect('professores')
+        return redirect('professores')    
 
-    return render(request, 'professores.html', {'form': form, 'professor': professor})
-
-def atualizar_disciplina(request, id):
-    disciplina = Disciplina.objects.get(id=id)
-    form =  FormDisciplina(request.POST or None, instance=disciplina)
-
-    if form.is_valid():
-        form.save()
-        return redirect('disciplinas')
-
-    return render(request, 'otime/disciplina-form.html', {'form': form, 'disciplina': disciplina})
+    return render(request, 'otime/modais/editar-prof.html', {'form': form, 'professor': professor})
 
 def atualizar_sala(request, id):
     sala = SalaDeAula.objects.get(id=id)
@@ -106,25 +84,25 @@ def atualizar_sala(request, id):
         form.save()
         return redirect('salas')
 
-    return render(request, 'otime/sala-form.html', {'form': form, 'sala': sala})
+    if request.method == 'POST':
+        sala.delete()
+        return redirect('salas')
 
-def deletar_disciplina(request, id):
+    return render(request, 'otime/modais/editar-sala.html', {'form': form, 'sala': sala})
+
+def atualizar_disciplina(request, id):
     disciplina = Disciplina.objects.get(id=id)
+    form =  FormDisciplina(request.POST or None, instance=disciplina)
+
+    if form.is_valid():
+        form.save()
+        return redirect('disciplinas')
 
     if request.method == 'POST':
         disciplina.delete()
         return redirect('disciplinas')
 
-    return render(request, 'otime/disc-delete-confirm.html', {'disciplina': disciplina})
-
-def deletar_sala(request, id):
-    sala = SalaDeAula.objects.get(id=id)
-
-    if request.method == 'POST':
-        sala.delete()
-        return redirect('salas')
-
-    return render(request, 'otime/sala-delete-confirm.html', {'sala': sala})
+    return render(request, 'otime/modais/editar-disc.html', {'form': form, 'disciplina': disciplina})
 
 def modelo(request):
     lista_de_professores = Professor.objects.all()
