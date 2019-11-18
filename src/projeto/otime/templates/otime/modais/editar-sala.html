@@ -57,16 +57,16 @@
         <thead>
           <tr>
             <th>SALA</th>
-             <th>CÓDIGO</th>
-              <th>CARGA HORÁRIA TOTAL</th>
+             <th>TIPO</th>
+              <th>NÚMERO</th>
               <th>OPÇÕES</th> 
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>{{disciplina.nome}}</td>
-            <td>{{disciplina.codigo}}</td>
-            <td>{{disciplina.carga_horaria_total}}</td>
+            <td>{{sala.nome}}</td>
+            <td>{{sala.tipo}}</td>
+            <td>{{sala.numero}}</td>
             <td>
               <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#Alterar"><i class="fas fa-edit"></i> Alterar </button>
               <button type="button" class="btn btn-outline-danger"  data-toggle="modal" data-target="#Deletar"> <i class="fas fa-trash-alt"></i> Deletar </button>
@@ -93,5 +93,5 @@
                   <button type="submit" class="btn btn-success" >Salvar</button>
                 </form> 
              </div>
-                    
-    
+  </body>
+</html>
