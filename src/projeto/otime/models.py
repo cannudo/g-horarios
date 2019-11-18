@@ -57,14 +57,14 @@ class Turma(models.Model):
     nome = models.CharField(max_length = 50)
     def __str__(self):
         return "Turma #%d: %s" % (int(self.id), self.nome)
-        
+
     class Meta:
         verbose_name_plural = 'turmas'
 
 ##############################--Slot de Horários--################################
 
 class SlotDeHorario(models.Model):
-    posicao = models.IntegerField(unique = True)
+    posicao = models.IntegerField()
     sala_de_aula = models.ForeignKey(SalaDeAula, on_delete = models.CASCADE)
     disciplina = models.ForeignKey(Disciplina, on_delete = models.CASCADE)
     professor = models.ForeignKey(Professor, on_delete = models.CASCADE)
