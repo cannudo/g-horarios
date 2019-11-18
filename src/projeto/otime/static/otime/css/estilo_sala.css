@@ -13,13 +13,6 @@ ul {
     text-align: center;
 }
 
-h4 {
-    background-color: #000;
-    color: #fff;
-    width: 800px;
-    margin: 0 auto;
-    height: 45px;
-}
 
 h2 {
     text-align: center;
@@ -29,15 +22,6 @@ h2 {
 
 h2:hover {
     color: silver;
-}
-
-p {
-    font-weight: bold;
-    background-color: black;
-    color: white;
-    width: 1000px;
-    margin: 0 auto;
-    padding: 20px 10px;
 }
 
 ul,
