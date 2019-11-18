@@ -21,16 +21,14 @@ h4 {
     height: 45px;
 }
 
-h2{
-
+h2 {
     text-align: center;
     text-decoration: none;
     color: #000;
 }
-h2:hover{
 
-   color: silver;
-
+h2:hover {
+    color: silver;
 }
 
 p {
@@ -41,8 +39,6 @@ p {
     margin: 0 auto;
     padding: 20px 10px;
 }
-
-
 
 ul,
 li {
@@ -92,7 +88,6 @@ a {
     background-color: #eee;
 }
 
-
 input[type=text],
 select {
     width: 100%;
@@ -119,7 +114,6 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #45a049;
 }
-
 
 #lista_de_disciplinas ul {
     position: center;
@@ -204,22 +198,24 @@ input[type=submit]:hover {
 
 
 /* Create three equal columns that floats next to each other */
+
 .column {
     float: left;
     width: 33.33%;
     padding: 10px;
     /* Should be removed. Only for demonstration */
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
     content: "";
     display: table;
     clear: both;
-  }
+}
 
-  .row {
+.row {
     padding-left: 15%;
     align-self: center;
-  }
-
+}

@@ -42,6 +42,7 @@
               <option value="{{ professor.id }}">{{ professor.nome }}</option>
             {% endfor %}
         </select>
+        <button type="submit" class="btn btn-light">Cadastrar</button>
           <hr>
           <table id="minhaTabela">
             <tr>
@@ -56,7 +57,7 @@
               <tr>
                 <th>{{ horario }}</th>
                 {% for linha in "abcde"|make_list %}
-                  <td><button id="slot"  class="btn btn-ligth" type="submit" onclick="document.getElementById('posicao').setAttribute('value', parentNode.id);">Cadastrar</button></td>
+                  <td><input id="slot" name="horarios" class="btn btn-ligth" type="checkbox" onclick="document.getElementById('posicao').setAttribute('value', parentNode.id);"></input></td>
                 {% endfor %}
               </tr>
             {% endfor %}
@@ -65,9 +66,10 @@
         <script type="text/javascript">
           celulas = document.getElementsByTagName("td");
           var i;
-          for (i = 0; i < celulas.length; i++) 
+          for (i = 0; i < celulas.length; i++)
           {
             celulas[i].id = i;
+            celulas[i].children[0].value = celulas[i].id;
           };
         </script>
         {% else %}

@@ -8,11 +8,7 @@ urlpatterns = [
     path("seletor_turmas", seletor_turmas, name = "seletor_turmas"),
     path("turmas", turmas, name = "turmas"),
     path("disciplinas", disciplinas, name = "disciplinas"),
-  	path('delete/professor/<int:id>/', deletar_professor, name='deletar_professor'),
+    path('update/professor/<int:id>/', atualizar_professor, name='atualizar_professor'),
     path('update/disciplina/<int:id>/', atualizar_disciplina, name='atualizar_disciplina'),
     path('update/sala/<int:id>/', atualizar_sala, name='atualizar_sala'),
-  	path('delete/disciplina/<int:id>/', deletar_disciplina, name='deletar_disciplina'),
-    path('delete/sala/<int:id>/', deletar_sala, name='deletar_sala'),
-    path('criar_disciplina', criar_disciplina, name='criar_disciplinas'),
-    path('criar_sala', criar_sala, name='criar_sala'),
 ]
