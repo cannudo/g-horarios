@@ -2,16 +2,22 @@
 {% load static%}
 <html>
   <head>
-    <meta charset="utf-8">
+        <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href='{% static "otime/css/modal.css" %}'>
     <title>O'time</title>
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href='{% static "otime/bootstrap/bootstrap.css" %}'>
     <link rel="stylesheet" href='{% static "otime/bootstrap/bootstrap.js" %}'>
     <!-- Our Custom CSS -->
-    <link rel="stylesheet" href='{% static "otime/css/estilo_disciplina.css" %}'> 
+    <link rel="stylesheet" href='{% static "otime/css/estilo_professor.css" %}'>
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
@@ -23,7 +29,7 @@
         <thead>
           <tr>
             <th>DISCIPLINAS</th>
-            <th>OPÇÕES</th>
+            <th><button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#myBtn4"> Nova </button></th>
           </tr>
         </thead>
         <tbody>
@@ -31,28 +37,46 @@
             <tr>
               <td>{{ disciplina.nome }}</td> 
               <td>
-                <a href='{% url "criar_disciplinas" %}'><button type="submit" class="btn btn-outline-success">Novo</button>
-                <a href='{% url "atualizar_disciplina" disciplina.id %}'>
-                <button type="submit"  class="btn btn-outline-primary"> Alterar </button>
-                <a href='{% url "deletar_disciplina" disciplina.id %}'><button type="submit" class="btn btn-outline-danger"> Deletar </button></a> 
-               </td>
+               <a href="update/disciplina/{{disciplina.id}}">Detalhes</a>
+              </td>
             </tr>
           {% endfor %}
         </tbody>
       </table>
+
+       <div class="modal fade" id="myBtn4" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>NOVA DISCIPLINA</h3>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <form method="POST">
+                {% csrf_token %}
+                {{ form }}
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+              <button type="submit" class="btn btn-outline-success" >Salvar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
       </body>
       <!-- jQuery CDN - Slim version (=without AJAX) -->
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
       <script src='{% static "jquery/jquery.mim.js" %}'></script>
-      <script src='{% static "jquery/jquery-3.2.1.slim.min.js" %}'></script> 
-      <script src='{% static "jquery/jquery.js" %}'></script> 
+      <script src='{% static "jquery/jquery-3.2.1.slim.min.js" %}'></script>
+      <script src='{% static "jquery/jquery.js" %}'></script>
       <!-- Popper.JS -->
       <script src='{% static "popper/popper.mim.js" %}'></script>
       <!-- Bootstrap JS -->
       <script src='{% static "bootstrap/js/bootstrap.js" %}'></script>
       <script src='{% static "bootstrap/js/bootstrap.bundle.min.js" %}'></script>
       <!-- javascript JS -->
-      <script type="text/javascript">$('#meuModal').on('shown.bs.modal', function () {$('#meuInput').trigger('focus')})</script>
       <script type="text/javascript">
       $(".rows").click
       (
@@ -63,4 +87,9 @@
         }
       )
       </script>
+      <script>
+      $(document).ready(function(){
+          $(".dropdown-toggle").dropdown();
+      });
+     </script>
 </html>

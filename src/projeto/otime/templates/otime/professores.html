@@ -32,7 +32,7 @@
               <th>
                 <div class="bs-example">
                   <div class="btn-group">
-                    <button class="btn btn-outline-light" type="button" id="myBtn">Novo</button>
+                    <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#myBtn"> Novo </button>
                   </div>
                 </div>
               </th>
@@ -43,58 +43,33 @@
             <tr>
               <td>{{ professor.nome }}</td>
               <td>
-                <button type="button" class="btn btn-outline-primary" id="myBtn2"> Alterar </button>
-                <button type="button" class="btn btn-outline-danger" id="myBtn3"> Deletar </button>
+               <a href="update/professor/{{professor.id}}">Detalhes</a>
               </td>
             </tr>
           {% endfor %}
         </tbody>
       </table>
 
-      <!-- Modal Novo -->
-      <div id="myModal" class="modal">
-        <!-- Modal content -->
+      <div class="modal fade" id="myBtn" role="dialog">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
               <h3>NOVO PROFESSOR</h3>
-              <span class="close">&times;</span>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
-              <form method="post">
-              {% csrf_token %}
-              {{ form }}
+              <form method="POST">
+                {% csrf_token %}
+                {{ form }}
             </div>
-              <div class="modal-footer">
-                <button type="Reset" class="btn btn-outline-danger" id="Fecha">Fechar</button>
-                <button id="Fecha" class="btn btn-outline-success" type="submit" value="Salvar">Salvar</button>
-              </form>           
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
+              <button type="submit" class="btn btn-outline-success" >Salvar</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-
-            <!-- Modal Novo -->
-      <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h3>NOVO PROFESSOR</h3>
-              <span class="close">&times;</span>
-            </div>
-            <div class="modal-body">
-              <form method="get">
-              {% csrf_token %}
-              {{ form }}
-            </div>
-              <div class="modal-footer">
-                <button type="Reset" class="btn btn-outline-danger" id="Fecha">Fechar</button>
-                <button id="Fecha" class="btn btn-outline-success" type="submit" value="Salvar">Salvar</button>
-              </form>           
-          </div>
-        </div>
-      </div>
-
       </body>
       <!-- jQuery CDN - Slim version (=without AJAX) -->
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
@@ -123,31 +98,4 @@
       });
      </script>
 
-    <script>
-    // Get the modal
-    var modal = document.getElementById("myModal");
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-    //Fecha o modal
-    var Fecha = document.getElementById("Fecha");
-    // Get the <span> element that closes the modal
-     var span = document.getElementsByClassName("close")[0];
-    // When the user clicks the button, open the modal
-    btn.onclick = function() {
-    modal.style.display = "block";
-    }
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-    Fecha.onclick = function() {
-      modal.style.display = "none";
-      }
-    }
-    </script>
 </html>
