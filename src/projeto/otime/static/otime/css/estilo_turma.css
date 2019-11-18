@@ -98,7 +98,7 @@ input[type=submit]:hover {
     background-color: #45a049;
 }
 
-#lista_de_salas ul {
+#lista_de_turmas ul {
     position: center;
     padding: 0;
     margin: 0 auto;
@@ -108,7 +108,7 @@ input[type=submit]:hover {
     text-align: center;
 }
 
-#form-sala {
+#form-turma {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 50px;
@@ -116,7 +116,7 @@ input[type=submit]:hover {
     margin: 0 auto;
 }
 
-#form-sala {
+#form-turma {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 50px;
@@ -124,14 +124,14 @@ input[type=submit]:hover {
     margin: 0 auto;
 }
 
-#botao_salvar_sala {
+#botao_salvar_turma {
     position: absolute;
     right: 270px;
     width: 10%;
     height: 5%;
 }
 
-#botao_voltar_sala1 {
+#botao_voltar_turma1 {
     position: absolute;
     right: 450px;
     width: 10%;
@@ -139,7 +139,7 @@ input[type=submit]:hover {
     height: 5%;
 }
 
-#botao_deletar_sala {
+#botao_deletar_turma {
     position: absolute;
     right: 450px;
     width: 10%;
@@ -147,7 +147,7 @@ input[type=submit]:hover {
     height: 5%;
 }
 
-#botao_voltar_sala {
+#botao_voltar_turma {
     position: absolute;
     right: 630px;
     top: 466px;
@@ -155,26 +155,26 @@ input[type=submit]:hover {
     height: 5%;
 }
 
-#botao_nova_sala {
+#botao_nova_turma {
     display: block;
     margin-left: 1000px;
     margin-right: 10px;
     margin-top: -25px;
 }
 
-#botao_nova_sala:hover {
+#botao_nova_turma:hover {
     background-color: #28A745;
     color: #fff;
 }
 
-#btn_voltar_sala_index {
+#btn_voltar_turma_index {
     display: block;
     margin-left: 850px;
     margin-right: 160px;
     margin-top: -38px;
 }
 
-#btn_voltar_sala_index:hover {
+#btn_voltar_turma_index:hover {
     background-color: #007BFF;
     color: #fff;
 }
