@@ -14,16 +14,17 @@ def index(request):
     return render(request, "otime/index.html", contexto)
 
 def reservarHorario(request, id):
+    turma = get_object_or_404(Turma, pk = id)
+
     if request.method == "POST":
-        turma = get_object_or_404(Turma, pk = id)
         sala_de_aula = get_object_or_404(SalaDeAula, pk = request.POST["sala_de_aula"])
         disciplina = get_object_or_404(Disciplina, pk = request.POST["disciplina"])
         professor = get_object_or_404(Professor, pk = request.POST["professor"])
         for horario in request.POST.getlist("horarios"):
             slot_de_horario = SlotDeHorario(turma = turma, posicao = horario, sala_de_aula = sala_de_aula, disciplina = disciplina, professor = professor)
-
             slot_de_horario.save()
-    slots_de_horario = SlotDeHorario.objects.all()
+
+    slots_de_horario = SlotDeHorario.objects.filter(turma = turma)
     lista_de_salas = SalaDeAula.objects.all()
     lista_de_disciplinas = Disciplina.objects.all()
     lista_de_professores = Professor.objects.all()
