@@ -3,7 +3,7 @@ from .views import  index, salas, reservarHorario, professores, turmas, discipli
 urlpatterns = [
     path("", index, name = "index"),
     path("salas", salas, name = "salas"),
-    path("reservarHorario", reservarHorario, name = "reservarHorario"),
+    path("reservarHorario/<int:id>", reservarHorario, name = "reservarHorario"),
     path("professores", professores, name = "professores"),
     path("seletor_turmas", seletor_turmas, name = "seletor_turmas"),
     path("turmas", turmas, name = "turmas"),
