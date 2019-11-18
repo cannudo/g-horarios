@@ -13,7 +13,7 @@ def index(request):
     }
     return render(request, "otime/index.html", contexto)
 
-def reservarHorario(request):
+def reservarHorario(request, id):
     if request.method == "POST":
         sala_de_aula = get_object_or_404(SalaDeAula, pk = request.POST["sala_de_aula"])
         disciplina = get_object_or_404(Disciplina, pk = request.POST["disciplina"])
@@ -61,6 +61,20 @@ def professores(request):
 
     lista_de_professores = Professor.objects.all()
     return render(request,'otime/professores.html',{'lista_de_professores':lista_de_professores, 'form':form})
+
+##View para exibir as turmas cadastradas e
+##selecionar a que irá ser definida os horarios na view de reserva de horario.
+def seletor_turmas(request):
+    lista_de_turmas = Turma.objects.all()
+    return render(request,'otime/seletor_turmas.html',{'lista_de_turmas':lista_de_turmas})
+
+def turmas(request):
+    form =  FormTurma(request.POST or None)
+    if form.is_valid():
+        form.save()
+
+    lista_de_turmas = Turma.objects.all()
+    return render(request,'otime/turmas.html',{'lista_de_turmas':lista_de_turmas, 'form':form})
 
 def atualizar_professor(request, id):
     professor = Professor.objects.get(id=id)
