@@ -13,6 +13,10 @@ ul {
     text-align: center;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> df6d8f146d2b8b845037218421e62a451df68fc0
 h2 {
     text-align: center;
     text-decoration: none;
@@ -21,15 +25,6 @@ h2 {
 
 h2:hover {
     color: silver;
-}
-
-p {
-    font-weight: bold;
-    background-color: black;
-    color: white;
-    width: 1000px;
-    margin: 0 auto;
-    padding: 20px 10px;
 }
 
 ul,
