@@ -43,8 +43,7 @@
             <tr>
               <td>{{ turma.nome }}</td>
               <td>
-                <button type="button" class="btn btn-outline-primary" id="myBtn2"> Alterar </button>
-                <button type="button" class="btn btn-outline-danger" id="myBtn3"> Deletar </button>
+               <a href="update/turma/{{turma.id}}">Detalhes</a>
               </td>
             </tr>
           {% endfor %}
@@ -62,28 +61,6 @@
             </div>
             <div class="modal-body">
               <form method="post">
-              {% csrf_token %}
-              {{ form }}
-            </div>
-              <div class="modal-footer">
-                <button type="Reset" class="btn btn-outline-danger" id="Fecha">Fechar</button>
-                <button id="Fecha" class="btn btn-outline-success" type="submit" value="Salvar">Salvar</button>
-              </form>
-          </div>
-        </div>
-      </div>
-
-            <!-- Modal Novo -->
-      <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h3>NOVA TURMA</h3>
-              <span class="close">&times;</span>
-            </div>
-            <div class="modal-body">
-              <form method="get">
               {% csrf_token %}
               {{ form }}
             </div>

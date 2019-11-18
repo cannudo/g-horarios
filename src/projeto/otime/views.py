@@ -76,6 +76,20 @@ def turmas(request):
     lista_de_turmas = Turma.objects.all()
     return render(request,'otime/turmas.html',{'lista_de_turmas':lista_de_turmas, 'form':form})
 
+def atualizar_turma(request, id):
+    turma = Turma.objects.get(id=id)
+    form =  FormTurma(request.POST or None, instance=turma)
+
+    if form.is_valid():
+        form.save()
+        return redirect('turmas')
+
+    if request.method == 'POST':
+        turma.delete()
+        return redirect('turmas')    
+
+    return render(request, 'otime/modais/editar-turma.html', {'form': form, 'turma': turma})
+
 def atualizar_professor(request, id):
     professor = Professor.objects.get(id=id)
     form =  FormProfessor(request.POST or None, instance=professor)

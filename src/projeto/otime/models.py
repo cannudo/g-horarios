@@ -59,7 +59,7 @@ class Turma(models.Model):
         return "Turma #%d: %s" % (int(self.id), self.nome)
         
     class Meta:
-        verbose_name_plural = 'turma'
+        verbose_name_plural = 'turmas'
 
 ##############################--Slot de Horários--################################
 
