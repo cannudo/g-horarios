@@ -44,7 +44,7 @@
             <tr>
               <td>{{ professor.nome }}</td>
               <td>
-                <button type="button" name='professor' value='{{ professor }}' class="btn btn-outline-primary" data-toggle="modal" data-target="#myBtn2"> Alterar </button>
+                <button type="button" name='professor' value='{{ professor.id }}' class="btn btn-outline-primary" data-toggle="modal" data-target="#myBtn2" onclick="doAjax(this);"> Alterar </button>
                 <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#myBtn3"> Deletar </button>
               </td>
             </tr>
