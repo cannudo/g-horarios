@@ -45,6 +45,9 @@ def salas(request):
 def professores(request):
     if request.method == "POST":
         ehAjax = request.POST.get("ajax", "0")
+        if ehAjax == "1":
+            professor = Professor.objects.get(pk = request.POST["idDoProfessor"])
+            form = FormProfessor(instance = professor)
     form =  FormProfessor(request.POST or None)
     if form.is_valid():
         form.save()
