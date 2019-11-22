@@ -10,4 +10,5 @@ function doAjax(botao) {
   };
 
   request.open("POST", "professores", true);
+  request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 }
