@@ -43,6 +43,8 @@ def salas(request):
     return render(request,'otime/salas.html',{'lista_de_salas':lista_de_salas})
 
 def professores(request):
+    if request.method == "POST":
+        ehAjax = request.POST.get("ajax", "0")
     form =  FormProfessor(request.POST or None)
     if form.is_valid():
         form.save()
