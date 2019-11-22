@@ -3,4 +3,6 @@ function doAjax(botao) {
   csrf = document.getElementById("csrf").innerText;
 
   var request = new XMLHttpRequest();
+  request.onreadystatechange = function() {
+  };
 }
