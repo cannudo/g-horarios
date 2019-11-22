@@ -48,6 +48,8 @@ def professores(request):
         if ehAjax == "1":
             professor = Professor.objects.get(pk = request.POST["idDoProfessor"])
             form = FormProfessor(instance = professor)
+            return HttpResponse(form)
+
     form =  FormProfessor(request.POST or None)
     if form.is_valid():
         form.save()
