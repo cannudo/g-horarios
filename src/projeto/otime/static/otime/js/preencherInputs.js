@@ -8,4 +8,6 @@ function doAjax(botao) {
       document.getElementById("receberDados").innerHTML = this.responseText;
     }
   };
+
+  request.open("POST", "professores", true);
 }
