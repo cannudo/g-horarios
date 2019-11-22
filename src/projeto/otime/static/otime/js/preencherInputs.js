@@ -11,4 +11,5 @@ function doAjax(botao) {
 
   request.open("POST", "professores", true);
   request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  request.send("idDoProfessor=" + idDoProfessor + "&csrfmiddlewaretoken=" + csrf + "&ajax=1");
 }
