@@ -1,3 +1,2 @@
-function init() {
-  continue;
+function doAjax(botao) {
 }
