@@ -81,13 +81,18 @@
             </div>
             <div class="modal-body">
               <form method="GET">
+              <form method="post" action=".">
                 {% csrf_token %}
                 {{ form }}
+                <span id="receberDados">
+
+                </span>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</button>
               <button type="submit" class="btn btn-outline-success" value="Salvar">Salvar</button>
               </form>           
+              </form>
             </div>
           </div> 
         </div>
