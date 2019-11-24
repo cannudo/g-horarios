@@ -39,6 +39,24 @@ def reservarHorario(request, id):
     }
     return render(request, "otime/reservar-horario.html", contexto)
 
+def exibeSlotTurma(request, id):
+    turma = get_object_or_404(Turma, pk = id)
+
+    slots_de_horario = SlotDeHorario.objects.filter(turma = turma)
+    lista_de_salas = SalaDeAula.objects.all()
+    lista_de_disciplinas = Disciplina.objects.all()
+    lista_de_professores = Professor.objects.all()
+    horarios = "07h00-07h45 07h45-08h30 09h00-09h45 09h45-10h30 10h30-11h15 11h15-12h00 13h00-13h45 13h45-14h30 14h30-15h15 15h15-16h00 16h30-17h15 15h15-18h00 19h00-19h45 19h45-20h30 20h40-21h25 21h25-22h10"
+    contexto = {
+        "slots_de_horario": slots_de_horario,
+        "lista_de_salas": lista_de_salas,
+        "lista_de_disciplinas": lista_de_disciplinas,
+        "lista_de_professores": lista_de_professores,
+        "horarios": horarios,
+    }
+    return render(request, "otime/exibeSlotTurma.html", contexto)
+
+
 
 def salas(request):
     form = FormSala(request.POST or None)
@@ -49,8 +67,11 @@ def salas(request):
     return render(request,'otime/salas.html',{'lista_de_salas':lista_de_salas, 'form': form})
 
 def buscas(request):
+    return render(request,'otime/buscas.html')
 
-    return HttpResponse("Buscas");
+def filtroTurma(request):
+    lista_de_turmas = Turma.objects.all()
+    return render(request,'otime/filtroTurma.html',{'lista_de_turmas':lista_de_turmas})
 
 def disciplinas(request):
     form = FormDisciplina(request.POST or None)
