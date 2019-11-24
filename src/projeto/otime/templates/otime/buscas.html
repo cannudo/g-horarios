@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <title>O'time</title>
+      <!-- Bootstrap CSS CDN -->
+      <link rel="stylesheet" href='{% static "otime/bootstrap/bootstrap.css" %}'>
+      <link rel="stylesheet" href='{% static "otime/bootstrap/bootstrap.js" %}'>
+      <!-- Our Custom CSS -->
+      <link rel="stylesheet" href='{% static "otime/css/estilo_professor.css" %}'>
+      <!-- Font Awesome JS -->
+      <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+      <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="caixaFiltros">
+      <a href="#">
+        <div class="caixaDisciplina">
+          <h1>Disciplina</h1>
+        </div>
+      </a>
+      <a href="filtroTurma">
+        <div class="caixaTurma">
+          <h1>Turma</h1>
+        </div>
+      </a>
+      <a href="#">
+        <div class="caixaProfessor">
+          <h1>Professor</h1>
+        </div>
+      </a>
+      <a href="#">
+        <div class="caixaSala">
+          <h1>Sala</h1>
+        </div>
+      </a>
+    </div>
+
+  </body>
+</html>
