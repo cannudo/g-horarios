@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404,redirect
+from django.http import HttpResponse
 from .models import *
 from .forms import *
 
@@ -46,6 +47,10 @@ def salas(request):
 
     lista_de_salas = SalaDeAula.objects.all()
     return render(request,'otime/salas.html',{'lista_de_salas':lista_de_salas, 'form': form})
+
+def buscas(request):
+
+    return HttpResponse("Buscas");
 
 def disciplinas(request):
     form = FormDisciplina(request.POST or None)
